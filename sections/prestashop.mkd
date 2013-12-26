@@ -13,6 +13,22 @@ http://api.bsale.cl/api/fingerprint_external/get_to_sync?access_token='token_emp
 
 Dependiendo de la firma, retorna en formato JSON el tipo de producto, producto o variente.
 
+Nuevo tipo de producto
+```
+{
+  "type": "new_type_product",
+  "status": "to_sync",
+  "data": {
+    "estado_tipo_producto": 0,
+    "fingerprint": "620605b5f0d7",
+    "id_categoria_prestashop": 0,
+    "id_tipo_producto": 14,
+    "nombre_tipo_producto": "software"
+  }
+}
+```
+
+Editar producto
 ```
 {
   "type": "edit_product",
@@ -39,3 +55,4 @@ mientras que el atributo "data" contiene la informacion del item.
 ```
 http://api.bsale.cl/api/fingerprint_external/set_synced?access_token='token de la empresa'&fingerprint='firma'&sync_id='id'&sync_id_adicional='id_adicional'
 ```
+

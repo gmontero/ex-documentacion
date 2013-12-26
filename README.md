@@ -23,7 +23,7 @@ PTP0EDLAMATGNV8Q81EZGEZMLZ9UJYR
 una vez obtenido el access token se puede realizar una peticion a la API de bsale con el metodo POST de la siguente forma:
 
 ```
-http://api.bsale.cl/api/documents/sales?access_token='token de la empresa'
+http://api.bsale.cl/api/documents/sales?access_token='token_empresa'
 ```
 
 La respuesta de Bsale llegara en formato JSON:
