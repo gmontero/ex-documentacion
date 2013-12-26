@@ -8,7 +8,7 @@ Con la API de Bsale, se podra acceder a los distintos recursos de del sistema, c
 
 ## Secciones
 
-### Prestashop (https://github.com/gmontero/API-Bsale/blob/master/sections/prestashop.mkd)
+### [Prestashop](https://github.com/gmontero/API-Bsale/blob/master/sections/prestashop.mkd)
 
 ### Autentificación
 
