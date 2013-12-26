@@ -46,8 +46,7 @@ Editar producto
 }
 ```
 
-el atributo "type" indica si el proceso que se debe sincronizar es una modificacion o creacion de un item,
-mientras que el atributo "data" contiene la informacion del item.
+el atributo "type" indica si el proceso que se debe sincronizar es una modificación o creación de un ítem, mientras que el atributo "data" contiene la información del ítem.
 
 
 ### set_synced
@@ -56,10 +55,9 @@ mientras que el atributo "data" contiene la informacion del item.
 http://api.bsale.cl/api/fingerprint_external/set_synced?access_token='token de la empresa'&fingerprint='firma'&sync_id='id'&sync_id_adicional='id_adicional'
 ```
 
-Una vez sincronizado correctamente el item, se debe informar a bsale que se ha completado el proceso. Para esto se le informa a la accion "set_synced"
-pasando por parametro la firma (fingerprint), el id generado por prestashop (sync_id) y algun id adicional que necesite el proceso (sync_id_adicional).
+Una vez sincronizado correctamente el ítem, se debe informar a bsale que se ha completado el proceso. Para esto se le informa a la acción "set_synced" pasando por parámetro la firma (fingerprint), el id generado por prestashop (sync_id) y algún id adicional que necesite el proceso (sync_id_adicional).
+El método retornara un JSON con el estado del proceso.
 
-El metodo retornara un JSON con el estado del proceso.
 ```
 {
   "status": "ok"
