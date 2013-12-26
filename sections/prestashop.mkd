@@ -8,7 +8,34 @@ La API que permite la sincronizacion fingerprint_external la cual posee 2 accion
 ### get_to_sync
 
 ```
-http://api.bsale.cl/api/fingerprint_external/get_to_sync?access_token='token de la empresa'&fingerprint='token de la firma'
+http://api.bsale.cl/api/fingerprint_external/get_to_sync?access_token='token_empresa'&fingerprint='firma'
 ```
 
+Dependiendo de la firma, retorna en formato JSON el tipo de producto, producto o variente.
+
+```
+{
+  "type": "edit_product",
+  "status": "to_sync",
+  "data": {
+    "fingerprint": "523c4cf549ce",
+    "id_categoria_prestashop": "117",
+    "id_producto_prestashop": 477,
+    "id_producto": 381,
+    "nombre_producto": "Yogurt",
+    "estado_producto": 0,
+    "id_atributo_prestashop": 644,
+    "descripcion_producto": null
+  }
+}
+```
+
+el atributo "type" indica si el proceso que se debe sincronizar es una modificacion o creacion de un item,
+mientras que el atributo "data" contiene la informacion del item.
+
+
 ### set_synced
+
+```
+http://api.bsale.cl/api/fingerprint_external/set_synced?access_token='token de la empresa'&fingerprint='firma'&sync_id='id'&sync_id_adicional='id_adicional'
+```
