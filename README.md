@@ -6,7 +6,11 @@ La API de Bsale esta implementada JSON a través de HTTP, en etapa de desarrollo
 
 Con la API de Bsale, se podra acceder a los distintos recursos de del sistema, como los productos, variantes, documentos etc.
 
-## Autentificación
+## Secciones
+
+### Prestashop (https://github.com/gmontero/API-Bsale/blob/master/sections/prestashop.mkd)
+
+### Autentificación
 
 Para poder acceder a la API se necesita un access token entregado por bsale, este token es unico para cada empresa.
 
