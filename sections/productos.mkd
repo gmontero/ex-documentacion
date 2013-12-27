@@ -1,6 +1,6 @@
 ## Introduccion
 
-La sincronizacion con prestashop trabaja por medios de firmas, las cuales se registran en la base de datos
+La sincronizacion de productos y variantes trabaja por medios de firmas, las cuales se registran en la base de datos
 cuando se ingresa o modifica, un producto, una variante o un movimiento de stock.
 
 La API que permite la sincronizacion fingerprint_external la cual posee 2 acciones.
