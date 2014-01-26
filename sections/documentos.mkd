@@ -1,4 +1,33 @@
-## Introducción
+## Documentos
 
 En esta sección están  agrupados los métodos asociados a la obtención de documentos emitidos en bsale.
-Estos métodos están orientados a obtener la lista de facturas, boletas, notas de crédito, y cualquier documentos asociado a una venta
+Estos métodos están orientados a obtener la lista de facturas, boletas, notas de crédito, y cualquier documentos asociado a una venta.
+
+Los métodos disponibles son:
+
+## search
+
+```
+POST documents/sales/search
+```
+
+Los filtros posibles de incorporar en la variable "data" (el nombre y el valor de los filtros deben ir en formato json). Es importante notar que la llamada debe enviar almenos una variable:
+
+
+document_type_id =>  Identificador del típo de documento solicitado (este identificador es propio de bsale)
+
+document_number  => Número del documentos solicitado (Folio docuemnto).
+
+salesman_id      => Identificado único vendedor
+
+office_id        => Identificador único sucursal
+
+client_id        => Identificador único del cliente receptor del docuemnto (Para Chile es el RUT)
+
+emission_date    => Fecha emisión documento (El formato debe ser YYYY-MM-DD
+
+
+
+
+
+
