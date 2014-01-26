@@ -1,10 +1,21 @@
 # Bsale
 
-La API de Bsale esta implementada JSON a través de HTTP, en etapa de desarrollo.
+
 
 ## Introducción
+El equipo de Bsale a puesto a disposición de la comunidad de desarrolladores  una API, la cual permite acceder  a un conjunto de métodos orientados a facilitar la integración, desde sistemas externos hacia bsale.
+Estos  métodos permitirán obtener información desde bsale o enviar información  hacia la aplicación, así por ejemplo se puede  obtener  la lista de productos, generar notas de venta, obtener los documentos generados, etc..
+Esta API permite llamadas del tipo REST y utiliza JSON para el envíos y recepción de información.
 
-Con la API de Bsale, se podra acceder a los distintos recursos de del sistema, como los productos, variantes, documentos etc.
+
+## Mandar un Request.
+
+Para hacer una llamada a la API la URL a utilizar debe ser http://app.bsale.cl/api/, seguido del nombre del método solicitado. En este sentido se  debe notar que los métodos están agrupados en sub carpetas, por lo que al nombre del método se el debe anteponer el nombre de la carpeta, así por ejemplo si se requiere obtener la lista de los documentos generados en bsale (lista de factura, boletas etc..) la llamada será:
+
+http://app.bsale.cl/api/documents/search
+
+Noten que la carpeta "Documents" están todos los métodos asociados al manejo de documentos.
+
 
 ## Secciones
 
