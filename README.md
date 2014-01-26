@@ -16,6 +16,14 @@ http://app.bsale.cl/api/documents/search
 
 Noten que la carpeta "Documents" están todos los métodos asociados al manejo de documentos.
 
+## Seguridad
+
+Para autenticar un request se utiliza la autenticación básica de http, mediante el envío  de un token, el cual deberá acompañar cada llamada.
+Dado que que la API se encuentra en estado "Beta", el token deberá ser solicitado al equipo de bsale (crojas@imaginex.cl).
+De esta manera dentro de las variables POST de la llamada se deberá agregar "access_token", con el token de acceso entregado.
+Es importante notar que este token es único para cada empresa-usuario, y el movimiento quedará asociado al usuario relacionado con el "access_token" entregado.
+
+
 
 ## Secciones
 
