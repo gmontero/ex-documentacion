@@ -23,6 +23,40 @@ Dado que que la API se encuentra en estado "Beta", el token deberá ser solicita
 De esta manera dentro de las variables POST de la llamada se deberá agregar "access_token", con el token de acceso entregado.
 Es importante notar que este token es único para cada empresa-usuario, y el movimiento quedará asociado al usuario relacionado con el "access_token" entregado.
 
+Por ejemplo si se requiere obtener la lista de docuemntos generados para el día 19-10-2013 de todas las sucursulas la llamada debería  ser:
+
+```php
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+        $url='http://localhost:3000/api/documents/sales/search';
+        $data=json_encode(Array(emission_date => '2013-10-19'));
+        $fields = array(
+                        'access_token' => urlencode('09133626ffa3718dfedb58be12f7cba880cfcfea'),
+                        'data' => urlencode($data)
+                        
+				);
+        foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
+        rtrim($fields_string, '&'); 
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch,CURLOPT_POST, count($fields));
+        curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
+
+        $response=curl_exec($ch);
+        curl_close($ch);
+
+
+        print_r($response);
+        php?>
+    </body>
+</html>
+```
 
 
 ## Secciones
