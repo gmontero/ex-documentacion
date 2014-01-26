@@ -1,0 +1,4 @@
+## Introducción
+
+En esta sección están  agrupados los métodos asociados a la obtención de documentos emitidos en bsale.
+Estos métodos están orientados a obtener la lista de facturas, boletas, notas de crédito, y cualquier documentos asociado a un aventa
