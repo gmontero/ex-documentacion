@@ -10,9 +10,9 @@ Esta API permite llamadas del tipo REST y utiliza JSON para el envíos y recepci
 
 ## Mandar un Request.
 
-Para hacer una llamada a la API, la URL a utilizar debe ser http://app.bsale.cl/api/, seguido del nombre del método solicitado. En este sentido se  debe notar que los métodos están agrupados en sub carpetas, por lo que al nombre del método se el debe anteponer el nombre de la carpeta, así por ejemplo si se requiere obtener la lista de los documentos generados en bsale (lista de factura, boletas etc..) la llamada será:
+Para hacer una llamada a la API, la URL a utilizar debe ser http://api.bsale.cl/api/, seguido del nombre del método solicitado. En este sentido se  debe notar que los métodos están agrupados en sub carpetas, por lo que al nombre del método se el debe anteponer el nombre de la carpeta, así por ejemplo si se requiere obtener la lista de los documentos generados en bsale (lista de factura, boletas etc..) la llamada será:
 
-http://app.bsale.cl/api/documents/search
+http://api.bsale.cl/api/documents/search
 
 Noten que la carpeta "Documents" están todos los métodos asociados al manejo de documentos.
 
@@ -34,7 +34,7 @@ Por ejemplo si se requiere obtener la lista de docuemntos generados para el día
     </head>
     <body>
         <?php
-        $url='http://http://app.bsale.cl/api/documents/sales/search';
+        $url='http://http://api.bsale.cl/api/documents/sales/search';
         $data=json_encode(Array(emission_date => '2013-10-19'));
         $fields = array(
                         'access_token' => urlencode('09133626ffa3718dfedb58be12f7cba880cfcfea'),
