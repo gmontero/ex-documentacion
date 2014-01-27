@@ -42,7 +42,7 @@ EL responce de la llamada  entregará la siguiente información en formato JSON
 [
   {
     "emission_date": "2013-11-04",  # Fecha de emisión
-    "send_status": "0",             # Si fue enviado por correo
+    "send_status": "0",             # Bollean que identifica Si el documento fue enviado por correo
     "read_date": "0000-00-00",      # Fecha de visualización del documento enviado
     "recipients": "",               # e-mail desinatario envío
     "client_email": "",             # e-mail cliente
@@ -57,29 +57,29 @@ EL responce de la llamada  entregará la siguiente información en formato JSON
     "total_amount": 21890.0,        # Monto total del documento
     "tax_amount": 3495.0,           # Monto total impuestos (incorpora otros impuestos además del IVA) 
     "has_received": "0",            # Boolean que indentifica si el documento fue visto por el destinatario
-    "document_id": 1984,            # Identificado interno del documento
+    "document_id": 1984,            # Identificador interno del documento
     "client_code": "",              # RUT cliente
     "office_id": 2,                 # Identificador único de sucursal
-    "document_type_id": 1,          # Identificador únido de tipo de documento
+    "document_type_id": 1,          # Identificador único de tipo de documento
     "coin_symbol": "$",             # Símbolo moneda
     "is_sales_note": "0",           # Si el documento corresponde a una nota de venta
     "office_destination_id": "0",   # Id sucursal de destino en caso de una guía de despacho
     "document_type_name": "Boleta", # Nombre tipo documento
-    "total_round": "0",             # Total con redondeo
+    "total_round": "0",             # identifica si el documento redondea totales
     "document_use": "0",            # Referencia asociada a si fue usado como documento padre de otro.
-    "link_xml": null,               # URL asociado al XML del documrnto (sólo para documentos electrónicos)
+    "link_xml": null,               # URL asociado al XML del documecnto (sólo para documentos electrónicos)
     "decimal_currency": "0",        # Número decimales moneda
     "observations": "0",            # Observaciones asociadas al documento
     "forwarding_recipients": "",    # e-mail destinatario de un re envío de docuemnto
     "payment": "0",                 # Monto total pago asociado (cero en el caso de crédito)
     "is_shipping": "0",             # Boolean que determina si es guía de despacho el documento.
-    "exempt_amount": 0.0,           # Mónto documento excento (caso de boletas y facturas excentas)
+    "exempt_amount": 0.0,           # Mónto documento exento (caso de boletas y facturas excentas)
     "office_destination": "",       # Nombre sucursal destino  (caso guías de despacho)
     "office_cost_center": "",       # Centro de costo asociado a la sucursal
     "send_id": "0",                 # Identificador único de envío de correo
     "expiration_date": "2013-11-04",# Fecha vencimiento
     "document_state": 0,            # Boolean que indica si el  documento esta activo, o fue borrado.
-    "office_name": "Casa Matriz",   # Nomre sucursal
+    "office_name": "Casa Matriz",   # Nombre sucursal
     "total_debt": "0",              # Monto total pendiente de pago
     "code_sii": "",                 # Código del SII asociado al tipo de documento
     "send_date": "0000-00-00",      # Fecha de envío por correo electrónico
@@ -98,10 +98,10 @@ EL responce de la llamada  entregará la siguiente información en formato JSON
         "item_ledger_account": null,    # Cuenta contable asociada al ítem línea 1
         "quantity": 1.0,                # Cantidad asociada a la línea 1
         "item_name": "polera brillo ",  # Nombre producto líne 1
-        "exempt_amount": 0,             # Monto excento de detalle
+        "exempt_amount": 0,             # Monto exento de detalle
         "office_cost_center": "",       # Centro de costo sucursal
         "tax_percentage": "0.19",       # % del impuesto asociado a la línea
-        "allows_decimal": "0",          # Bool que identifica si el ítem permite cantidades decimales
+        "allows_decimal": "0",          # Boolen que identifica si el ítem permite cantidades decimales
         "net_amount": 8395.0,           # subtotal neto
         "exchange_rate": 1.0            # tipo de cambio
       },
