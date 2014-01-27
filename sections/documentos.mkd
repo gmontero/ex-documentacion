@@ -11,20 +11,33 @@ Los métodos disponibles son:
 POST documents/sales/search
 ```
 
-Los filtros posibles de incorporar en la variable "data" (el nombre y el valor de los filtros deben ir en formato json). Es importante notar que la llamada debe enviar almenos una variable:
+
+Los filtros posibles de incorporar en la variable "data" (el nombre y el valor de los filtros deben ir en formato json). Es importante notar que la llamada debe enviar al menos una variable:
 
 
-document_type_id =>  Identificador del típo de documento solicitado (este identificador es propio de bsale)
+document_type_id =>  Identificador del tipo de documento solicitado (este identificador es propio de bsale)
 
-document_number  => Número del documentos solicitado (Folio docuemnto).
+code_sii         => Código documento basado en los identificadores de tipo de documento del SII de Chile
+
+document_number  => Número del documentos solicitado (Folio documento).
 
 salesman_id      => Identificado único vendedor
 
 office_id        => Identificador único sucursal
 
-client_id        => Identificador único del cliente receptor del docuemnto (Para Chile es el RUT)
+client_id        => Identificador único del cliente receptor del documento (Para Chile es el RUT)
 
-emission_date    => Fecha emisión documento (El formato debe ser YYYY-MM-DD
+emission_date    => Fecha emisión documento (El formato debe ser YYYY-MM-DD)
+
+expiration_date  => Fecha de vencimiento del documento (El formato debe ser YYYY-MM-DD)
+
+declared_sii     => Documentos declarados al SII (1 declarado 0 no declarado)
+
+others_attrs     => Hash de atributos asociados al documento los cuales son dinámicamente configurados en bsale.
+
+
+
+
 
 
 
