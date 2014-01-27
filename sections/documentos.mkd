@@ -41,13 +41,13 @@ EL responce de la llamada  entregará la siguiente información en formato JSON
 ```json
 [
   {
-    "emission_date": "2013-11-04",  #Fecha de emisión
+    "emission_date": "2013-11-04",  # Fecha de emisión
     "send_status": "0",             # Si fue enviado por correo
     "read_date": "0000-00-00",      # Fecha de visualización del documento enviado
     "recipients": "",               # e-mail desinatario envío
     "client_email": "",             # e-mail cliente
-    "is_credit_note": "0",          #
-    "client_id": 0,                 # Identificador único de  cliente
+    "is_credit_note": "0",          # Boolean  que identifica si el documento es una nota de crédito ( 0 no 1 si)
+    "client_id": 0,                 # Identificador único de  cliente (id interno bsale)
     "coin_id": "1",                 # id de la moneda del documento (Para chile es siempre en $)
     "iva_amount": "3495",           # Monto IVA
     "salesman_name": "Demo Bsale",  # Nombre vendedor
@@ -56,57 +56,57 @@ EL responce de la llamada  entregará la siguiente información en formato JSON
     "total_attachments": "0",       # Número de documentos asociados
     "total_amount": 21890.0,        # Monto total del documento
     "tax_amount": 3495.0,           # Monto total impuestos (incorpora otros impuestos además del IVA) 
-    "has_received": "0",            #
+    "has_received": "0",            # Boolean que indentifica si el documento fue visto por el destinatario
     "document_id": 1984,            # Identificado interno del documento
     "client_code": "",              # RUT cliente
     "office_id": 2,                 # Identificador único de sucursal
     "document_type_id": 1,          # Identificador únido de tipo de documento
     "coin_symbol": "$",             # Símbolo moneda
-    "is_sales_note": "0",           #
-    "office_destination_id": "0",   #
+    "is_sales_note": "0",           # Si el documento corresponde a una nota de venta
+    "office_destination_id": "0",   # Id sucursal de destino en caso de una guía de despacho
     "document_type_name": "Boleta", # Nombre tipo documento
     "total_round": "0",             # Total con redondeo
-    "document_use": "0",            #
+    "document_use": "0",            # Referencia asociada a si fue usado como documento padre de otro.
     "link_xml": null,               # URL asociado al XML del documrnto (sólo para documentos electrónicos)
     "decimal_currency": "0",        # Número decimales moneda
     "observations": "0",            # Observaciones asociadas al documento
-    "forwarding_recipients": "",    #
+    "forwarding_recipients": "",    # e-mail destinatario de un re envío de docuemnto
     "payment": "0",                 # Monto total pago asociado (cero en el caso de crédito)
-    "is_shipping": "0",             #
-    "exempt_amount": 0.0,           #
-    "office_destination": "",       #
+    "is_shipping": "0",             # Boolean que determina si es guía de despacho el documento.
+    "exempt_amount": 0.0,           # Mónto documento excento (caso de boletas y facturas excentas)
+    "office_destination": "",       # Nombre sucursal destino  (caso guías de despacho)
     "office_cost_center": "",       # Centro de costo asociado a la sucursal
-    "send_id": "0",                 #
+    "send_id": "0",                 # Identificador único de envío de correo
     "expiration_date": "2013-11-04",# Fecha vencimiento
-    "document_state": 0,            #
+    "document_state": 0,            # Boolean que indica si el  documento esta activo, o fue borrado.
     "office_name": "Casa Matriz",   # Nomre sucursal
-    "total_debt": "0",              #
+    "total_debt": "0",              # Monto total pendiente de pago
     "code_sii": "",                 # Código del SII asociado al tipo de documento
     "send_date": "0000-00-00",      # Fecha de envío por correo electrónico
-    "net_amount": 18395.0,          #  Monto neto
-    "shipping_type_name": "",       #
+    "net_amount": 18395.0,          # Monto neto
+    "shipping_type_name": "",       # Tipo de transporte asociado a guías de despacho
     "adicional_tax_amount": "0",    # Monto de impuestos específicos
     "details": [
       {
-        "cart_item_id": 7056,               # Cantidad líne 1
-        "total_amount": 9990.0,             # Subtotal línea 1
-        "unit_amount": 8394.95798319328,    # Precio Unitario línea 1
-        "tax_amount": 1595.0,               # Impuesto asociado a línea 1
-        "item_cost_center": null,           # Centro de costo asociado al detalle línea 1
-        "discount_percentage": 0.0,         # % Descuento línea 1
-        "item_sku": "7450071009359",        # SKU ítem línea 1
-        "item_ledger_account": null,        # Cuenta contable asociada al ítem línea 1
-        "quantity": 1.0,                    # Cantidad asociada a la línea 1
-        "item_name": "polera brillo ",      # Nombre producto líne 1
-        "exempt_amount": 0,                 
-        "office_cost_center": "",           #
-        "tax_percentage": "0.19",           # % del impuesto asociado a la línea
-        "allows_decimal": "0",              # Bool que identifica si el ítem permite cantidades decimales
-        "net_amount": 8395.0,               # subtotal neto
-        "exchange_rate": 1.0                # tipo de cambio
+        "cart_item_id": 7056,           # Cantidad líne 1
+        "total_amount": 9990.0,         # Subtotal línea 1
+        "unit_amount": 8394.95798319328,# Precio Unitario línea 1
+        "tax_amount": 1595.0,           # Impuesto asociado a línea 1
+        "item_cost_center": null,       # Centro de costo (si se trabaja con cc a nivel de la sucursal queda nulo)
+        "discount_percentage": 0.0,     # % Descuento línea 1
+        "item_sku": "7450071009359",    # SKU ítem línea 1
+        "item_ledger_account": null,    # Cuenta contable asociada al ítem línea 1
+        "quantity": 1.0,                # Cantidad asociada a la línea 1
+        "item_name": "polera brillo ",  # Nombre producto líne 1
+        "exempt_amount": 0,             # Monto excento de detalle
+        "office_cost_center": "",       # Centro de costo sucursal
+        "tax_percentage": "0.19",       # % del impuesto asociado a la línea
+        "allows_decimal": "0",          # Bool que identifica si el ítem permite cantidades decimales
+        "net_amount": 8395.0,           # subtotal neto
+        "exchange_rate": 1.0            # tipo de cambio
       },
       {
-        "cart_item_id": 7057,               # Valores correspondentes al segundo detalle
+        "cart_item_id": 7057,           # Valores correspondentes al segundo detalle
         "total_amount": 11900.0,
         "unit_amount": 10000.0,
         "tax_amount": 1900.0,
@@ -124,7 +124,7 @@ EL responce de la llamada  entregará la siguiente información en formato JSON
         "exchange_rate": 1.0
       }
     ],
-    "is_electronic_document": "0",   # 
+    "is_electronic_document": "0",   # Si es un documento electrónico
     "link_pdf": "",                  # URL PDF del documento
     "document_number": 2503659       # Folio documento
   }
