@@ -34,9 +34,9 @@ Por ejemplo si se requiere obtener la lista de docuemntos generados para el día
     </head>
     <body>
         <?php
-        $url='http://localhost:3000/api/documents/sales/search/';
+       $url='http://localhost:3000/api/documents/sales/search/';
         //Guarda los filtros de la solicitud en un arrego, el cual debe ser guardado en formato JSON
-        $data=json_encode(Array(emission_date => '2014-01-02', code_sii=>'33', expiration_date=>'2014-01-2'));
+      $data=json_encode(Array(emission_date_start => '2014-01-02', code_sii=>'33', emission_date_end=>'2014-01-2'));
         //Se conforma el arrego con las variables POST que se mandarán en el Request 
         $fields = array(
 
