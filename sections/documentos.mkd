@@ -132,7 +132,48 @@ EL responce de la llamada  entregará la siguiente información en formato JSON
 
 
 ```
+## create
 
+```
+POST documents/sales/create
+```
+
+El objetivo de este método es la creación de documentos en bsale. Por el momento este método está limitado a la creación de notas de venta.
+Con este método será posible generar notas de venta desde otros sistema, en especial permitirá integrarse con las ventas efectuadas desde la página web de la empresa
+
+Los datos deberán ser mandados en formato JSON, y deberán estar contenidos dentro de la variable "data" del request.
+A su ves la variable data deberá tener tres estructuras:
+  client => Estructura que contendrá los datos del cliente asociado a la nota d eventa
+  document => Estructura que contiene los datos generales del docuemento generado
+  detail => Estructura que contiene el detalle del documento
+  
+De esta manera un ejemplo de como debería estar conformada la variable "data" es:
+
+```
+data = {
+      	:client =>  {
+        	:first_name => "nombre",
+        	:last_name => "apellido",
+        	:code => "12345", #RUT cliente
+        	:email => "correo electronico", 
+        	:company => "empresa", 
+        	:activity => "giro", #opcional 
+        	:address => "direccion", 
+        	:city => "ciudad",
+        	:municipality => "comuna" 
+      	},
+      	:document => {
+        	:document_type_id => 3, #por el momento es el único tipo permitido
+        	:emission_date => "2013-11-22", #formato AÑO-MES-DIA
+        	:expiration_date => "2013-11-22", #formato AÑO-MES-DIA
+        	:office_id => 1, #opcional, de no venir usa la sucursal marcada como virtual
+        	:price_list_id => 1, #opcional, de no venir utiliza la que tiene seleccionada la sucursal
+        	:exchange_rate => 1, #opcional
+        	:number => 1234, # Normalmente se deja sin dato de manera que bsale establezca el correlativo
+        	:detail => {{variant_id => 144, quantity => 1, unit_net_value => 1203, discount => 0},
+        	            {variant_id => 173, quantity => 1, unit_net_value => 2347, discount => 5}}
+
+```
 
 
 
