@@ -149,7 +149,7 @@ A su ves la variable data deberá tener tres estructuras:
   
 De esta manera un ejemplo de como debería estar conformada la variable "data" es:
 
-```
+```json
 data = {
       	:client =>  {
         	:first_name => "nombre",
