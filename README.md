@@ -34,28 +34,30 @@ Por ejemplo si se requiere obtener la lista de docuemntos generados para el día
     </head>
     <body>
         <?php
-        $url='http://http://api.bsale.cl/api/documents/sales/search';
-        $data=json_encode(Array(emission_date => '2013-10-19'));
+        $url='http://localhost:3000/api/documents/sales/search/';
+        //Guarda los filtros de la solicitud en un arrego, el cual debe ser guardado en formato JSON
+        $data=json_encode(Array(emission_date => '2014-01-02', code_sii=>'33', expiration_date=>'2014-01-2'));
+        //Se conforma el arrego con las variables POST que se mandarán en el Request 
         $fields = array(
-                        'access_token' => urlencode('09133626ffa3718dfedb58be12f7cba880cfcfea'),
-                        'data' => urlencode($data)
-                        
+
+                        'access_token' => '09133626ffa3718dfedb58be12f7cba880cfcfea',
+                        'data' => $data                    
 				);
-        foreach($fields as $key=>$value) { $fields_string .= $key.'='.$value.'&'; }
-        rtrim($fields_string, '&'); 
+        // Se inicializa la llamda CURL, 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch,CURLOPT_POST, count($fields));
-        curl_setopt($ch,CURLOPT_POSTFIELDS, $fields_string);
-
+        curl_setopt($ch,CURLOPT_POST, 1);
+        curl_setopt($ch,CURLOPT_POSTFIELDS, $fields);
+        // Variable en la que se guarda el response
         $response=curl_exec($ch);
         curl_close($ch);
 
-
+        //Esto es sólo para poder visualizar lo que se está retornando
         print_r($response);
-        php?>
+        ?>
     </body>
 </html>
+
 ```
 
 
