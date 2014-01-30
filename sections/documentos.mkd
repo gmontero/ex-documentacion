@@ -143,11 +143,12 @@ Con este método será posible generar notas de venta desde otros sistema, en es
 
 Los datos deberán ser mandados en formato JSON, y deberán estar contenidos dentro de la variable "data" del request.
 A su ves la variable data deberá tener tres estructuras:
-  client => Estructura que contendrá los datos del cliente asociado a la nota d eventa
-  document => Estructura que contiene los datos generales del docuemento generado
+  client => Estructura que contendrá los datos del cliente asociado a la nota de venta
+  document => Estructura que contiene los datos generales del documento generado
   detail => Estructura que contiene el detalle del documento
   
 De esta manera un ejemplo de como debería estar conformada la variable "data" es:
+
 
 ```json
 data = {
@@ -163,18 +164,58 @@ data = {
         	:municipality => "comuna" 
       	},
       	:document => {
-        	:document_type_id => 3, #por el momento es el único tipo permitido
+        	:document_type_id => "3", #por el momento es el único tipo permitido
         	:emission_date => "2013-11-22", #formato AÑO-MES-DIA
         	:expiration_date => "2013-11-22", #formato AÑO-MES-DIA
-        	:office_id => 1, #opcional, de no venir usa la sucursal marcada como virtual
-        	:price_list_id => 1, #opcional, de no venir utiliza la que tiene seleccionada la sucursal
-        	:exchange_rate => 1, #opcional
-        	:number => 1234, # Normalmente se deja sin dato de manera que bsale establezca el correlativo
-        	:detail => {{variant_id => 144, quantity => 1, unit_net_value => 1203, discount => 0},
-        	            {variant_id => 173, quantity => 1, unit_net_value => 2347, discount => 5}}
+        	:office_id => "1", #opcional, de no venir usa la sucursal marcada como virtual
+        	:price_list_id => "1", #opcional, de no venir utiliza la que tiene seleccionada la sucursal
+        	:exchange_rate => "1", #opcional
+        	:number => "1234", # Normalmente se deja sin dato de manera que bsale establezca el correlativo
+        	:detail => {{variant_id => "144", quantity => "1", unit_net_value => "1203", discount => "0"},
+        	            {variant_id => "173", quantity => "1", unit_net_value => "2347", discount => "5"}}
 
 ```
+Un ejemplo de llamada implementado en php sería:
 
+```php
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+        $url='http://localhost:3000/api/documents/sales/create/';
+        //Guarda los filtros de la solicitud en un arrego, el cual debe ser guardado en formato JSON
+        $detail=array();
+        $client=Array('first_name'=>'Gustavo', 'last_name'=>'Montero', 'code'=>'7513098-9', 'email'=>'gmonterop@imaginex.cl', 'company'=>'Germont', 'activity'=>'Asesorías Informáticas', 'address'=>'Los trigales 372', 'city'=>'Santiago', 'municipality'=>'Las Condes');
+        array_push ($detail, Array('variant_id'=>144, 'quantity'=>1, 'unit_net_value'=>1203, 'discount'=>0));
+        $document=Array('document_type_id'=>3, 'emision_date'=>'2014-01-29', 'expiration_date'=>'2014-01-29', 'office_id'=>2, 'price_list_id'=>1, 'exchange_rate'=>0, 'number'=>223345, 'detail'=>$detail);
+        $data=json_encode(Array('client'=>$client, 'document'=>$document));
+        //Se conforma el arrego con las variables POST que se mandarán en el Request 
+        $fields = array(
+
+                        'access_token' => '09133626ffa3718dfedb58be12f7cba880c34rtfcfea',
+                        'data' => $data                    
+				);
+        print_r($fields);
+        // Se inicializa la llamda CURL, 
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch,CURLOPT_POST, 1);
+        curl_setopt($ch,CURLOPT_POSTFIELDS, $fields);
+        // // Variable en la que se guarda el response
+        $response=curl_exec($ch);
+        curl_close($ch);
+
+        // //Esto es sólo para poder visualizar lo que se está retornando
+         //print_r($response);
+        ?>
+    </body>
+</html>
+
+```
 
 
 
