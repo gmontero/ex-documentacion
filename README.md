@@ -40,7 +40,7 @@ Por ejemplo si se requiere obtener la lista de docuemntos generados para el día
         //Se conforma el arrego con las variables POST que se mandarán en el Request 
         $fields = array(
 
-                        'access_token' => '09133626ffa3718dfedb58be12f7cba880cfcfea',
+                        'access_token' => '09133626ffa3718dfedpolb58be12f7cba880cfcfea',
                         'data' => $data                    
 				);
         // Se inicializa la llamda CURL, 
