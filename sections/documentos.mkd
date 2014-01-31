@@ -152,27 +152,35 @@ De esta manera un ejemplo de como debería estar conformada la variable "data" e
 
 ```json
 data = {
-      	:client =>  {
-        	:first_name => "nombre",
-        	:last_name => "apellido",
-        	:code => "12345", #RUT cliente
-        	:email => "correo electronico", 
-        	:company => "empresa", 
-        	:activity => "giro", #opcional 
-        	:address => "direccion", 
-        	:city => "ciudad",
-        	:municipality => "comuna" 
-      	},
-      	:document => {
-        	:document_type_id => "3", #por el momento es el único tipo permitido
-        	:emission_date => "2013-11-22", #formato AÑO-MES-DIA
-        	:expiration_date => "2013-11-22", #formato AÑO-MES-DIA
-        	:office_id => "1", #opcional, de no venir usa la sucursal marcada como virtual
-        	:price_list_id => "1", #opcional, de no venir utiliza la que tiene seleccionada la sucursal
-        	:exchange_rate => "1", #opcional
-        	:number => "1234", # Normalmente se deja sin dato de manera que bsale establezca el correlativo
-        	:detail => {{variant_id => "144", quantity => "1", unit_net_value => "1203", discount => "0"},
-        	            {variant_id => "173", quantity => "1", unit_net_value => "2347", discount => "5"}}
+    "client": {
+        "first_name": "Gustavo",
+        "last_name": "Montero",
+        "code": "7513098-9",
+        "email": "gmonterop@imaginex.cl",
+        "company": "Germont",
+        "activity": "Asesorías Informáticas",
+        "address": "Los trigales 372",
+        "city": "Santiago",
+        "municipality": "Las Condes"
+    },
+    "document": {
+        "document_type_id ": "3",
+        "emision_date": "2014-01-29",
+        "expiration_date": "2014-01-29",
+        "office_id": "2",
+        "price_list_id": "1",
+        "exchange_rate": "0",
+        "number": "223345",
+        "detail": [
+            {
+                "variant_id": "144",
+                "quantity": "1",
+                "unit_net_value": "1203",
+                "discount": "0"
+            }
+        ]
+    }
+}
 
 ```
 Un ejemplo de llamada implementado en php sería:
@@ -199,7 +207,6 @@ Un ejemplo de llamada implementado en php sería:
                         'access_token' => '09133626ffa3718dfedb58be12f7cba880c34rtfcfea',
                         'data' => $data                    
 				);
-        print_r($fields);
         // Se inicializa la llamda CURL, 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
