@@ -6,7 +6,7 @@
 El equipo de Bsale a puesto a disposición de la comunidad de desarrolladores  una API, la cual permite acceder  a un conjunto de métodos orientados a facilitar la integración, desde sistemas externos hacia bsale.
 Estos  métodos permitirán obtener información desde bsale o enviar información  hacia la aplicación, así por ejemplo se puede  obtener  la lista de productos, generar notas de venta, obtener los documentos generados, etc..
 Esta API permite llamadas del tipo REST y utiliza JSON para el envíos y recepción de información.
-
+En  la carpeta sections pueden encontrar los diferentes métodos disponibles.
 
 ## Mandar un Request.
 
