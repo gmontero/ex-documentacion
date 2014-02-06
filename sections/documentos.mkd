@@ -226,7 +226,7 @@ Un ejemplo de llamada implementado en php sería:
 
 La respuesta que obtendrán será:
 
-```
+```json
 {
     "status": "ok",
     "doc_number": 223347,
