@@ -118,7 +118,6 @@ POST config/products/product_create
 Este método permite generar un producto y la primera variante asociada.
 Los datos que se deben enviar en la llamada  son:
 
-Nuevo tipo de producto
 ```php
 {
   'product_name' => 'Polera Polo'  #Nombre del producto
@@ -316,5 +315,66 @@ La respuestá en caso de éxito será:
 
 ```
 
+##variant_create
 
+```
+POST config/products/variant_create
+```
+Este método permite generar una nueva variante asociada a un producto
+Los datos que se deben enviar en la llamada  son:
+
+```php
+   'product_id' => '407'         #Identificador único de producto al cual pertenecerá la variante
+   'variant_name'=>'XL Verde'    #Nombre de la variante
+   'barcode'=>'',                #Código de varra de la variante
+   'sku'=>'253674786'            #SKU de la variante
+```
+Un ejemplo de llamada en php sería:
+
+```php
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+        $url='http://localhost:3000/api/config/products/variant_create';
+        //Guarda los filtros de la solicitud en un arrego, el cual debe ser guardado en formato JSON
+        //Se conforma el arrego con las variables POST que se mandarán en el Request 
+        $fields = array(
+
+                      'access_token' => '09133626ffa3718dfedb58be12f7cbdsfa880cfcfea',
+                        'product_id' => '407',
+                        'variant_name'=>'XL Verde',
+                        'barcode'=>'',
+                        'sku'=>'253674786'                
+				);
+        // Se inicializa la llamda CURL, 
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch,CURLOPT_POST, 1);
+        curl_setopt($ch,CURLOPT_POSTFIELDS, $fields);
+        // Variable en la que se guarda el response
+        $response=curl_exec($ch);
+        curl_close($ch);
+
+        //Esto es sólo para poder visualizar lo que se está retornando
+        print_r($response);
+        ?>
+    </body>
+</html>
+```
+
+El resultado obtenído en caso de éxito será:
+
+```json
+{
+    "status": "ok",
+    "msg": "Guardado con éxito",
+    "id": 1566
+}
+```
 
