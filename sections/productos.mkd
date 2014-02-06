@@ -10,7 +10,7 @@ Los métodos disponibles son:
 POST config/products/product_find
 ```
 
-Este método permitelistar los productos en registrados en bsale.
+Este método permite listar los productos  registrados en bsale.
 #### El filtro product_id y filter son excluyente es decir si se manda product_id, no tomará en cuenta los que llegue en la variable filter.
 Los datos que se deben enviar en la llamada  son:
 
