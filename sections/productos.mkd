@@ -7,7 +7,7 @@ Los métodos disponibles son:
 ##product_create
 
 ```
-POST config/products/
+POST config/products/product_create
 ```
 
 Este método permite generar un producto y la primera variante asociada.
@@ -38,7 +38,6 @@ Un ejemplo de llamada sería:
     <body>
         <?php
         $url='http://localhost:3000/api/config/products/product_create';
-        //Guarda los filtros de la solicitud en un arrego, el cual debe ser guardado en formato JSON
         //Se conforma el arrego con las variables POST que se mandarán en el Request 
         $fields = array(
 
@@ -71,7 +70,7 @@ Un ejemplo de llamada sería:
 No olviden colocar el token de acceso.
 La respuestá en caso de éxito será:
 
-```
+``` json
 {
     "status": "ok",
     "product_id": 407,
