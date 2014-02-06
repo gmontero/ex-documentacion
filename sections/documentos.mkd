@@ -224,6 +224,20 @@ Un ejemplo de llamada implementado en php sería:
 
 ```
 
+La respuesta que obtendrán será:
+
+```
+{
+    "status": "ok",
+    "doc_number": 223347,
+    "doc_type": "Nota de Venta",
+    "doc_total": 1432,
+    "doc_token": "682ab58a2112",
+    "id": 2456,
+    "client_id": 74
+}
+```
+
 
 
 
