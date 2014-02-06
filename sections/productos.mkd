@@ -14,7 +14,7 @@ Este método permite generar un producto y la primera variante asociada.
 Los datos que se deben enviar en la llamada  son:
 
 Nuevo tipo de producto
-```json
+```php
 {
   'product_name' => 'Polera Polo'  #Nombre del producto
   'product_classification'=>'0'    #Clasificación (0 producto, 1 servicio)
