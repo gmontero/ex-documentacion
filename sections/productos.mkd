@@ -100,7 +100,7 @@ Los datos que se deben enviar en la llamada  son:
 
 Un ejemplo de llamada sería:
 
-```
+``` php
 <!DOCTYPE html>
 <html>
     <head>
@@ -114,7 +114,7 @@ Un ejemplo de llamada sería:
         //Se conforma el arrego con las variables POST que se mandarán en el Request 
         $fields = array(
 
-                        'access_token' => '09133626ffa3718d67yfedb58be12f7cba880cfcfea',
+                        'access_token' => '09133626ffa3718d67yfedb58be12f752cba880cfcfea',
                         'product_id'=>'407'
                         'product_name' => 'Polera Polo',
                         'product_classification'=>'0',
@@ -140,7 +140,7 @@ Un ejemplo de llamada sería:
 No olviden colocar el token de acceso.
 La respuestá en caso de éxito será:
 
-´´´ json
+``` json
 {
     "status": "ok",
     "msg": "Guardado con Éxito"
