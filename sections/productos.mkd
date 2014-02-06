@@ -1,6 +1,6 @@
 ## Productos
 
-En esta sección están agrupados los métodos asociados a la creación y administración de productos y sus variantes. Estos métodos están orientados a poder mantener  los productos y su información básica 
+En esta sección están agrupados los métodos asociados a la creación y administración de productos y sus variantes. Estos métodos están orientados a poder mantener  los productos y su información básica. 
 
 Los métodos disponibles son:
 
@@ -14,7 +14,7 @@ Este método permite generar un producto y la primera variante asociada.
 Los datos que se deben enviar en la llamada  son:
 
 Nuevo tipo de producto
-```
+```json
 {
   'product_name' => 'Polera Polo'  #Nombre del producto
   'product_classification'=>'0'    #Clasificación (0 producto, 1 servicio)
