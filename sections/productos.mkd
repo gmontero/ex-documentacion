@@ -378,3 +378,65 @@ El resultado obtenído en caso de éxito será:
 }
 ```
 
+##variant_update
+
+```
+POST config/products/variant_update
+```
+Este método permite actualizar una  variante asociada a un producto
+Los datos que se deben enviar en la llamada  son:
+
+```php
+   'variant_id' => '1024'         #Identificador único de  la variante
+   'variant_name'=>'XL Verde'    #Nombre de la variante
+   'barcode'=>'',                #Código de varra de la variante
+   'sku'=>'253674786'            #SKU de la variante
+```
+Un ejemplo de llamada en php sería:
+
+```php
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+        $url='http://localhost:3000/api/config/products/variant_update';
+        //Guarda los filtros de la solicitud en un arrego, el cual debe ser guardado en formato JSON
+        //Se conforma el arrego con las variables POST que se mandarán en el Request 
+        $fields = array(
+
+                        'access_token' => '09198033626ffa3718dfedb58be12f7cba880cfcfea',
+                        'variant_id' => '102',
+                        'variant_name'=>'XL Verde',
+                        'barcode'=>'',
+                        'sku'=>'FUWAYAZUL025'                
+				);
+        // Se inicializa la llamda CURL, 
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch,CURLOPT_POST, 1);
+        curl_setopt($ch,CURLOPT_POSTFIELDS, $fields);
+        // Variable en la que se guarda el response
+        $response=curl_exec($ch);
+        curl_close($ch);
+
+        //Esto es sólo para poder visualizar lo que se está retornando
+        print_r($response);
+        ?>
+    </body>
+</html>
+```
+
+El resultado obtenído en caso de éxito será:
+
+```json
+{
+    "status": "ok",
+    "msg": "Guardado con éxito",
+    "id": 1024
+}
+```
