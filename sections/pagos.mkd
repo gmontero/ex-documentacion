@@ -36,18 +36,18 @@ EL response de la llamada  entregará la siguiente información en formato JSON
     "payment_date": "2012-10-29",       # Fecha en que se realiza el pago de un documento
     "payment_amount": 23800.0,          # Monto total del pago
     "payment_state": 0,                 # Boleano indica el estado del pago (0 correcto, 1 incorrecto)
-    "payment_type_id": 1,               # Identificador interno de la forma de pago
-    "payment_type_name": "EFECTIVO",    # Nombre de la forma de pago del documento
+    "payment_type_id": 5,               # Identificador interno de la forma de pago
+    "payment_type_name": "Cheque",      # Nombre de la forma de pago del documento
     "payment_ledger_account": "",       # Cuenta contable de la forma de pago
-    "is_check": "0",                    # Boleano indica si la forma de pago es un cheque
+    "is_check": "1",                    # Boleano indica si la forma de pago es un cheque
     "is_credit_note": "0",              # Boleano indica si la forma de pago es una nota de credito
     "is_client_credit": "0",            # Boleano indica si la forma de pago es credito del cliente
-    "is_cash": "1",                     # Boleano indica si la forma de pago es efectivo
+    "is_cash": "0",                     # Boleano indica si la forma de pago es efectivo
     "is_credit_memo": "0",              # Boleano indica si la forma de pago es un abono al credito del cliente
-    "check_date": null,                 # Fecha de pago de un cheque
+    "check_date": "2012-10-29",         # Fecha de pago de un cheque
     "check_number": null,               # Numero de cheques utilizados en el pago
-    "check_amount": "0",                # Monto total del cheque
-    "check_taken": 0,                   # Boleano indica si el cheque fue cobrabo
+    "check_amount": "23800.0",          # Monto total del cheque
+    "check_taken": 1,                   # Boleano indica si el cheque fue cobrabo
     "document_id": 412,                 # Identificador interno del documento
     "document_number": "128",           # Folio del documento
     "code_sii": "39",                   # Codigo tributario del documento
@@ -55,5 +55,28 @@ EL response de la llamada  entregará la siguiente información en formato JSON
     "office_id": 2,                     # Identificador interno de la sucursal
     "office_name": "Casa Matriz"        # Nombre de la sucursal donde se efectuo el pago
     "office_cost_center": "",           # Centro de costo de la sucursal
+    "details":                          # Atributos dinamicos de la forma de pago
+     [
+          {
+            "attr_value": "Banco de Chile",
+            "attr_name": "Banco"
+          },
+          {
+            "attr_value": "12345",
+            "attr_name": "N\u00famero"
+          },
+          {
+            "attr_value": "14/03/2014",
+            "attr_name": "Vencimiento"
+          },
+          {
+            "attr_value": "Gustavo montero",
+            "attr_name": "Titular"
+          },
+          {
+            "attr_value": "56",
+            "attr_name": "N\u00ba Autoriza DICOM"
+          }
+    ]
   }
 ]
