@@ -67,3 +67,4 @@ Por ejemplo si se requiere obtener la lista de docuemntos generados para el día
 
 * [Productos, variantes](https://github.com/gmontero/API-Bsale/blob/master/sections/productos.mkd)
 
+* [Pagos](https://github.com/gmontero/API-Bsale/blob/master/sections/pagos.mkd)

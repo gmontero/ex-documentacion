@@ -36,7 +36,7 @@ declared_sii     => Documentos declarados al SII (1 declarado 0 no declarado)
 others_attrs     => Hash de atributos asociados al documento los cuales son dinámicamente configurados en bsale.
 
 
-EL responce de la llamada  entregará la siguiente información en formato JSON
+EL response de la llamada  entregará la siguiente información en formato JSON
 
 ```json
 [

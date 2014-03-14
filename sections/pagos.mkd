@@ -1,0 +1,59 @@
+## Pagos
+
+En esta sección están  agrupados los métodos asociados a la obtención de pagos registrados en bsale.
+
+Los métodos disponibles son:
+
+## search
+
+```
+POST documents/payments/search
+```
+
+
+Los filtros posibles de incorporar en la variable "data" (el nombre y el valor de los filtros deben ir en formato json). Es importante notar que la llamada debe enviar al menos una variable:
+
+
+payment_date =>  Identificador del tipo de documento solicitado (este identificador es propio de bsale)
+
+code_sii         => Código documento basado en los identificadores de tipo de documento del SII de Chile
+
+document_id  => Identificador interno de un documento.
+
+office_id        => Identificador único sucursal
+
+client_code        => Identificador único del cliente receptor del documento (Para Chile es el RUT).
+
+payment_type_id  => Identificador de la forma de pago de un documento.
+
+
+EL response de la llamada  entregará la siguiente información en formato JSON
+
+```json
+[
+  {
+    "payment_type_name": "EFECTIVO",    # Nombre de la forma de pago del documento
+    "client_code": "7513098-8",         # Rut del cliente
+    "payment_type_id": 1,               # Identificador interno de la forma de pago
+    "payment_ledger_account": "",       # Cuenta contable de la forma de pago
+    "check_amount": "0",                # Monto total del cheque
+    "document_id": 412,                 # Identificador interno del documento
+    "office_id": 2,                     # Identificador interno de la sucursal
+    "code_sii": "39",                   # Codigo tributario del documento
+    "document_number": "128",           # Folio del documento
+    "check_date": null,                 # Fecha de pago de un cheque
+    "payment_amount": 23800.0,          # Monto total del pago
+    "payment_id": 378,                  # Indetificador interno del pago
+    "office_cost_center": "",           # Centro de costo de la sucursal
+    "is_client_credit": "0",            # Boleano indica si la forma de pago es credito del cliente
+    "is_credit_note": "0",              # Boleano indica si la forma de pago es una nota de credito
+    "check_number": null,               # Numero de cheques utilizados en el pago
+    "payment_state": 0,                 # Boleano indica el estado del pago (0 correcto, 1 incorrecto)
+    "is_check": "0",                    # Boleano indica si la forma de pago es un cheque
+    "is_credit_memo": "0",              # Boleano indica si la forma de pago es un abono al credito del cliente
+    "is_cash": "1",                     # Boleano indica si la forma de pago es efectivo
+    "payment_date": "2012-10-29",       # Fecha en que se realiza el pago de un documento
+    "check_taken": 0,                   # Boleano indica si el cheque fue cobrabo
+    "office_name": "Casa Matriz"        # Nombre de la sucursal donde se efectuo el pato
+  }
+]
