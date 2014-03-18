@@ -80,3 +80,109 @@ EL response de la llamada  entregará la siguiente información en formato JSON
     ]
   }
 ]
+
+```
+Un ejemplo de llamada implementado en php sería:
+
+```php
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <?php
+       $url='http://app.bsale.cl/api/documents/payments/search/';
+        //Guarda los filtros de la solicitud en un arrego, el cual debe ser guardado en formato JSON.
+	//Preguntara por los pagos realizados el dia 02/01/2014 que sean facturas.
+      $data=json_encode(Array(payment_date => '2014-01-02', code_sii=>'33'));
+        //Se conforma el arrego con las variables POST que se mandarán en el Request
+        $fields = array(
+
+                        'access_token' => '09133626ffa3718dfedb58be12f7cba880cfcfea',
+                        'data' => $data
+                );
+        // Se inicializa la llamda CURL,
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch,CURLOPT_POST, 1);
+        curl_setopt($ch,CURLOPT_POSTFIELDS, $fields);
+        // Variable en la que se guarda el response
+        $response=curl_exec($ch);
+        curl_close($ch);
+
+        //Esto es sólo para poder visualizar lo que se está retornando
+        print_r($response);
+        ?>
+    </body>
+</html>
+
+```
+
+La respuesta que obtendrán será:
+
+```
+{
+  "status": "ok",
+  "data": [
+    {
+      "document_id": 2334,
+      "payment_type_id": 1,
+      "office_cost_center": "",
+      "is_credit_memo": "0",
+      "document_number": "125371",
+      "payment_type_name": "EFECTIVO",
+      "check_date": null,
+      "payment_id": 2092,
+      "code_sii": "33",
+      "payment_ledger_account": "",
+      "check_number": null,
+      "payment_date": "2014-01-02",
+      "client_code": "13.732.643-4",
+      "is_credit_note": "0",
+      "check_amount": null,
+      "payment_amount": 50.0,
+      "details": [
+
+      ],
+      "office_id": 2,
+      "is_client_credit": "0",
+      "check_taken": 0,
+      "payment_state": 0,
+      "office_name": "Casa Matriz",
+      "is_cash": "1",
+      "is_check": "0"
+    },
+    {
+      "document_id": 2347,
+      "payment_type_id": 1,
+      "office_cost_center": "",
+      "is_credit_memo": "0",
+      "document_number": "125373",
+      "payment_type_name": "EFECTIVO",
+      "check_date": null,
+      "payment_id": 2102,
+      "code_sii": "33",
+      "payment_ledger_account": "",
+      "check_number": null,
+      "payment_date": "2014-01-02",
+      "client_code": "12123706-7",
+      "is_credit_note": "0",
+      "check_amount": null,
+      "payment_amount": 60440.0,
+      "details": [
+
+      ],
+      "office_id": 2,
+      "is_client_credit": "0",
+      "check_taken": 0,
+      "payment_state": 0,
+      "office_name": "Casa Matriz",
+      "is_cash": "1",
+      "is_check": "0"
+    }
+  ]
+}
+
+```
