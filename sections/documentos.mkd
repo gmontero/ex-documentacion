@@ -378,14 +378,14 @@ per_document = 1
 POST documents/sales/create
 ```
 
-El objetivo de este método es la creación de documentos en bsale. Por el momento este método está limitado a la creación de notas de venta.
-Con este método será posible generar notas de venta desde otros sistema, en especial permitirá integrarse con las ventas efectuadas desde la página web de la empresa
+El objetivo de este método es la creación de documentos en bsale y de requerirse, su declaración al SII. 
 
-Los datos deberán ser mandados en formato JSON, y deberán estar contenidos dentro de la variable "data" del request.
-A su ves la variable data deberá tener tres estructuras:
-  client => Estructura que contendrá los datos del cliente asociado a la nota de venta
-  document => Estructura que contiene los datos generales del documento generado
+Los datos de la solicitud deberán ser mandados en formato JSON, y deberán estar contenidos dentro de la variable "data" del request.
+A su vez la variable data deberá tener las siguientes estructuras:
+  client => Estructura que contendrá los datos del cliente asociado al documento
+  document => Estructura que contiene los datos generales del documento
   detail => Estructura que contiene el detalle del documento
+  detail_payment => Estructura que contiene el detalle de pago del documento
   
 De esta manera un ejemplo de como debería estar conformada la variable "data" es:
 
@@ -411,12 +411,23 @@ data = {
         "price_list_id": "1",
         "exchange_rate": "0",
         "number": "223345",
+	"declare_sii": "0", #opcional, de no enviarse no se declara al sii
+	"send_html": "0", #opcional, de no enviarse no se devuelve el html de impresión        
         "detail": [
             {
                 "variant_id": "144",
-                "quantity": "1",
+                "quantity": "2",
                 "unit_net_value": "1203",
                 "discount": "0"
+            }
+        ],
+        "detail_payment": [
+            {
+            	"id_forma_pago": "5",
+	        "fecha_registro_pago": "2014-01-29",
+		"monto_forma_pago": "2406",
+		"fecha_cheque": "2014-02-01",
+	        "num_cheque": "188654"
             }
         ]
     }
@@ -468,13 +479,16 @@ La respuesta que obtendrán será:
 
 ```json
 {
-    "status": "ok",
-    "doc_number": 223347,
-    "doc_type": "Nota de Venta",
-    "doc_total": 1432,
-    "doc_token": "682ab58a2112",
-    "id": 2456,
-    "client_id": 74
+    "status": "ok", #estado de la operación "ok" éxito, "fail" error
+    "msg": "", #mensaje con descripción en caso de error
+    "doc_number": 223347, #número del documento (folio)
+    "doc_type": "Nota de Venta", #nombre del tipo de documento
+    "doc_total": 1432, #monto total del documento
+    "doc_token": "682ab58a2112", #token del documento
+    "id": 2456, #id del documento
+    "client_id": 74, #id del cliente asociado al documento
+    "html_doc": "", #html impresión del documento
+    "url_pdf": "", #url timbre sii
 }
 ```
 
