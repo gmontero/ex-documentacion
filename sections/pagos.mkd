@@ -186,3 +186,69 @@ La respuesta que obtendrán será:
 }
 
 ```
+
+## group_payment_type
+
+```
+POST documents/payments/group_payment_type
+```
+
+resumen de los pagos realizados agrupados por forma de pago
+
+Parametros:
+
+payment_date =>  Identificador del tipo de documento solicitado (este identificador es propio de bsale)
+
+code_sii         => Código documento basado en los identificadores de tipo de documento del SII de Chile
+
+document_id  => Identificador interno de un documento.
+
+office_id        => Identificador único sucursal
+
+payment_type_id  => Identificador de la forma de pago de un documento.
+
+EL response de la llamada  entregará la siguiente información en formato JSON
+
+```json
+[
+  {
+    "is_credit_memo": "0",
+    "payment_ledger_account": "",
+    "is_check": "0",
+    "office_id": 2,
+    "details": [
+
+    ],
+    "is_cash": "1",
+    "office_cost_center": "",
+    "payment_type_total_amount": "2371954",
+    "payment_date": "2014-02-14",
+    "code_sii": "",
+    "payment_type_id": 1,
+    "office_name": "Casa Matriz",
+    "payment_type_name": "EFECTIVO",
+    "is_client_credit": "0",
+    "is_credit_note": "0"
+  },
+  {
+    "is_credit_memo": "0",
+    "payment_ledger_account": null,
+    "is_check": "0",
+    "office_id": 2,
+    "details": [
+
+    ],
+    "is_cash": "0",
+    "office_cost_center": "",
+    "payment_type_total_amount": "1963500",
+    "payment_date": "2014-02-14",
+    "code_sii": "",
+    "payment_type_id": 3,
+    "office_name": "Casa Matriz",
+    "payment_type_name": "Nota Credito Devolucion",
+    "is_client_credit": "0",
+    "is_credit_note": "1"
+  }
+]
+
+```
