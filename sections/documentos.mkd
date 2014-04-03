@@ -132,6 +132,246 @@ EL response de la llamada  entregará la siguiente información en formato JSON
 
 
 ```
+## group_sales
+
+```
+POST documents/sales/group_sales
+```
+Retorna totales de las ventas por rango de fecha, los filtros posibles de incorporar en la variable "data":
+
+
+code_sii         => Código documento basado en los identificadores de tipo de documento del SII de Chile
+
+emission_date_start  => Fecha que indica el rango inicial de busqueda de documentos (El formato debe ser YYYY-MM-DD)
+
+emission_date_end  => Fecha que indica el rango final de busqueda de documentos (El formato debe ser YYYY-MM-DD)
+
+per_document => Boolean (0 o 1) indica si el resultado lo agrupa por documento
+
+EL response de la llamada  entregará la siguiente información en formato JSON para el resumen general (per_document = 0)
+
+```json
+[
+  {
+    "details": [
+      {
+        "total_net_amount": 1992103.0,
+        "item_ledger_account": null
+      }
+    ],
+    "office_cost_center": "",
+    "code_sii": "",
+    "total_net_amount": "1992103",
+    "taxes": [
+      {
+        "tax_name": "IVA",
+        "tax_id": "1",
+        "tax_amount": "378501"
+      }
+    ],
+    "month": "2",
+    "total_amount": "2370604",
+    "document_type_name": "Boleta",
+    "emission_date": "2014-02-14",
+    "total_tax_amount": "378501",
+    "year": "2014",
+    "office_name": "Casa Matriz",
+    "count": "6",
+    "total_exempt_amount": "0",
+    "office_id": 2
+  }
+]
+
+
+```
+per_document = 1
+
+```json
+[
+  {
+    "total_tax_amount": "369635",
+    "document_type_name": "Boleta",
+    "year": "2014",
+    "month": "2",
+    "document_number": 2503948,
+    "document_id": 2541,
+    "total_net_amount": "1945445",
+    "total_exempt_amount": "0",
+    "total_amount": "2315080",
+    "emission_date": "2014-02-14",
+    "details": [
+      {
+        "total_net_amount": 1945445.0,
+        "item_ledger_account": null
+      }
+    ],
+    "office_cost_center": "",
+    "code_sii": "",
+    "office_name": "Casa Matriz",
+    "count": "1",
+    "taxes": [
+      {
+        "tax_amount": "369635",
+        "tax_id": "1",
+        "tax_name": "IVA"
+      }
+    ],
+    "office_id": 2
+  },
+  {
+    "total_tax_amount": "1595",
+    "document_type_name": "Boleta",
+    "year": "2014",
+    "month": "2",
+    "document_number": 2503949,
+    "document_id": 2542,
+    "total_net_amount": "8395",
+    "total_exempt_amount": "0",
+    "total_amount": "9990",
+    "emission_date": "2014-02-14",
+    "details": [
+      {
+        "total_net_amount": "8395",
+        "item_ledger_account": null
+      }
+    ],
+    "office_cost_center": "",
+    "code_sii": "",
+    "office_name": "Casa Matriz",
+    "count": "1",
+    "taxes": [
+      {
+        "tax_amount": "1595",
+        "tax_id": "1",
+        "tax_name": "IVA"
+      }
+    ],
+    "office_id": 2
+  },
+  {
+    "total_tax_amount": "380",
+    "document_type_name": "Factura Electronica",
+    "year": "2014",
+    "month": "2",
+    "document_number": 125412,
+    "document_id": 2543,
+    "total_net_amount": "2000",
+    "total_exempt_amount": "0",
+    "total_amount": "2380",
+    "emission_date": "2014-02-14",
+    "details": [
+      {
+        "total_net_amount": "2000",
+        "item_ledger_account": null
+      }
+    ],
+    "office_cost_center": "",
+    "code_sii": "",
+    "office_name": "Casa Matriz",
+    "count": "1",
+    "taxes": [
+      {
+        "tax_amount": "380",
+        "tax_id": "1",
+        "tax_name": "IVA"
+      }
+    ],
+    "office_id": 2
+  },
+  {
+    "total_tax_amount": "1834",
+    "document_type_name": "Boleta",
+    "year": "2014",
+    "month": "2",
+    "document_number": 2503950,
+    "document_id": 2544,
+    "total_net_amount": "9650",
+    "total_exempt_amount": "0",
+    "total_amount": "11484",
+    "emission_date": "2014-02-14",
+    "details": [
+      {
+        "total_net_amount": "9650",
+        "item_ledger_account": null
+      }
+    ],
+    "office_cost_center": "",
+    "code_sii": "",
+    "office_name": "Casa Matriz",
+    "count": "1",
+    "taxes": [
+      {
+        "tax_amount": "1834",
+        "tax_id": "1",
+        "tax_name": "IVA"
+      }
+    ],
+    "office_id": 2
+  },
+  {
+    "total_tax_amount": "570",
+    "document_type_name": "Boleta",
+    "year": "2014",
+    "month": "2",
+    "document_number": 2503951,
+    "document_id": 2546,
+    "total_net_amount": "3000",
+    "total_exempt_amount": "0",
+    "total_amount": "3570",
+    "emission_date": "2014-02-14",
+    "details": [
+      {
+        "total_net_amount": "3000",
+        "item_ledger_account": null
+      }
+    ],
+    "office_cost_center": "",
+    "code_sii": "",
+    "office_name": "Casa Matriz",
+    "count": "1",
+    "taxes": [
+      {
+        "tax_amount": "570",
+        "tax_id": "1",
+        "tax_name": "IVA"
+      }
+    ],
+    "office_id": 2
+  },
+  {
+    "total_tax_amount": "4487",
+    "document_type_name": "Boleta",
+    "year": "2014",
+    "month": "2",
+    "document_number": 2503952,
+    "document_id": 2547,
+    "total_net_amount": "23613",
+    "total_exempt_amount": "0",
+    "total_amount": "28100",
+    "emission_date": "2014-02-14",
+    "details": [
+      {
+        "total_net_amount": "23613",
+        "item_ledger_account": null
+      }
+    ],
+    "office_cost_center": "",
+    "code_sii": "",
+    "office_name": "Casa Matriz",
+    "count": "1",
+    "taxes": [
+      {
+        "tax_amount": "4487",
+        "tax_id": "1",
+        "tax_name": "IVA"
+      }
+    ],
+    "office_id": 2
+  }
+]
+
+```
+
 ## create
 
 ```
