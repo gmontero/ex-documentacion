@@ -382,10 +382,10 @@ El objetivo de este método es la creación de documentos en bsale y de requerir
 
 Los datos de la solicitud deberán ser mandados en formato JSON, y deberán estar contenidos dentro de la variable "data" del request.
 A su vez la variable data deberá tener las siguientes estructuras:
-  client => Estructura que contendrá los datos del cliente asociado al documento
-  document => Estructura que contiene los datos generales del documento
-  detail => Estructura que contiene el detalle del documento
-  detail_payment => Estructura que contiene el detalle de pago del documento
+  <br>- client => Estructura que contendrá los datos del cliente asociado al documento
+  <br>- document => Estructura que contiene los datos generales del documento
+  <br>- detail => Estructura que contiene el detalle del documento
+  <br>- detail_payment => Estructura que contiene el detalle de pago del documento
   
 De esta manera un ejemplo de como debería estar conformada la variable "data" es:
 
@@ -411,8 +411,8 @@ data = {
         "price_list_id": "1",
         "exchange_rate": "0",
         "number": "223345",
-	"declare_sii": "0", #opcional, de no enviarse no se declara al sii
-	"send_html": "0", #opcional, de no enviarse no se devuelve el html de impresión        
+        "declare_sii": "0", #opcional, de no enviarse no se declara al sii
+        "send_html": "0", #opcional, de no enviarse no se devuelve el html de impresión        
         "detail": [
             {
                 "variant_id": "144",
@@ -423,11 +423,11 @@ data = {
         ],
         "detail_payment": [
             {
-            	"id_forma_pago": "5",
-	        "fecha_registro_pago": "2014-01-29",
-		"monto_forma_pago": "2406",
-		"fecha_cheque": "2014-02-01",
-	        "num_cheque": "188654"
+                "id_forma_pago": "5",
+                "fecha_registro_pago": "2014-01-29",
+                "monto_forma_pago": "2406",
+                "fecha_cheque": "2014-02-01",
+                "num_cheque": "188654"
             }
         ]
     }
