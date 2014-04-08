@@ -1,54 +1,54 @@
 ## Documentos
 
-En esta sección están  agrupados los métodos asociados a la obtención de documentos emitidos en bsale.
-Estos métodos están orientados a obtener la lista de facturas, boletas, notas de crédito, y cualquier documentos asociado a una venta.
+En esta sección están agrupados los métodos asociados a la obtención de documentos emitidos en Bsale.
+Estos métodos están orientados a obtener la lista de facturas, boletas, notas de crédito, y cualquier documento asociado a una venta.
 
 Los métodos disponibles son:
 
 ## search
 
 ```
-POST documents/sales/search
+POST api/documents/sales/search
 ```
 
 
-Los filtros posibles de incorporar en la variable "data" (el nombre y el valor de los filtros deben ir en formato json). Es importante notar que la llamada debe enviar al menos una variable:
+Los filtros posibles de incorporar en la variable "data" (el nombre y el valor de los filtros deben ir en formato json). Es importante notar que la llamada (request) debe enviar al menos un filtro:
 
 
-document_type_id =>  Identificador del tipo de documento solicitado (este identificador es propio de bsale)
+document_type_id => Identificador del tipo de documento solicitado (este identificador es propio de Bsale)
 
 code_sii         => Código documento basado en los identificadores de tipo de documento del SII de Chile
 
-document_number  => Número del documentos solicitado (Folio documento).
+document_number  => Número del documentos solicitado (folio documento)
 
 salesman_id      => Identificado único vendedor
 
 office_id        => Identificador único sucursal
 
-client_id        => Identificador único del cliente receptor del documento (Para Chile es el RUT)
+client_id        => Identificador único del cliente receptor del documento (para Chile es el RUT)
 
-emission_date_start  => Fecha que indica el rango inicial de busqueda de documentos (El formato debe ser YYYY-MM-DD)
+emission_date_start  => Fecha que indica el rango inicial de busqueda de documentos (el formato debe ser YYYY-MM-DD)
 
-emission_date_end  => Fecha que indica el rango final de busqueda de documentos (El formato debe ser YYYY-MM-DD)
+emission_date_end    => Fecha que indica el rango final de busqueda de documentos (el formato debe ser YYYY-MM-DD)
 
 declared_sii     => Documentos declarados al SII (1 declarado 0 no declarado)
 
-others_attrs     => Hash de atributos asociados al documento los cuales son dinámicamente configurados en bsale.
+others_attrs     => Hash de atributos asociados al documento los cuales son dinámicamente configurados en Bsale
 
 
-EL response de la llamada  entregará la siguiente información en formato JSON
+La respuesta (response) de la llamada  entregará la siguiente información en formato JSON
 
 ```json
 [
   {
     "emission_date": "2013-11-04",  # Fecha de emisión
-    "send_status": "0",             # Bollean que identifica Si el documento fue enviado por correo
+    "send_status": "0",             # Boolean que identifica si el documento fue enviado por correo
     "read_date": "0000-00-00",      # Fecha de visualización del documento enviado
-    "recipients": "",               # e-mail desinatario envío
+    "recipients": "",               # e-mail destinatario envío
     "client_email": "",             # e-mail cliente
     "is_credit_note": "0",          # Boolean  que identifica si el documento es una nota de crédito ( 0 no 1 si)
     "client_id": 0,                 # Identificador único de  cliente (id interno bsale)
-    "coin_id": "1",                 # id de la moneda del documento (Para chile es siempre en $)
+    "coin_id": "1",                 # Identificador de la moneda del documento (para chile es siempre en $)
     "iva_amount": "3495",           # Monto IVA
     "salesman_name": "Demo Bsale",  # Nombre vendedor
     "client_name": "Sin Cliente",   # Nombre cliente
@@ -74,7 +74,7 @@ EL response de la llamada  entregará la siguiente información en formato JSON
     "payment": "0",                 # Monto total pago asociado (cero en el caso de crédito)
     "is_shipping": "0",             # Boolean que determina si es guía de despacho el documento.
     "exempt_amount": 0.0,           # Mónto documento exento (caso de boletas y facturas excentas)
-    "office_destination": "",       # Nombre sucursal destino  (caso guías de despacho)
+    "office_destination": "",       # Nombre sucursal destino (caso guías de despacho)
     "office_cost_center": "",       # Centro de costo asociado a la sucursal
     "send_id": "0",                 # Identificador único de envío de correo
     "expiration_date": "2013-11-04",# Fecha vencimiento
@@ -88,22 +88,22 @@ EL response de la llamada  entregará la siguiente información en formato JSON
     "adicional_tax_amount": "0",    # Monto de impuestos específicos
     "details": [
       {
-        "cart_item_id": 7056,           # Cantidad líne 1
+        "cart_item_id": 7056,           # Cantidad línea 1
         "total_amount": 9990.0,         # Subtotal línea 1
-        "unit_amount": 8394.95798319328,# Precio Unitario línea 1
+        "unit_amount": 8394.95798319328,# Precio unitario línea 1
         "tax_amount": 1595.0,           # Impuesto asociado a línea 1
         "item_cost_center": null,       # Centro de costo (si se trabaja con cc a nivel de la sucursal queda nulo)
         "discount_percentage": 0.0,     # % Descuento línea 1
         "item_sku": "7450071009359",    # SKU ítem línea 1
         "item_ledger_account": null,    # Cuenta contable asociada al ítem línea 1
         "quantity": 1.0,                # Cantidad asociada a la línea 1
-        "item_name": "polera brillo ",  # Nombre producto líne 1
+        "item_name": "polera brillo ",  # Nombre producto línea 1
         "exempt_amount": 0,             # Monto exento de detalle
         "office_cost_center": "",       # Centro de costo sucursal
         "tax_percentage": "0.19",       # % del impuesto asociado a la línea
         "allows_decimal": "0",          # Boolen que identifica si el ítem permite cantidades decimales
-        "net_amount": 8395.0,           # subtotal neto
-        "exchange_rate": 1.0            # tipo de cambio
+        "net_amount": 8395.0,           # Subtotal neto
+        "exchange_rate": 1.0            # Tipo de cambio
       },
       {
         "cart_item_id": 7057,           # Valores correspondentes al segundo detalle
@@ -135,20 +135,20 @@ EL response de la llamada  entregará la siguiente información en formato JSON
 ## group_sales
 
 ```
-POST documents/sales/group_sales
+POST api/documents/sales/group_sales
 ```
 Retorna totales de las ventas por rango de fecha, los filtros posibles de incorporar en la variable "data":
 
 
 code_sii         => Código documento basado en los identificadores de tipo de documento del SII de Chile
 
-emission_date_start  => Fecha que indica el rango inicial de busqueda de documentos (El formato debe ser YYYY-MM-DD)
+emission_date_start  => Fecha que indica el rango inicial de busqueda de documentos (el formato debe ser YYYY-MM-DD)
 
-emission_date_end  => Fecha que indica el rango final de busqueda de documentos (El formato debe ser YYYY-MM-DD)
+emission_date_end  => Fecha que indica el rango final de busqueda de documentos (el formato debe ser YYYY-MM-DD)
 
 per_document => Boolean (0 o 1) indica si el resultado lo agrupa por documento
 
-EL response de la llamada  entregará la siguiente información en formato JSON para el resumen general (per_document = 0)
+La respuesta (response) de la llamada  entregará la siguiente información en formato JSON para el resumen general (per_document = 0)
 
 ```json
 [
@@ -375,10 +375,10 @@ per_document = 1
 ## create
 
 ```
-POST documents/sales/create
+POST api/documents/sales/create
 ```
 
-El objetivo de este método es la creación de documentos en bsale y de requerirse, su declaración al SII. 
+El objetivo de este método es la creación de documentos en Bsale y de requerirse, su declaración al SII. 
 
 Los datos de la solicitud deberán ser mandados en formato JSON, y deberán estar contenidos dentro de la variable "data" del request.
 A su vez la variable data deberá tener las siguientes estructuras:
@@ -412,13 +412,16 @@ data = {
         "exchange_rate": "0",
         "number": "223345",
         "declare_sii": "0", #opcional, de no enviarse no se declara al sii
-        "send_html": "0", #opcional, de no enviarse no se devuelve el html de impresión        
+        "send_html": "0", #opcional, de no enviarse no se devuelve el html de impresión
+        "id_venta_externa": "87162", #identificador del documento en el sistema que se conecta a la API 
         "detail": [
             {
                 "variant_id": "144",
                 "quantity": "2",
                 "unit_net_value": "1203",
-                "discount": "0"
+                "discount": "0",
+                "comment": "glosa de prueba", #opcional, de no enviar la variante se debe incluir la glosa del producto/servicio
+                "product_tax": [{:id_impuesto => "1"}] #al enviar la glosa dinámica se deben incluir los impuestos a considerar
             }
         ],
         "detail_payment": [
@@ -426,15 +429,15 @@ data = {
                 "id_forma_pago": "5",
                 "fecha_registro_pago": "2014-01-29",
                 "monto_forma_pago": "2406",
-                "fecha_cheque": "2014-02-01",
-                "num_cheque": "188654"
+                "fecha_cheque": "2014-02-01", #opcional, debe ir en caso de que la forma de pago sea cheque
+                "num_cheque": "188654" #opcional, debe ir en caso de que la forma de pago sea cheque
             }
         ]
     }
 }
 
 ```
-Un ejemplo de llamada implementado en php sería:
+Un ejemplo de llamada implementada en PHP sería:
 
 ```php
 <!DOCTYPE html>
