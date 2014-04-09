@@ -4,7 +4,7 @@ En esta sección están agrupados los métodos asociados a la obtención de los 
 
 Los métodos disponibles son:
 
-## search
+## get_taxes
 
 ```
 POST api/tax/get_taxes
