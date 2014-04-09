@@ -22,14 +22,13 @@ La respuesta (response) de la llamada entregará la siguiente información en fo
      "nombre_forma_pago": "Efectivo", #Nombre de la forma de pago
      "es_virtual": "",                #
      "es_cheque": "0",                #Boolean que indica si la forma de pago es cheque o no
-     "max_cheque": "",                #
+     "max_cheque": "",                #Límite de cheques a generar al usar la forma de pago
      "es_nota_credito": "0",          #Boolean que indica si la forma de pago es nota de crédito o no
      "es_credito_cliente": "0",       #Boolean que indica si la forma de pago es crédito cliente o no
      "es_efectivo": "1",              #Boolean que indica si la forma de pago es efectivo o no
      "es_abono": "0",                 #Boolean que indica si la forma de pago es abono o no
      "estado_forma_pago": "0",        #Estado de la forma de pago (0:activo, 1:inactivo)
-     "max_cuotas_cliente": "",
-     "cuenta_contable": ""            #
+     "cuenta_contable": ""            #Cuenta contable asociada
   }
 ]
 
