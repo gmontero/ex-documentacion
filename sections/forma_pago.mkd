@@ -4,7 +4,7 @@ En esta sección están agrupados los métodos asociados a la obtención de las 
 
 Los métodos disponibles son:
 
-## search
+## get_payment_types
 
 ```
 POST api/payment_type/get_payment_types
