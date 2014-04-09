@@ -1,1 +1,32 @@
-api/tax
+## Impuesto
+
+En esta sección están agrupados los métodos asociados a la obtención de los distintos impuestos existentes en Bsale.
+
+Los métodos disponibles son:
+
+## search
+
+```
+POST api/tax/get_taxes
+```
+
+
+En la llamada a este método es posible incorporar el filtro opcional "estado_impuesto" (0: activo, 1: inactivo) para recuperar los impuestos que correspondan. Si no se envía filtro el método devuelve todos los impuestos en Bsale.
+
+La respuesta (response) de la llamada entregará la siguiente información en formato JSON
+
+```json
+[
+  {
+     "id_impuesto": "1",            #Identificador del impuesto
+     "nombre_impuesto": "IVA",      #Nombre del impuesto
+     "porcentaje_impuesto": "19",   #Valor del porcentaje del impuesto
+     "es_para_todo_producto": "0",  #Boolean que indica si el impuesto aplica a todos los productos cada vez que se cree uno nuevo
+     "estado_impuesto": "0",        #Estado del impuesto (0:activo, 1:inactivo)
+     "cuenta_contable": "",         #Cuenta contable asociada al impuesto
+     "codigo_impuesto": "14",       #Código del impuesto en SII
+  }
+]
+
+
+```
