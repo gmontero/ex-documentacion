@@ -1,1 +1,103 @@
-api/stock
+## Stock
+
+En esta sección están agrupados los métodos asociados al manejo de stock en Bsale.
+
+Los métodos disponibles son:
+
+## get_stock_by_office
+
+```
+POST api/stock/get_stock_by_office
+```
+
+
+Este método busca el stock de cada variante de producto por sucursal. Los datos posibles de incorporar en la llamada, son los siguientes:
+<br> filter => Cadena de texto para filtrar productos específicos, por ejemplo todos los que contengan la cadena "be"
+<br> sucursal_id => Identificador de la sucursal para la que se desea obtener el stock
+
+La respuesta (response) de la llamada entregará la siguiente información en formato JSON
+
+```json
+[
+  {
+    "codigo_variante_producto": "7801610000595",     #Código interno del producto (SKU)
+    "nombre_producto": "Bebida Coca-Cola",           #Nombre del producto al que pertenece la variante
+    "descripcion_variante": "Coca Cola Light 591ml", #Descripción variante
+    "stock": "187",                                  #Stock de la variante en la sucursal
+    "id_variante_producto": "545",                   #Identificador de la variante
+    "costo_variante": "558",                         #Costo unitario de la variante
+  }
+]
+
+
+```
+## stock_update
+
+```
+POST api/stock/stock_update
+```
+
+
+Este método se debe utilizar para la actualización de stock de una variante. Los datos que se deben enviar son los siguientes:
+<br> id_variante_producto => Identificador de la variante
+<br> id_sucursal => Identificador de la sucursal
+<br> stock_variante => Nuevo stock de la variante
+<br> costo_variante => Nuevo costo unitario de la variante
+
+La respuesta (response) de la llamada entregará la siguiente información en formato JSON
+
+```json
+  {
+    "status": "ok",                  #Estado de la operación (ok o fail en caso de error)
+    "msg": "Guardado con éxito"      #Mensaje descriptivo
+  }
+  
+
+```
+## stock_save
+
+```
+POST api/stock/stock_save
+```
+
+
+Este método se debe utilizar para la recepción de stock en Bsale. Los datos que se deben enviar son los siguientes:
+<br> ingreso_stock => Estructura con datos generales de la recepción
+<br> detalle_ingreso_stock => Arreglo con detalle de recepción
+
+Un ejemplo de llamada es el siguiente:
+
+```json
+
+  "ingreso_stock":
+          {
+            "num_doc_recepcion": "21312",                #N° del documento de recepción 
+            "doc_recepcion": "Factura",                  #Documento de recepción (Factura, Guía, Sin Documento)
+            "nota_recepcion": "Recepción sin problemas", #Nota de recepción
+            "id_sucursal": "2",                          #Identificador de la sucursal
+            "id_centro_costo_imagestion": "0",           #Identificador centro costo en caso de conexión con Imagestión 
+            "descripcion_centro_costo_imagestion": ""    #Descripción centro costo en caso de conexión con Imagestión
+          },
+  "detalle_ingreso_stock":
+  [
+          {
+            "id_variante_producto": "329",               #Identificador de variante recepcionada
+            "cantidad_ingreso": "10",                    #Cantidad recepcionada
+            "costo_ingreso": "1000",                     #Costo unitario variante recepcionada
+            "id_detalle_guia_imagestion": "0"            #Identificador guía en caso de conexión con Imagestión
+          }
+  ]
+
+```
+
+La respuesta (response) de la llamada entregará la siguiente información en formato JSON
+
+```json
+
+  {
+    "status": "ok",                  #Estado de la operación (ok o fail en caso de error)
+    "msg": "Guardado con éxito"      #Mensaje descriptivo
+  }
+
+
+
