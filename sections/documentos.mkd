@@ -137,14 +137,19 @@ La respuesta (response) de la llamada  entregará la siguiente información en f
 ```
 POST api/documents/sales/group_sales
 ```
-Retorna totales de las ventas por rango de fecha, los filtros posibles de incorporar en la variable "data":
+Retorna totales de las ventas por rango de fecha, agrupados por centro de costo, codigo tributario y fecha de emision.
 
+Los filtros posibles de incorporar en la variable "data":
 
-code_sii         => Código documento basado en los identificadores de tipo de documento del SII de Chile
+code_sii         => Código documento basado en los identificadores de tipo de documento del SII de Chile, pueden ser varios separados por coma
 
-emission_date_start  => Fecha que indica el rango inicial de busqueda de documentos (el formato debe ser YYYY-MM-DD)
+emission_date_start  => Fecha de emision que indica el rango inicial de busqueda de documentos (el formato debe ser YYYY-MM-DD)
 
-emission_date_end  => Fecha que indica el rango final de busqueda de documentos (el formato debe ser YYYY-MM-DD)
+emission_date_end  => Fecha de emision que indica el rango final de busqueda de documentos (el formato debe ser YYYY-MM-DD)
+
+generation_date_start => Fecha de generacion que indica el rango incial de busqueda de documentos (el formato debe ser YYYY-MM-DD)
+
+generation_date_end => Fecha de generacion que indica el rango final de busqueda de documentos (el formato debe ser YYYY-MM-DD)
 
 per_document => Boolean (0 o 1) indica si el resultado lo agrupa por documento
 

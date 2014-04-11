@@ -199,7 +199,7 @@ Parametros:
 
 payment_date =>  Identificador del tipo de documento solicitado (este identificador es propio de bsale)
 
-code_sii         => Código documento basado en los identificadores de tipo de documento del SII de Chile
+code_sii         => Código documento basado en los identificadores de tipo de documento del SII de Chile, pueden ser varios separados por coma
 
 document_id  => Identificador interno de un documento.
 
