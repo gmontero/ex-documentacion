@@ -672,7 +672,7 @@ using (StreamWriter stream_writer = new StreamWriter(request.GetRequestStream())
 	string send_html = "1"; //se indica si en la respuesta se desea obtener el formato de impresión del documento
 	
 	//hash con datos del documento
-	string document = @"{'document_type_id':" +document_type_id+ ",
+	string document = @"{'document_type_id':'" +document_type_id+ "',
 						 'emission_date':'" +emission_date+ "',
 						 'expiration_date':'" +expiration_date+ "',
 						 'office_id':'" +office_id+ "',
