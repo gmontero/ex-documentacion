@@ -132,6 +132,118 @@ La respuesta (response) de la llamada  entregará la siguiente información en f
 
 
 ```
+
+Un ejemplo de llamada implementada en C Sharp (.NET) sería:
+
+```csharp
+//incluir en el encabezado de la clase
+using System.Net;
+
+//se define la url del método de la api
+string url_api = "http://app.bsale.cl/api/documents/sales/search";
+//se genera un request a dicha url, indicando que es los datos a enviar van en formato JSON y que se utilizará el método POST
+HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+request.ContentType = "application/json; charset=utf-8";					
+request.Method = "POST";
+using (StreamWriter stream_writer = new StreamWriter(request.GetRequestStream()))
+{
+	//se generan los datos a enviar
+	
+	string document_number = "15";
+	
+	string post_data = "{'data' : {\\'document_number\\' : \\'" +document_number+ "\\'}, 'access_token' : 'TU_ACCESS_TOKEN'}";
+	//paso los parámetros de la llamada
+	stream_writer.Write(post_data);
+	stream_writer.Flush();
+	stream_writer.Close();
+	//proceso la llamada
+	HttpWebResponse http_response = (HttpWebResponse)request.GetResponse();
+	using (StreamReader stream_reader = new StreamReader(httpResponse.GetResponseStream()))
+	{
+		//capturo la respuesta de la llamada y la muestro
+		string result = stream_reader.ReadToEnd();	
+		Response.Write(result);				   
+	}
+}
+
+```
+
+Un ejemplo de llamada implementada en Java sería:
+
+```java
+package testbsale;
+
+import org.json.simple.JSONObject;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.simple.JSONArray;
+
+/**
+ *
+ * @author carlos
+ */
+public class Testbsale {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+
+        String error;
+        try {
+            // Url base de la API
+            String url = "http://app.bsale.cl/api/documents/sales/search";
+            
+            JSONObject data = new JSONObject();            
+            JSONObject filtros = new JSONObject();
+            //filtros
+            filtros.put("document_number", "15"); 
+            //token acceso
+            data.put("access_token", "TU_ACCESS_TOKEN");
+            data.put("data", filtros);
+            
+            System.out.println(data.toString());
+            
+            DefaultHttpClient httpClient = new DefaultHttpClient();
+            HttpPost request = new HttpPost(url);
+            request.setHeader("Content-Type", "application/json");
+            
+            StringEntity parametros = new StringEntity(data.toString());            
+            parametros.setContentType("application/json");
+                        
+            request.setEntity(parametros);
+            
+            HttpResponse response = httpClient.execute(request);
+
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader((response.getEntity().getContent())));
+
+            String output;
+            System.out.println("Respuesta de Bsale: \n");
+            while ((output = br.readLine()) != null) {
+                System.out.println(output);
+            }
+
+            httpClient.getConnectionManager().shutdown();
+
+        } catch (MalformedURLException e) {
+
+            e.printStackTrace();
+
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+    }
+}
+```
+
 ## group_sales
 
 ```
@@ -498,6 +610,93 @@ La respuesta que obtendrán será:
     "html_doc": "", #html impresión del documento
     "url_pdf": "", #url timbre sii
 }
+```
+
+Un ejemplo de llamada implementada en C Sharp (.NET) sería:
+
+```csharp
+//incluir en el encabezado de la clase
+using System.Net;
+
+//se define la url del método de la api
+string url_api = "http://app.bsale.cl/api/documents/sales/create";
+//se genera un request a dicha url, indicando que es los datos a enviar van en formato JSON y que se utilizará el método POST
+HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+request.ContentType = "application/json; charset=utf-8";					
+request.Method = "POST";
+using (StreamWriter stream_writer = new StreamWriter(request.GetRequestStream()))
+{
+	//se generan los datos a enviar
+	
+	string first_name = "nombre";
+	string last_name = "apellido";
+	string code = "15286665-8";
+	string company = "empresa";
+	string address = "direccion";
+	string city = "ciudad";
+	string municipality = "comuna";
+	
+	//hash con datos del cliente
+	
+	string client = @"{\\'first_name\\':\\'" +first_name+ "\\',
+					   \\'last_name\\':\\'" +last_name+ "\\',
+					   \\'code\\':\\'" +code+ "\\',
+					   \\'company\\':\\'" +company+ "\\',
+					   \\'address\\':\\'" +address+ "\\',
+					   \\'city\\':\\'" +city+ "\\',
+					   \\'municipality\\':\\'" +municipality+ "\\'}";	
+	
+	//id de la variante de producto
+	string variant_id = "150";
+	//cantidad
+	string quantity = "5";
+	//valor neto unitario
+	string unit_net_value = "10000";
+	//descuento
+	string discount = "0";
+	
+	//hash con datos del detalle del documento, ojo que más abajo se indica que pueden ser varios y se pasan al documento como arreglo
+	
+	string detail = @"{\\'variant_id\\':" +variant_id+ ",
+					   \\'quantity\\':" +quantity+ ",
+					   \\'unit_net_value\\':" +unit_net_value+ ",
+					   \\'discount\\':"+discount+"}";							
+	
+	string document_type_id = "5"; //id del tipo de documento
+	string emission_date = "2013-11-22"; //fecha de emisión
+	string expiration_date = "2013-11-22"; //fecha de vencimiento
+	string office_id = "2"; //id de la sucursal
+	string price_list_id = "1"; //id de la lista de precios
+	string number = "12345"; //número de documento (folio)
+	string declare_sii = "0"; //se indica si se desea declarar el documento al SII, en este caso no
+	string send_html = "1"; //se indica si en la respuesta se desea obtener el formato de impresión del documento
+	
+	//hash con datos del documento
+	string document = @"{\\'document_type_id\\':" +document_type_id+ ",
+						 \\'emission_date\\':\\'" +emission_date+ "\\',
+						 \\'expiration_date\\':\\'" +expiration_date+ "\\',
+						 \\'office_id\\':\\'" +office_id+ "\\',
+						 \\'price_list_id\\':\\'" +price_list_id+ "\\',
+						 \\'number\\':\\'" +number+ "\\',
+						 \\'declare_sii\\':\\'" +declare_sii+ "\\',
+						 \\'send_html\\':\\'" +send_html+ "\\',
+						 \\'detail\\':[" +detail+ "]}"; //acá asigno todos los detalles del documento, pueden ser más de uno por eso va con [] (arreglo)
+	
+	string post_data = "{'data' : {'client' : " +client+ ", 'document' : " +document+ " }, 'access_token' : 'TU_ACCESS_TOKEN'}";
+	//paso los parámetros de la llamada
+	stream_writer.Write(post_data);
+	stream_writer.Flush();
+	stream_writer.Close();
+	//proceso la llamada
+	HttpWebResponse http_response = (HttpWebResponse)request.GetResponse();
+	using (StreamReader stream_reader = new StreamReader(httpResponse.GetResponseStream()))
+	{
+		//capturo la respuesta de la llamada y la muestro
+		string result = stream_reader.ReadToEnd();	
+		Response.Write(result);				   
+	}
+}
+
 ```
 
 
