@@ -151,7 +151,7 @@ using (StreamWriter stream_writer = new StreamWriter(request.GetRequestStream())
 	
 	string document_number = "15";
 	
-	string post_data = "{'data' : {\\'document_number\\' : \\'" +document_number+ "\\'}, 'access_token' : 'TU_ACCESS_TOKEN'}";
+	string post_data = "{'data' : {'document_number' : '" +document_number+ "'}, 'access_token' : 'TU_ACCESS_TOKEN'}";
 	//paso los parámetros de la llamada
 	stream_writer.Write(post_data);
 	stream_writer.Flush();
@@ -638,13 +638,13 @@ using (StreamWriter stream_writer = new StreamWriter(request.GetRequestStream())
 	
 	//hash con datos del cliente
 	
-	string client = @"{\\'first_name\\':\\'" +first_name+ "\\',
-					   \\'last_name\\':\\'" +last_name+ "\\',
-					   \\'code\\':\\'" +code+ "\\',
-					   \\'company\\':\\'" +company+ "\\',
-					   \\'address\\':\\'" +address+ "\\',
-					   \\'city\\':\\'" +city+ "\\',
-					   \\'municipality\\':\\'" +municipality+ "\\'}";	
+	string client = @"{'first_name':'" +first_name+ "',
+					   'last_name':'" +last_name+ "',
+					   'code':'" +code+ "',
+					   'company':'" +company+ "',
+					   'address':'" +address+ "',
+					   'city':'" +city+ "',
+					   'municipality':'" +municipality+ "'}";	
 	
 	//id de la variante de producto
 	string variant_id = "150";
@@ -657,10 +657,10 @@ using (StreamWriter stream_writer = new StreamWriter(request.GetRequestStream())
 	
 	//hash con datos del detalle del documento, ojo que más abajo se indica que pueden ser varios y se pasan al documento como arreglo
 	
-	string detail = @"{\\'variant_id\\':" +variant_id+ ",
-					   \\'quantity\\':" +quantity+ ",
-					   \\'unit_net_value\\':" +unit_net_value+ ",
-					   \\'discount\\':"+discount+"}";							
+	string detail = @"{'variant_id':'" +variant_id+ "',
+					   'quantity':'" +quantity+ "',
+					   'unit_net_value':'" +unit_net_value+ "',
+					   'discount':'" +discount+ "'}";							
 	
 	string document_type_id = "5"; //id del tipo de documento
 	string emission_date = "2013-11-22"; //fecha de emisión
@@ -672,15 +672,15 @@ using (StreamWriter stream_writer = new StreamWriter(request.GetRequestStream())
 	string send_html = "1"; //se indica si en la respuesta se desea obtener el formato de impresión del documento
 	
 	//hash con datos del documento
-	string document = @"{\\'document_type_id\\':" +document_type_id+ ",
-						 \\'emission_date\\':\\'" +emission_date+ "\\',
-						 \\'expiration_date\\':\\'" +expiration_date+ "\\',
-						 \\'office_id\\':\\'" +office_id+ "\\',
-						 \\'price_list_id\\':\\'" +price_list_id+ "\\',
-						 \\'number\\':\\'" +number+ "\\',
-						 \\'declare_sii\\':\\'" +declare_sii+ "\\',
-						 \\'send_html\\':\\'" +send_html+ "\\',
-						 \\'detail\\':[" +detail+ "]}"; //acá asigno todos los detalles del documento, pueden ser más de uno por eso va con [] (arreglo)
+	string document = @"{'document_type_id':" +document_type_id+ ",
+						 'emission_date':'" +emission_date+ "',
+						 'expiration_date':'" +expiration_date+ "',
+						 'office_id':'" +office_id+ "',
+						 'price_list_id':'" +price_list_id+ "',
+						 'number':'" +number+ "',
+						 'declare_sii':'" +declare_sii+ "',
+						 'send_html':'" +send_html+ "',
+						 'detail':[" +detail+ "]}"; //acá asigno todos los detalles del documento, pueden ser más de uno por eso va con [] (arreglo)
 	
 	string post_data = "{'data' : {'client' : " +client+ ", 'document' : " +document+ " }, 'access_token' : 'TU_ACCESS_TOKEN'}";
 	//paso los parámetros de la llamada
