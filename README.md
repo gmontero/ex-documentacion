@@ -10,7 +10,7 @@ En la carpeta sections pueden encontrar los distintos métodos disponibles.
 
 ## Mandar un Request.
 
-Para hacer una llamada a la API, la URL a utilizar debe ser http://app.bsale.cl/api/, seguido del nombre del método solicitado. En este sentido se debe notar que los métodos están agrupados en sub carpetas, por lo que al nombre del método se le debe anteponer el nombre de la carpeta. Por ejemplo, si se requiere obtener la lista de los documentos generados en Bsale (lista de factura, boletas etc..) la llamada será:
+Para hacer una llamada a la API, la URL a utilizar debe ser http://app.bsale.cl/api/, seguido del nombre del método solicitado. En este sentido se debe notar que los métodos están agrupados en sub carpetas, por lo que al nombre del método se le debe anteponer el nombre de la carpeta. Por ejemplo, si se requiere obtener la lista de los documentos generados en Bsale (lista de facturas, boletas, etc.) la llamada será:
 
 http://app.bsale.cl/api/documents/search
 
