@@ -374,116 +374,119 @@ Un ejemplo de llamada sería:
 donde el resultado obtenido tendría el siguiente formato:
 
 ```json
-[
-    {
-        "product_name": "Chaleco Verde XL",
-        "sku": "1349272051",
-        "product_id": 134,
-        "barcode": "1349272051",
-        "variant_id": 492,
-        "variant_name": "Verde L",
-        "state": 0
-    },
-    {
-        "product_name": "Chaleco Verde XL",
-        "sku": "1349271448",
-        "product_id": 134,
-        "barcode": "1349271448",
-        "variant_id": 491,
-        "variant_name": "Verde XL",
-        "state": 0
-    },
-    {
-        "product_name": "Chaqueta Mezclilla",
-        "sku": "1359758002",
-        "product_id": 167,
-        "barcode": "000034489604",
-        "variant_id": 539,
-        "variant_name": "XL Azul",
-        "state": 0
-    },
-    {
-        "product_name": "Chaqueta Mezclilla",
-        "sku": "1359758043",
-        "product_id": 167,
-        "barcode": "1359758043",
-        "variant_id": 541,
-        "variant_name": "XL Negra",
-        "state": 0
-    },
-    {
-        "product_name": "CHOCMAN",
-        "sku": "1352138024",
-        "product_id": 158,
-        "barcode": "1352138024",
-        "variant_id": 520,
-        "variant_name": "CHOCMAN XL",
-        "state": 0
-    },
-    {
-        "product_name": "Funny Way",
-        "sku": "FUWAYAZUL025",
-        "product_id": 10,
-        "barcode": "",
-        "variant_id": 102,
-        "variant_name": "XL Verde",
-        "state": 0
-    },
-    {
-        "product_name": "Polar",
-        "sku": "1351176770",
-        "product_id": 143,
-        "barcode": "1351176770",
-        "variant_id": 503,
-        "variant_name": "xl",
-        "state": 0
-    },
-    {
-        "product_name": "Polar Columbia",
-        "sku": "1380201826",
-        "product_id": 353,
-        "barcode": "1380201826",
-        "variant_id": 1453,
-        "variant_name": "XL",
-        "state": 0
-    },
-    {
-        "product_name": "Polera",
-        "sku": "1351176399",
-        "product_id": 113,
-        "barcode": "1351176399",
-        "variant_id": 501,
-        "variant_name": "xl",
-        "state": 0
-    },
-    {
-        "product_name": "Polera Polo",
-        "sku": "2536746",
-        "product_id": 407,
-        "barcode": "1391705898",
-        "variant_id": 1565,
-        "variant_name": "XL Roja",
-        "state": 0
-    },
-    {
-        "product_name": "Polera Polo",
-        "sku": "253674786",
-        "product_id": 407,
-        "barcode": "1391722102",
-        "variant_id": 1566,
-        "variant_name": "XL Verde",
-        "state": 0
-    },
-    {
-        "product_name": "Chaqueta",
-        "sku": "1359757436",
-        "product_id": 164,
-        "barcode": "239DNKF00910",
-        "variant_id": 535,
-        "variant_name": "XL",
-        "state": 1
-    }
-]
+{	"status": "ok".
+	"data":
+		[
+		    {
+		        "product_name": "Chaleco Verde XL",
+		        "sku": "1349272051",
+		        "product_id": 134,
+		        "barcode": "1349272051",
+		        "variant_id": 492,
+		        "variant_name": "Verde L",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "Chaleco Verde XL",
+		        "sku": "1349271448",
+		        "product_id": 134,
+		        "barcode": "1349271448",
+		        "variant_id": 491,
+		        "variant_name": "Verde XL",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "Chaqueta Mezclilla",
+		        "sku": "1359758002",
+		        "product_id": 167,
+		        "barcode": "000034489604",
+		        "variant_id": 539,
+		        "variant_name": "XL Azul",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "Chaqueta Mezclilla",
+		        "sku": "1359758043",
+		        "product_id": 167,
+		        "barcode": "1359758043",
+		        "variant_id": 541,
+		        "variant_name": "XL Negra",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "CHOCMAN",
+		        "sku": "1352138024",
+		        "product_id": 158,
+		        "barcode": "1352138024",
+		        "variant_id": 520,
+		        "variant_name": "CHOCMAN XL",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "Funny Way",
+		        "sku": "FUWAYAZUL025",
+		        "product_id": 10,
+		        "barcode": "",
+		        "variant_id": 102,
+		        "variant_name": "XL Verde",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "Polar",
+		        "sku": "1351176770",
+		        "product_id": 143,
+		        "barcode": "1351176770",
+		        "variant_id": 503,
+		        "variant_name": "xl",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "Polar Columbia",
+		        "sku": "1380201826",
+		        "product_id": 353,
+		        "barcode": "1380201826",
+		        "variant_id": 1453,
+		        "variant_name": "XL",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "Polera",
+		        "sku": "1351176399",
+		        "product_id": 113,
+		        "barcode": "1351176399",
+		        "variant_id": 501,
+		        "variant_name": "xl",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "Polera Polo",
+		        "sku": "2536746",
+		        "product_id": 407,
+		        "barcode": "1391705898",
+		        "variant_id": 1565,
+		        "variant_name": "XL Roja",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "Polera Polo",
+		        "sku": "253674786",
+		        "product_id": 407,
+		        "barcode": "1391722102",
+		        "variant_id": 1566,
+		        "variant_name": "XL Verde",
+		        "state": 0
+		    },
+		    {
+		        "product_name": "Chaqueta",
+		        "sku": "1359757436",
+		        "product_id": 164,
+		        "barcode": "239DNKF00910",
+		        "variant_id": 535,
+		        "variant_name": "XL",
+		        "state": 1
+		    }
+		]
+}
 ```
 
 
