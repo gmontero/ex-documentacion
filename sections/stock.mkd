@@ -13,22 +13,24 @@ POST api/stock/get_stock_by_office
 
 Este método busca el stock de cada variante de producto por sucursal. Los datos posibles de incorporar en la llamada, son los siguientes:
 <br> filter => Cadena de texto para filtrar productos específicos, por ejemplo todos los que contengan la cadena "be"
-<br> sucursal_id => Identificador de la sucursal para la que se desea obtener el stock
+<br> office_id => Identificador de la sucursal para la que se desea obtener el stock
 
 La respuesta (response) de la llamada entregará la siguiente información en formato JSON
 
 ```json
-[
-  {
-    "codigo_variante_producto": "7801610000595",     #Código interno del producto (SKU)
-    "nombre_producto": "Bebida Coca-Cola",           #Nombre del producto al que pertenece la variante
-    "descripcion_variante": "Coca Cola Light 591ml", #Descripción variante
-    "stock": "187",                                  #Stock de la variante en la sucursal
-    "id_variante_producto": "545",                   #Identificador de la variante
-    "costo_variante": "558",                         #Costo unitario de la variante
-  }
-]
-
+{   "status": "ok",
+    "data": 
+            [
+              {
+                "variant_code": "7801610000595",                #Código interno del producto (SKU)
+                "variant_name": "Bebida Coca-Cola",             #Nombre del producto al que pertenece la variante
+                "variant_description": "Coca Cola Light 591ml", #Descripción variante
+                "variant_stock": "187",                         #Stock de la variante en la sucursal
+                "variant_id": "545",                            #Identificador de la variante
+                "variant_cost": "558",                          #Costo unitario de la variante
+              }
+            ]
+}
 
 ```
 ## stock_update
@@ -39,10 +41,10 @@ POST api/stock/stock_update
 
 
 Este método se debe utilizar para la actualización de stock de una variante. Los datos que se deben enviar son los siguientes:
-<br> id_variante_producto => Identificador de la variante
-<br> id_sucursal => Identificador de la sucursal
-<br> stock_variante => Nuevo stock de la variante
-<br> costo_variante => Nuevo costo unitario de la variante
+<br> variant_id => Identificador de la variante
+<br> office_id => Identificador de la sucursal
+<br> variant_stock => Nuevo stock de la variante
+<br> variant_cost => Nuevo costo unitario de la variante
 
 La respuesta (response) de la llamada entregará la siguiente información en formato JSON
 
@@ -62,32 +64,35 @@ POST api/stock/stock_save
 
 
 Este método se debe utilizar para la recepción de stock en Bsale. Los datos que se deben enviar son los siguientes:
-<br> ingreso_stock => Estructura con datos generales de la recepción
-<br> detalle_ingreso_stock => Arreglo con detalle de recepción
+<br> stock => Estructura con datos generales de la recepción
+<br> stock_detail => Arreglo con detalle de recepción
+
+Estos deben ir dentro de la variable "data".
 
 Un ejemplo de llamada es el siguiente:
 
 ```json
-
-  "ingreso_stock":
-          {
-            "num_doc_recepcion": "21312",                #N° del documento de recepción 
-            "doc_recepcion": "Factura",                  #Documento de recepción (Factura, Guía, Sin Documento)
-            "nota_recepcion": "Recepción sin problemas", #Nota de recepción
-            "id_sucursal": "2",                          #Identificador de la sucursal
-            "id_centro_costo_imagestion": "0",           #Identificador centro costo en caso de conexión con Imagestión 
-            "descripcion_centro_costo_imagestion": ""    #Descripción centro costo en caso de conexión con Imagestión
-          },
-  "detalle_ingreso_stock":
-  [
-          {
-            "id_variante_producto": "329",               #Identificador de variante recepcionada
-            "cantidad_ingreso": "10",                    #Cantidad recepcionada
-            "costo_ingreso": "1000",                     #Costo unitario variante recepcionada
-            "id_detalle_guia_imagestion": "0"            #Identificador guía en caso de conexión con Imagestión
-          }
-  ]
-
+"data" =
+        {
+          "stock":
+                  {
+                    "document_number": "21312",                #N° del documento de recepción 
+                    "document_type": "Factura",                #Documento de recepción (Factura, Guía, Sin Documento)
+                    "note": "Recepción sin problemas",         #Nota de recepción
+                    "office_id": "2",                          #Identificador de la sucursal
+                    "imagestion_cost_center_id": "0",          #Identificador centro costo en caso de conexión con Imagestión 
+                    "imagestion_cost_center_description": ""   #Descripción centro costo en caso de conexión con Imagestión
+                  },
+          "stock_detail":
+          [
+                  {
+                    "variant_id": "329",                       #Identificador de variante recepcionada
+                    "quantity": "10",                          #Cantidad recepcionada
+                    "cost": "1000",                            #Costo unitario variante recepcionada
+                    "imagestion_guide_detail_id": "0"          #Identificador guía en caso de conexión con Imagestión
+                  }
+          ]
+        }
 ```
 
 La respuesta (response) de la llamada entregará la siguiente información en formato JSON
