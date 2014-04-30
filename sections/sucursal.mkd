@@ -10,29 +10,32 @@ Los métodos disponibles son:
 POST api/office/get_offices
 ```
 
-En la llamada a este método es posible incorporar el filtro opcional estado_sucursal_pago" (0: activo, 1: inactivo) para recuperar las sucursales que correspondan. Si no se envía filtro el método devuelve todas las sucursales en Bsale.
+En la llamada a este método es posible incorporar el filtro opcional status (0: activo, 1: inactivo) para recuperar las sucursales que correspondan. Si no se envía filtro el método devuelve todas las sucursales en Bsale.
 
 La respuesta (response) de la llamada entregará la siguiente información en formato JSON
 
 ```json
-[
-  {
-    "id_sucursal": "1",                       #Identificador de la sucursal
-    "nombre_sucursal": "Casa Matriz",         #Nombre de la sucursal
-    "descripcion_sucursal": "",               #Descripción de la sucursal
-    "direccion_sucursal": "Anibal Pinto 299", #Dirección 
-    "latitud_sucursal": "",                   #Latitud
-    "longitud_sucursal": "",                  #Longitud
-    "es_virtual": "0",                        #
-    "pais_sucursal": "Chile",                 #País
-    "comuna_sucursal": "Puerto Varas",        #Comuna
-    "ciudad_sucursal": "Puerto Varas",        #Ciudad
-    "zipcode_sucursal": "5570000",            #Zipcode
-    "centro_costo": "",                       #Centro de costo asociado
-    "estado_sucursal": "0",                   #Estado de la sucursal (0:activo, 1:inactivo)
-    "id_bodega_imagestion": "558"             #Identificador de bodega en caso de conexión con Imagestión
-  }
-]
+{   "status": "ok",
+    "data":
+            [
+              {
+                "office_id": "1",                     #Identificador de la sucursal
+                "office_name": "Casa Matriz",         #Nombre de la sucursal
+                "office_description": "",             #Descripción de la sucursal
+                "office_address": "Anibal Pinto 299", #Dirección 
+                "latitude": "",                       #Latitud
+                "longitude": "",                      #Longitud
+                "is_virtual": "0",                    #
+                "office_country": "Chile",            #País
+                "office_town": "Puerto Varas",        #Comuna
+                "office_city": "Puerto Varas",        #Ciudad
+                "zipcode": "5570000",                 #Zipcode
+                "cost_center": "",                    #Centro de costo asociado
+                "office_status": "0",                 #Estado de la sucursal (0:activo, 1:inactivo)
+                "id_bodega_imagestion": "558"         #Identificador de bodega en caso de conexión con Imagestión
+              }
+            ]
+}
 
 ```
 
@@ -47,23 +50,26 @@ Este método devuelve las sucursales activas asociadas a un usuario. No es neces
 La respuesta (response) de la llamada entregará la siguiente información en formato JSON
 
 ```json
-[
-  {
-    "id_sucursal": "1",                       #Identificador de la sucursal
-    "nombre_sucursal": "Casa Matriz",         #Nombre de la sucursal
-    "descripcion_sucursal": "",               #Descripción de la sucursal
-    "direccion_sucursal": "Anibal Pinto 299", #Dirección 
-    "latitud_sucursal": "",                   #Latitud
-    "longitud_sucursal": "",                  #Longitud
-    "es_virtual": "0",                        #
-    "pais_sucursal": "Chile",                 #País
-    "comuna_sucursal": "Puerto Varas",        #Comuna
-    "ciudad_sucursal": "Puerto Varas",        #Ciudad
-    "zipcode_sucursal": "5570000",            #Zipcode
-    "centro_costo": "",                       #Centro de costo asociado
-    "estado_sucursal": "0",                   #Estado de la sucursal (0:activo, 1:inactivo)
-    "id_bodega_imagestion": "558"             #Identificador de bodega en caso de conexión con Imagestión
-  }
-]
+{   "status": "ok",
+    "data":
+            [
+              {
+                "office_id": "1",                     #Identificador de la sucursal
+                "office_name": "Casa Matriz",         #Nombre de la sucursal
+                "office_description": "",             #Descripción de la sucursal
+                "office_address": "Anibal Pinto 299", #Dirección 
+                "latitude": "",                       #Latitud
+                "longitude": "",                      #Longitud
+                "is_virtual": "0",                    #
+                "office_country": "Chile",            #País
+                "office_town": "Puerto Varas",        #Comuna
+                "office_city": "Puerto Varas",        #Ciudad
+                "zipcode": "5570000",                 #Zipcode
+                "cost_center": "",                    #Centro de costo asociado
+                "office_status": "0",                 #Estado de la sucursal (0:activo, 1:inactivo)
+                "id_bodega_imagestion": "558"         #Identificador de bodega en caso de conexión con Imagestión
+              }
+            ]
+}
 
 ```
