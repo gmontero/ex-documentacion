@@ -11,22 +11,24 @@ POST api/tax/get_taxes
 ```
 
 
-En la llamada a este método es posible incorporar el filtro opcional "estado_impuesto" (0: activo, 1: inactivo) para recuperar los impuestos que correspondan. Si no se envía filtro el método devuelve todos los impuestos en Bsale.
+En la llamada a este método es posible incorporar el filtro opcional "status" (0: activo, 1: inactivo) para recuperar los impuestos que correspondan. Si no se envía filtro el método devuelve todos los impuestos en Bsale.
 
 La respuesta (response) de la llamada entregará la siguiente información en formato JSON
 
 ```json
-[
-  {
-     "id_impuesto": "1",            #Identificador del impuesto
-     "nombre_impuesto": "IVA",      #Nombre del impuesto
-     "porcentaje_impuesto": "19",   #Valor del porcentaje del impuesto
-     "es_para_todo_producto": "0",  #Boolean que indica si el impuesto aplica a todos los productos cada vez que se cree uno nuevo
-     "estado_impuesto": "0",        #Estado del impuesto (0:activo, 1:inactivo)
-     "cuenta_contable": "",         #Cuenta contable asociada al impuesto
-     "codigo_impuesto": "14",       #Código del impuesto en SII
-  }
-]
-
+{    "status": "ok",
+     "data":
+            [
+              {
+                 "tax_id": "1",             #Identificador del impuesto
+                 "tax_name": "IVA",         #Nombre del impuesto
+                 "tax_percentage": "19",    #Valor del porcentaje del impuesto
+                 "is_for_all_product": "0", #Boolean que indica si el impuesto aplica a todos los productos cada vez que se cree uno nuevo
+                 "tax_status": "0",         #Estado del impuesto (0:activo, 1:inactivo)
+                 "account": "",             #Cuenta contable asociada al impuesto
+                 "tax_code": "14",          #Código del impuesto en SII
+              }
+            ]
+}
 
 ```
