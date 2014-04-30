@@ -374,7 +374,7 @@ Un ejemplo de llamada sería:
 donde el resultado obtenido tendría el siguiente formato:
 
 ```json
-{	"status": "ok".
+{	"status": "ok",
 	"data":
 		[
 		    {
