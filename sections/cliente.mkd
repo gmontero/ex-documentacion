@@ -1,0 +1,57 @@
+## Lista de Precios
+
+En esta sección están agrupados los métodos asociados a las listas de precios en Bsale.
+
+Los métodos disponibles son:
+
+## search
+
+```
+POST api/prices_list/search
+```
+
+
+En la llamada a este método es posible incorporar el filtro opcional "status" (0: activo, 1: inactivo) para recuperar las listas de precios que correspondan. Si no se envía filtro el método devuelve todas las listas de precios en Bsale.
+
+La respuesta (response) de la llamada entregará la siguiente información en formato JSON
+
+```json
+{    "status": "ok",
+     "data":
+            [
+              {
+                 "price_list_id": "1",            #Identificador de la lista de precios
+                 "price_list_name": "Lista Base", #Nombre de la lista de precios
+                 "price_list_description": "",    #Descripción de la lista de precios
+                 "base_list": "1",                #Boolean que indica si es lista de precios base
+                 "price_list_status": "0",        #Estado de la lista de p recios
+                 "coin_id": "1"                   #Identificador de la moneda de la lista de precios
+              }
+            ]
+}
+
+
+```
+
+## price_update
+
+```
+POST api/prices_list/price_update
+```
+
+
+Este método actualiza el precio de una variante en una lista de precios determinada. Los datos posibles de incorporar en la llamada, son los siguientes:
+<br> variant_id => Identificador de la variante
+<br> price_list_id => Identificador de la lista de precios
+<br> variant_value => Nuevo precio de la variante en la lista de precios
+
+La respuesta (response) de la llamada entregará la siguiente información en formato JSON
+
+```json
+{    "status": "ok",
+     "msg": "Guardado con éxito"
+}
+
+
+```
+
