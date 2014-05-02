@@ -20,12 +20,12 @@ La respuesta (response) de la llamada entregará la siguiente información en fo
      "data":
             [
               {
-                 "price_list_id": "1",          #Identificador de la lista de precios
-                 "price_list_name": "Efectivo", #Nombre de la lista de precios
-                 "price_list_description": "",  #Descripción de la lista de precios
-                 "base_list": "0",              #Boolean que indica si es lista de precios base
-                 "price_list_status": "",       #Estado de la lista de p recios
-                 "coin_id": "0"                 #Identificador de la moneda de la lista de precios
+                 "price_list_id": "1",            #Identificador de la lista de precios
+                 "price_list_name": "Lista Base", #Nombre de la lista de precios
+                 "price_list_description": "",    #Descripción de la lista de precios
+                 "base_list": "1",                #Boolean que indica si es lista de precios base
+                 "price_list_status": "0",        #Estado de la lista de p recios
+                 "coin_id": "1"                   #Identificador de la moneda de la lista de precios
               }
             ]
 }
