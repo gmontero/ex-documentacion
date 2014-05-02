@@ -1,0 +1,39 @@
+## Forma de Pago
+
+En esta sección están agrupados los métodos asociados a la obtención de las distintas formas de pago existentes en Bsale.
+
+Los métodos disponibles son:
+
+## get_payment_types
+
+```
+POST api/payment_type/get_payment_types
+```
+
+
+En la llamada a este método es posible incorporar el filtro opcional "status" (0: activo, 1: inactivo) para recuperar las formas de pago que correspondan. Si no se envía filtro el método devuelve todas las formas de pagos en Bsale.
+
+La respuesta (response) de la llamada entregará la siguiente información en formato JSON
+
+```json
+{    "status": "ok",
+     "data":
+            [
+              {
+                 "payment_type_id": "1",          #Identificador de la forma de pago
+                 "payment_type_name": "Efectivo", #Nombre de la forma de pago
+                 "is_virtual": "",                #
+                 "is_check": "0",                 #Boolean que indica si la forma de pago es cheque o no
+                 "check_max": "",                 #Límite de cheques a generar al usar la forma de pago
+                 "is_credit_note": "0",           #Boolean que indica si la forma de pago es nota de crédito o no
+                 "is_client_credit": "0",         #Boolean que indica si la forma de pago es crédito cliente o no
+                 "is_cash": "1",                  #Boolean que indica si la forma de pago es efectivo o no
+                 "is_pay": "0",                   #Boolean que indica si la forma de pago es abono o no
+                 "payment_type_status": "0",      #Estado de la forma de pago (0:activo, 1:inactivo)
+                 "account": ""                    #Cuenta contable asociada
+              }
+            ]
+}
+
+
+```
