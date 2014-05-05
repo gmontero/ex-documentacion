@@ -371,7 +371,7 @@ Un ejemplo de llamada sería:
 
 ```
 
-donde el resultado obtenido tendría el siguiente formato:
+donde el resultado obtenido tendría el siguiente formato (solamente cuando se encuentra más de un registro, la variable "data" es un arreglo):
 
 ```json
 {	"status": "ok",
