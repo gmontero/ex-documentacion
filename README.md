@@ -63,7 +63,7 @@ Por ejemplo si se requiere obtener la lista de documentos generados para el día
 
 ## Secciones
 
-* [Clientes](https://github.com/gmontero/API-Bsale/blob/master/sections/clientes.mkd)
+* [Cliente](https://github.com/gmontero/API-Bsale/blob/master/sections/cliente.mkd)
 
 * [Documentos](https://github.com/gmontero/API-Bsale/blob/master/sections/documentos.mkd)
 
