@@ -42,7 +42,7 @@ POST api/prices_list/price_update
 
 Este método actualiza el precio de una variante en una lista de precios determinada. Los datos posibles de incorporar en la llamada, son los siguientes:
 <br> variant_id => Identificador de la variante
-<br> price_list_id => Identificador de la lista de precios
+<br> prices_list_id => Identificador de la lista de precios
 <br> variant_value => Nuevo precio de la variante en la lista de precios
 
 La respuesta (response) de la llamada entregará la siguiente información en formato JSON
