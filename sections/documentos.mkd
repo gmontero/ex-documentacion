@@ -608,6 +608,7 @@ La respuesta que obtendrán será:
     "client_id": 74, #id del cliente asociado al documento
     "html_doc": "", #html impresión del documento
     "url_pdf": "", #url timbre sii
+    "url_pdf_doc": "" #url pdf impresión del documento
 }
 ```
 
