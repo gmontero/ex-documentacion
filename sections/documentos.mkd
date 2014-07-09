@@ -569,7 +569,7 @@ Un ejemplo de llamada implementada en PHP sería:
         //Guarda los filtros de la solicitud en un arrego, el cual debe ser guardado en formato JSON
         $detail=array();
         $client=Array('first_name'=>'Gustavo', 'last_name'=>'Montero', 'code'=>'7513098-9', 'email'=>'gmonterop@imaginex.cl', 'company'=>'Germont', 'activity'=>'Asesorías Informáticas', 'address'=>'Los trigales 372', 'city'=>'Santiago', 'municipality'=>'Las Condes');
-        array_push ($detail, Array('variant_id'=>144, 'quantity'=>1, 'unit_net_value'=>1203, 'discount'=>0));
+        array_push ($detail, Array('variant_id'=>144, 'quantity'=>1, 'unit_net_value'=>1203, 'discount'=>0, 'comment'=>'nota'));
         $document=Array('document_type_id'=>3, 'emision_date'=>'2014-01-29', 'expiration_date'=>'2014-01-29', 'office_id'=>2, 'price_list_id'=>1, 'exchange_rate'=>0, 'number'=>223345, 'detail'=>$detail);
         $data=json_encode(Array('client'=>$client, 'document'=>$document));
         //Se conforma el arrego con las variables POST que se mandarán en el Request 
@@ -654,13 +654,16 @@ using (StreamWriter stream_writer = new StreamWriter(request.GetRequestStream())
 	string unit_net_value = "10000";
 	//descuento
 	string discount = "0";
+	//nota
+	string comment = "nota";
 	
 	//hash con datos del detalle del documento, ojo que más abajo se indica que pueden ser varios y se pasan al documento como arreglo
 	
 	string detail = @"{'variant_id':'" +variant_id+ "',
 					   'quantity':'" +quantity+ "',
 					   'unit_net_value':'" +unit_net_value+ "',
-					   'discount':'" +discount+ "'}";							
+					   'discount':'" +discount+ "',
+					   'comment':'" +comment+ "'}";							
 	
 	string document_type_id = "5"; //id del tipo de documento
 	string emission_date = "2013-11-22"; //fecha de emisión
