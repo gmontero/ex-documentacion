@@ -10,20 +10,20 @@ Parametros
 * fields, solo devolver atributos especificos de un recurso
 * expand, permite expandir instanacias y colecciones.
 * code, Permite filtrar por rut del cliente.
-* firstname, .
-* lastname,.
-* email, .
-* paymenttypeid, .
-* salesconditionid, .
+* firstname, filtra los clientes por nombre.
+* lastname, filtra los clientes por apellido.
+* email, filtra los clientes por email.
+* paymenttypeid, recupera los clientes con forma de pago.
+* salesconditionid, recupera los clientes por la condicion de venta.
 * state, boolean (0 o 1) indica si los clientes estan activos(0) inactivos (1).
 
 Ejemplos
 
-`GET /v1/clients.json?limit=10&offset=0`
-`GET /v1/clients.json?fields=[firstname,lastname]`
-`GET /v1/clients.json?code=1-9`
-`GET /v1/clients.json?paymenttypeid=1`
-`GET /v1/clients.json?expand=[contacts]`
+* `GET /v1/clients.json?limit=10&offset=0`
+* `GET /v1/clients.json?fields=[firstname,lastname]`
+* `GET /v1/clients.json?code=1-9`
+* `GET /v1/clients.json?paymenttypeid=1`
+* `GET /v1/clients.json?expand=[contacts,payment_type]`
 
 Respuesta
 ```json
