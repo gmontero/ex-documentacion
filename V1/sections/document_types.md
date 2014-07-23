@@ -1,7 +1,7 @@
 Obtener colección de tipos de documento
 ---------------------------------------
 
-* `GET /v1/discounts.json` retornara todos los tipos de documento.
+* `GET /v1/document_types.json` retornara todos los tipos de documento.
 
 ####Parametros
 
@@ -25,13 +25,13 @@ Obtener colección de tipos de documento
 ####Respuesta
 ```json
 {
-  "href": "http://localhost:9292/v1/document_types.json",
+  "href": "http://api.bsale.cl/v1/document_types.json",
   "count": 3,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://localhost:9292/v1/document_types/2.json",
+      "href": "http://api.bsale.cl/v1/document_types/2.json",
       "id": 2,
       "name": "FACTURA EXENTA O NO AFECTA ELECTRONICA",
       "initialNumber": 1,
@@ -53,12 +53,12 @@ Obtener colección de tipos de documento
       "ipadPrint": 0,
       "ipadPrintHigh": "0",
       "book_type": {
-        "href": "http://localhost:9292/v1/book_types/1.json",
+        "href": "http://api.bsale.cl/v1/book_types/1.json",
         "id": "1"
       }
     },
     {
-      "href": "http://localhost:9292/v1/document_types/3.json",
+      "href": "http://api.bsale.cl/v1/document_types/3.json",
       "id": 3,
       "name": "NOTA CREDITO ELECTRONICA",
       "initialNumber": 43,
@@ -80,12 +80,12 @@ Obtener colección de tipos de documento
       "ipadPrint": 0,
       "ipadPrintHigh": "0",
       "book_type": {
-        "href": "http://localhost:9292/v1/book_types/1.json",
+        "href": "http://api.bsale.cl/v1/book_types/1.json",
         "id": "1"
       }
     },
     {
-      "href": "http://localhost:9292/v1/document_types/1.json",
+      "href": "http://api.bsale.cl/v1/document_types/1.json",
       "id": 1,
       "name": "NOTA VENTA",
       "initialNumber": 1,
@@ -124,11 +124,9 @@ Obtener un tipo de documento
 * `GET /v1/document_types/1.json?expand=[book_type]`
 
 ####Respuesta
-
-####Respuesta
 ```json
 {
-  "href": "http://localhost:9292/v1/document_types/1.json",
+  "href": "http://api.bsale.cl/v1/document_types/1.json",
   "id": 1,
   "name": "NOTA VENTA",
   "initialNumber": 1,
@@ -151,7 +149,7 @@ Obtener un tipo de documento
   "ipadPrintHigh": "0"
 }
 ```
-Obtener cantidad de tipos de libro
+Cantidad de tipos de libro
 ----------------------------------
 
 * `GET /v1/document_types/count.json`

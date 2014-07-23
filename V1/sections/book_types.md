@@ -70,7 +70,7 @@ Obtener un tipo de libro
   "state": 1
 }
 ```
-Obtener cantidad de tipos de libro.
+Cantidad de tipos de libro.
 -----------------------------------
 
 * `GET /v1/book_types/count.json`

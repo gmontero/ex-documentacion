@@ -171,7 +171,7 @@ Obtener un de contacto de un cliente.
   "email": "a.villanueva@gmail.cl"
 }
 ```
-Obtener cantidad de clientes.
+Cantidad de clientes.
 -----------------------------
 
 * `GET /v1/clients/count.json`

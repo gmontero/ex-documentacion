@@ -21,13 +21,13 @@ Obtener colección de descuentos
 ####Respuesta
 ```json
 {
-  "href": "http://app.bsale.cl/v1/discounts.json",
+  "href": "http://api.bsale.cl/v1/discounts.json",
   "count": 3,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://app.bsale.cl/v1/discounts/1.json",
+      "href": "http://api.bsale.cl/v1/discounts/1.json",
       "id": 1,
       "name": "Ajuste Precio",
       "percentage": "14.3",
@@ -35,7 +35,7 @@ Obtener colección de descuentos
       "automatic": 0
     },
     {
-      "href": "http://app.bsale.cl/v1/discounts/3.json",
+      "href": "http://api.bsale.cl/v1/discounts/3.json",
       "id": 3,
       "name": "Descuento CPT",
       "percentage": "75.0",
@@ -43,7 +43,7 @@ Obtener colección de descuentos
       "automatic": 0
     },
     {
-      "href": "http://app.bsale.cl/v1/discounts/2.json",
+      "href": "http://api.bsale.cl/v1/discounts/2.json",
       "id": 2,
       "name": "Descuento Imagestion",
       "percentage": "25.0",
@@ -61,7 +61,7 @@ Obtener una moneda
 ####Respuesta
 ```json
 {
-  "href": "http://app.bsale.cl/v1/discounts/1.json",
+  "href": "http://api.bsale.cl/v1/discounts/1.json",
   "id": 1,
   "name": "Ajuste Precio",
   "percentage": "14.3",
@@ -69,7 +69,7 @@ Obtener una moneda
   "automatic": 0
 }
 ```
-Obtener cantidad de descuentos.
+Cantidad de descuentos.
 -----------------------------------
 
 * `GET /v1/discounts/count.json`

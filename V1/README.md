@@ -29,9 +29,12 @@ Documentacion
 -------------
 * [Clientes.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/clients.md)
 * [Descuentos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/discounts.md)
+* [Impuestos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/taxes.md)
 * [Monedas.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/coins.md)
+* [Pagos](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/payments.md)
 * [Tipos de documento.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/document_types.md)
 * [Tipos de libro.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/book_types.md)
+* [Tipos de producto.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/product_types.md)
 
 [RESTful]:http://es.wikipedia.org/wiki/Representational_State_Transfer
 [JSON]:http://www.json.org/
