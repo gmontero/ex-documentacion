@@ -4,7 +4,6 @@ Obtener colección de clientes
 * `GET /v1/clients.json` retornara todos los clientes.
 
 Parametros
-----------
 
 * limit, limita la cantidad de items de una respuesta JSON, si no se envia el limit es 25.
 * offset, permite paginar los items de una respuesta JSON, si no se envia el offset es 0.
@@ -15,18 +14,16 @@ Parametros
 * lastname,.
 * email, .
 * paymenttypeid, .
-* salesconditionid,.
-* state
+* salesconditionid, .
+* state, boolean (0 o 1) indica si los clientes estan activos(0) inactivos (1).
 
 Ejemplos
 
-```sh
-GET /v1/clients.json?limit=10&offset=0
-GET /v1/clients.json?fields=[firstname,lastname]
-GET /v1/clients.json?code=1-9
-GET /v1/clients.json?paymenttypeid=1
-GET /v1/clients.json?expand=[contacts]
-```
+`GET /v1/clients.json?limit=10&offset=0`
+`GET /v1/clients.json?fields=[firstname,lastname]`
+`GET /v1/clients.json?code=1-9`
+`GET /v1/clients.json?paymenttypeid=1`
+`GET /v1/clients.json?expand=[contacts]`
 
 Respuesta
 ```json
