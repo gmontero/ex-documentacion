@@ -3,7 +3,7 @@ Obtener colección de clientes
 
 * `GET /v1/clients.json` retornara todos los clientes.
 
-Parametros
+###Parametros
 
 * limit, limita la cantidad de items de una respuesta JSON, si no se envia el limit es 25.
 * offset, permite paginar los items de una respuesta JSON, si no se envia el offset es 0.
@@ -17,7 +17,7 @@ Parametros
 * salesconditionid, recupera los clientes por la condicion de venta.
 * state, boolean (0 o 1) indica si los clientes estan activos(0) inactivos (1).
 
-Ejemplos
+###Ejemplos
 
 * `GET /v1/clients.json?limit=10&offset=0`
 * `GET /v1/clients.json?fields=[firstname,lastname]`
@@ -25,7 +25,7 @@ Ejemplos
 * `GET /v1/clients.json?paymenttypeid=1`
 * `GET /v1/clients.json?expand=[contacts,payment_type]`
 
-Respuesta
+###Respuesta
 ```json
 {
   "href": "http://api.bsale.cl/v1/clients.json",
@@ -195,7 +195,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "code": "2-7"
 }
 ```
-Respuesta
+###Respuesta
 ```json
 {
   "companyOrPerson": 0,
@@ -248,7 +248,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "twitter": ""
 }
 ```
-Respuesta
+###Respuesta
 ```json
 {
   "companyOrPerson": 0,
