@@ -90,6 +90,16 @@ Obtener un cliente
 ------------------
 
 * `GET /v1/clients/55.json` retornara un cliente específico.
+
+####Parametros
+
+- *expand*, permite expandir instanacias y colecciones.
+
+####Ejemplos
+
+* `GET /v1/clients/55.json?expand=[contacts,payment_type]`
+
+####Respuesta
 ```json
 {
   "href": "http://api.bsale.cl/v1/clients/80.json",
