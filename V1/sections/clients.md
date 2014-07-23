@@ -8,7 +8,7 @@ Obtener colección de clientes
 - *limit*, limita la cantidad de items de una respuesta JSON, si no se envia el limit es 25.
 - *offset*, permite paginar los items de una respuesta JSON, si no se envia el offset es 0.
 - *fields*, solo devolver atributos especificos de un recurso
-- *expand*, permite expandir instanacias y colecciones.
+- *expand*, permite expandir instancias y colecciones.
 - *code*, Permite filtrar por rut del cliente.
 - *firstname*, filtra los clientes por nombre.
 - *lastname*, filtra los clientes por apellido.
@@ -93,7 +93,7 @@ Obtener un cliente
 
 ####Parametros
 
-- *expand*, permite expandir instanacias y colecciones.
+- *expand*, permite expandir instancias y colecciones.
 
 ####Ejemplos
 
