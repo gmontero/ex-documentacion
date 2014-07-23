@@ -1,0 +1,34 @@
+Bsale API
+---------
+[RESTful] API desarrollada para el sistema Bsale, los servicios solo trabajan con [JSON].
+
+Convenciones de la API
+-----------------------------
+* Usar sustantivos, no verbos.
+* Dos urls base por recurso "/clients.json", "clients/1.json"
+* Siempre usar el nombre del recurso en plural.
+* Enviar la url del rucurso.
+* Respuesta JSON en camelCase
+* respuesta JSON en ingles.
+* Manejo de versiones en la url.
+* Manejo de errores y estados.
+* Paginacion de la respuesta JSON.
+* Permitir acceder a las asociones de un recurso a traves de la variable expand en una sola peticion.
+* Permitir devolver solo los atributos requeridos a traves de la variable fields.
+
+Mandar un Request
+-----------------
+Las peticones son RESTful por lo que se debe especificar el metodo a utilzan GET, PUT, POST, DELETE, ademas se debe enviar
+en la cabecera del request el token de acceso que permite la autentificacion en la API.
+
+```sh
+curl -i -H "access_token: tutokendeacceso" -X GET http://api.bsale.cl/v1/clients.json
+```
+
+Documentacion
+-------------
+* [Clientes.](https://github.com/gmontero/bsync-API/blob/master/doc/config.md)
+* [Vouchers](https://github.com/gmontero/bsync-API/blob/master/doc/vouchers.md)
+
+[RESTful]:http://es.wikipedia.org/wiki/Representational_State_Transfer
+[JSON]:http://www.json.org/
