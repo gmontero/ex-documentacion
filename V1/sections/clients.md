@@ -156,21 +156,12 @@ Obtener cantidad de clientes.
 }
 ```
 
-Modifica un cliente.
---------------------
-
-* `GET /v1/clients/count.json`
-
-```json
-{
-  "count": 66
-}
-```
-
 Crea un cliente.
 --------------------
 
-* `GET /v1/clients/count.json`
+* `POST /v1/clients.json`
+
+Se debe enviar un Json con la siguiente esctructura.
 
 ```json
 {
@@ -221,7 +212,61 @@ Respuesta
   "href": "http://localhost:9292/v1/clients/67.json"
 }
 ```
+Modifica un cliente.
+--------------------
 
+* `PUT /v1/clients/67.json`
+
+Se debe enviar un Json con la siguiente esctructura.
+
+```json
+{
+  "id": "67",
+  "facebook": "",
+  "municipality": "Puerto Montt",
+  "phone": "66287196",
+  "activity": "Venta de ropa",
+  "city": "Puerto Montt",
+  "maxCredit": 100000,
+  "hasCredit": 1,
+  "lastName": "Muñoz",
+  "note": "Cliente premiun",
+  "firstName": "Marcela",
+  "company": "Particular",
+  "address": "Los trigales 372",
+  "email": "mmunoz@.email.cl",
+  "twitter": ""
+}
+```
+
+Respuesta
+
+```json
+{
+  "companyOrPerson": 0,
+  "address": "Los trigales 372",
+  "lastName": "Muñoz",
+  "sendDte": 0,
+  "city": "Puerto Montt",
+  "state": 0,
+  "twitter": "",
+  "firstName": "Marcela",
+  "id": 67,
+  "municipality": "Puerto Montt",
+  "maxCredit": 100000.0,
+  "note": "Cliente premiun",
+  "phone": "66287196",
+  "contacts": {
+    "href": "http://localhost:9292/v1/clients/67/contacts.json"
+  },
+  "prestashopClienId": 0,
+  "activity": "Venta de ropa",
+  "hasCredit": 1,
+  "facebook": "",
+  "company": "Particular",
+  "code": "2-7",
+  "href": "http://localhost:9292/v1/clients/67.json"
+}
 
 Eliminar un cliente virtualmente (desactivar).
 ----------------------------------------------
