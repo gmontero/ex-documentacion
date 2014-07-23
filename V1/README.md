@@ -27,8 +27,7 @@ curl -i -H "access_token: tutokendeacceso" -X GET http://api.bsale.cl/v1/clients
 
 Documentacion
 -------------
-* [Clientes.](https://github.com/gmontero/bsync-API/blob/master/doc/config.md)
-* [Vouchers](https://github.com/gmontero/bsync-API/blob/master/doc/vouchers.md)
+* [Clientes.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/clients.md)
 
 [RESTful]:http://es.wikipedia.org/wiki/Representational_State_Transfer
 [JSON]:http://www.json.org/
