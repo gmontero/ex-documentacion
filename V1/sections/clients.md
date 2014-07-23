@@ -146,7 +146,7 @@ Obtener un de contacto de un cliente.
 ```
 
 Obtener cantidad de clientes.
--------------------------------------
+-----------------------------
 
 * `GET /v1/clients/count.json`
 
@@ -156,8 +156,8 @@ Obtener cantidad de clientes.
 }
 ```
 
-Obtener cantidad de clientes.
--------------------------------------
+Modifica un cliente.
+--------------------
 
 * `GET /v1/clients/count.json`
 
@@ -167,8 +167,64 @@ Obtener cantidad de clientes.
 }
 ```
 
-Eliminar un cliente virtualmente (desactivarlo).
-------------------------------------------------
+Crea un cliente.
+--------------------
+
+* `GET /v1/clients/count.json`
+
+```json
+{
+  "facebook": "",
+  "municipality": "Las Condes",
+  "phone": "66287196",
+  "activity": "Venta de ropa",
+  "city": "Santiago",
+  "maxCredit": 100000,
+  "hasCredit": 1,
+  "lastName": "Muñoz",
+  "note": "Cliente premiun",
+  "firstName": "Marcela",
+  "company": "Particular",
+  "address": "Los trigales 372",
+  "email": "mmunoz@.email.cl",
+  "twitter": "",
+  "code": "2-7"
+}
+```
+
+Respuesta
+
+```json
+{
+  "companyOrPerson": 0,
+  "address": "Los trigales 372",
+  "lastName": "Muñoz",
+  "sendDte": 0,
+  "city": "Santiago",
+  "state": 0,
+  "twitter": "",
+  "firstName": "Marcela",
+  "id": 67,
+  "municipality": "Las Condes",
+  "maxCredit": 100000.0,
+  "note": "Cliente premiun",
+  "phone": "66287196",
+  "contacts": {
+    "href": "http://localhost:9292/v1/clients/67/contacts.json"
+  },
+  "prestashopClienId": 0,
+  "activity": "Venta de ropa",
+  "hasCredit": 1,
+  "facebook": "",
+  "company": "Particular",
+  "code": "2-7",
+  "href": "http://localhost:9292/v1/clients/67.json"
+}
+```
+
+
+Eliminar un cliente virtualmente (desactivar).
+----------------------------------------------
 
 * `DELETE /v1/clients/30.json` cambia el estado del cliente.
 
