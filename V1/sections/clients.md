@@ -2,6 +2,33 @@ Obtener colección de clientes
 -----------------------------
 
 * `GET /v1/clients.json` retornara todos los clientes.
+
+Parametros
+----------
+
+* limit, limita la cantidad de items de una respuesta JSON, si no se envia el limit es 25.
+* offset, permite paginar los items de una respuesta JSON, si no se envia el offset es 0.
+* fields, solo devolver atributos especificos de un recurso
+* expand, permite expandir instanacias y colecciones.
+* code, Permite filtrar por rut del cliente.
+* firstname, .
+* lastname,.
+* email, .
+* paymenttypeid, .
+* salesconditionid,.
+* state
+
+Ejemplos
+
+```sh
+GET /v1/clients.json?limit=10&offset=0
+GET /v1/clients.json?fields=[firstname,lastname]
+GET /v1/clients.json?code=1-9
+GET /v1/clients.json?paymenttypeid=1
+GET /v1/clients.json?expand=[contacts]
+```
+
+Respuesta
 ```json
 {
   "href": "http://api.bsale.cl/v1/clients.json",
