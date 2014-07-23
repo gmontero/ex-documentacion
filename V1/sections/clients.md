@@ -2,7 +2,6 @@ Obtener colección de clientes
 -----------------------------
 
 * `GET /v1/clients.json` retornara todos los clientes.
-
 ```json
 {
   "href": "http://api.bsale.cl/v1/clients.json",
@@ -63,12 +62,10 @@ Obtener colección de clientes
   ]
 }
 ```
-
 Obtener un cliente
 ------------------
 
 * `GET /v1/clients/55.json` retornara un cliente específico.
-
 ```json
 {
   "href": "http://api.bsale.cl/v1/clients/80.json",
@@ -96,12 +93,10 @@ Obtener un cliente
   }
 }
 ```
-
 Obtener colección de contactos de un cliente.
 ---------------------------------------------
 
 * `GET /v1/clientes/55/contacts.json`
-
 ```json
 {
   "href": "http://api.bsale.cl/v1/clients/4/contacts.json",
@@ -128,12 +123,10 @@ Obtener colección de contactos de un cliente.
   ]
 }
 ```
-
 Obtener un de contacto de un cliente.
 -------------------------------------
 
 * `GET /v1/clientes/4/contacts/31.json`
-
 ```json
 {
   "href": "http://api.bsale.cl/v1/clients/4/contacts/31.json",
@@ -144,25 +137,21 @@ Obtener un de contacto de un cliente.
   "email": "a.villanueva@gmail.cl"
 }
 ```
-
 Obtener cantidad de clientes.
 -----------------------------
 
 * `GET /v1/clients/count.json`
-
 ```json
 {
   "count": 66
 }
 ```
-
 Crea un cliente.
 --------------------
 
 * `POST /v1/clients.json`
 
 Se debe enviar un Json con la siguiente esctructura.
-
 ```json
 {
   "facebook": "",
@@ -182,9 +171,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "code": "2-7"
 }
 ```
-
 Respuesta
-
 ```json
 {
   "companyOrPerson": 0,
@@ -218,7 +205,6 @@ Modifica un cliente.
 * `PUT /v1/clients/67.json`
 
 Se debe enviar un Json con la siguiente esctructura.
-
 ```json
 {
   "id": "67",
@@ -238,9 +224,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "twitter": ""
 }
 ```
-
 Respuesta
-
 ```json
 {
   "companyOrPerson": 0,
@@ -267,12 +251,11 @@ Respuesta
   "code": "2-7",
   "href": "http://localhost:9292/v1/clients/67.json"
 }
-
+```
 Eliminar un cliente virtualmente (desactivar).
 ----------------------------------------------
 
 * `DELETE /v1/clients/30.json` cambia el estado del cliente.
-
 ```json
 {
   {
