@@ -28,10 +28,13 @@ curl -i -H "access_token: tutokendeacceso" -X GET http://api.bsale.cl/v1/clients
 Documentacion
 -------------
 * [Clientes.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/clients.md)
+* [Condiciones de venta.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/sale_conditions.md)
 * [Descuentos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/discounts.md)
+* [Formas de pago.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/payment_types.md)
 * [Impuestos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/taxes.md)
 * [Monedas.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/coins.md)
 * [Pagos](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/payments.md)
+* [Productos](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/products.md)
 * [Tipos de documento.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/document_types.md)
 * [Tipos de libro.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/book_types.md)
 * [Tipos de producto.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/product_types.md)

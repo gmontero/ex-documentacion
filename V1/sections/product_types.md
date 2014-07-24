@@ -109,8 +109,8 @@ Obtener un tipo de producto
 }
 ```
 
-Obtener los productos de un tipo de producto
---------------------------------------------
+Obtener productos de un tipo de producto
+----------------------------------------
 
 * `GET /v1/product_types/3/products.json`
 ```json
