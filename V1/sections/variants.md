@@ -27,13 +27,13 @@ Obtener colección de variantes
 ####Respuesta
 ```json
 {
-  "href": "http://localhost:9292/v1/variants.json",
+  "href": "http://api.bsale.cl/v1/variants.json",
   "count": 165,
   "limit": 4,
   "offset": 0,
   "items": [
     {
-      "href": "http://localhost:9292/v1/variants/101.json",
+      "href": "http://api.bsale.cl/v1/variants/101.json",
       "id": 101,
       "description": " Sitio Web",
       "unlimitedStock": 1,
@@ -51,12 +51,12 @@ Obtener colección de variantes
       "prestashopCombinationId": 0,
       "prestashopValueId": 0,
       "product": {
-        "href": "http://localhost:9292/v1/products/26.json",
+        "href": "http://api.bsale.cl/v1/products/26.json",
         "id": "26"
       }
     },
     {
-      "href": "http://localhost:9292/v1/variants/167.json",
+      "href": "http://api.bsale.cl/v1/variants/167.json",
       "id": 167,
       "description": "Anual",
       "unlimitedStock": 1,
@@ -74,12 +74,12 @@ Obtener colección de variantes
       "prestashopCombinationId": 0,
       "prestashopValueId": 0,
       "product": {
-        "href": "http://localhost:9292/v1/products/75.json",
+        "href": "http://api.bsale.cl/v1/products/75.json",
         "id": "75"
       }
     },
     {
-      "href": "http://localhost:9292/v1/variants/170.json",
+      "href": "http://api.bsale.cl/v1/variants/170.json",
       "id": 170,
       "description": "Anual",
       "unlimitedStock": 1,
@@ -97,12 +97,12 @@ Obtener colección de variantes
       "prestashopCombinationId": 0,
       "prestashopValueId": 0,
       "product": {
-        "href": "http://localhost:9292/v1/products/78.json",
+        "href": "http://api.bsale.cl/v1/products/78.json",
         "id": "78"
       }
     },
     {
-      "href": "http://localhost:9292/v1/variants/206.json",
+      "href": "http://api.bsale.cl/v1/variants/206.json",
       "id": 206,
       "description": "Asesoria Informatica",
       "unlimitedStock": 1,
@@ -120,7 +120,7 @@ Obtener colección de variantes
       "prestashopCombinationId": 0,
       "prestashopValueId": 0,
       "product": {
-        "href": "http://localhost:9292/v1/products/93.json",
+        "href": "http://api.bsale.cl/v1/products/93.json",
         "id": "93"
       }
     }
@@ -143,7 +143,7 @@ Obtener una variante
 ####Respuesta
 ```json
 {
-  "href": "http://localhost:9292/v1/variants/101.json",
+  "href": "http://api.bsale.cl/v1/variants/101.json",
   "id": 101,
   "description": " Sitio Web",
   "unlimitedStock": 1,
@@ -161,7 +161,7 @@ Obtener una variante
   "prestashopCombinationId": 0,
   "prestashopValueId": 0,
   "product": {
-    "href": "http://localhost:9292/v1/products/26.json",
+    "href": "http://api.bsale.cl/v1/products/26.json",
     "id": "26"
   }
 }
@@ -172,47 +172,47 @@ Obtener stock de una variante.
 * `GET /v1/variants/101/stock.json`
 ```json
 {
-  "href": "http://localhost:9292/v1/variants/101/stock.json",
+  "href": "http://api.bsale.cl/v1/variants/101/stock.json",
   "count": 0,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://localhost:9292/v1/offices/2/stock/11.json",
+      "href": "http://api.bsale.cl/v1/offices/2/stock/11.json",
       "id": 11,
       "quantity": "5.0",
       "variant": {
-        "href": "http://localhost:9292/v1/variants/101.json",
+        "href": "http://api.bsale.cl/v1/variants/101.json",
         "id": "101"
       },
       "office": {
-        "href": "http://localhost:9292/v1/offices/2.json",
+        "href": "http://api.bsale.cl/v1/offices/2.json",
         "id": "2"
       }
     },
     {
-      "href": "http://localhost:9292/v1/offices/1/stock/12.json",
+      "href": "http://api.bsale.cl/v1/offices/1/stock/12.json",
       "id": 12,
       "quantity": "10.0",
       "variant": {
-        "href": "http://localhost:9292/v1/variants/101.json",
+        "href": "http://api.bsale.cl/v1/variants/101.json",
         "id": "101"
       },
       "office": {
-        "href": "http://localhost:9292/v1/offices/1.json",
+        "href": "http://api.bsale.cl/v1/offices/1.json",
         "id": "1"
       }
     },
     {
-      "href": "http://localhost:9292/v1/offices/4/stock/104.json",
+      "href": "http://api.bsale.cl/v1/offices/4/stock/104.json",
       "id": 104,
       "quantity": "40.0",
       "variant": {
-        "href": "http://localhost:9292/v1/variants/101.json",
+        "href": "http://api.bsale.cl/v1/variants/101.json",
         "id": "101"
       },
       "office": {
-        "href": "http://localhost:9292/v1/offices/4.json",
+        "href": "http://api.bsale.cl/v1/offices/4.json",
         "id": "4"
       }
     }
@@ -254,7 +254,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "allowNegativeStock": 0,
   "unlimitedStock": 0,
   "product": {
-    "href": "http://localhost:9292/v1/products/1.json",
+    "href": "http://api.bsale.cl/v1/products/1.json",
     "id": "1"
   },
   "prestashopCombinationId": 0,
@@ -263,7 +263,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "serialNumber": 15269874,
   "prestashopValueId": 0,
   "description": "Calcetas con rombos",
-  "href": "http://localhost:9292/v1/variants/208.json",
+  "href": "http://api.bsale.cl/v1/variants/208.json",
   "imagestionProductId": 0,
   "imagestionCategoryCod": 0,
   "imagestionCenterCost": 0,
@@ -292,7 +292,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "allowNegativeStock": 0,
   "unlimitedStock": 0,
   "product": {
-    "href": "http://localhost:9292/v1/products/1.json",
+    "href": "http://api.bsale.cl/v1/products/1.json",
     "id": "1"
   },
   "prestashopCombinationId": 0,
@@ -301,7 +301,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "serialNumber": 15269874,
   "prestashopValueId": 0,
   "description": "Calcetas con rombos rojos",
-  "href": "http://localhost:9292/v1/variants/208.json",
+  "href": "http://api.bsale.cl/v1/variants/208.json",
   "imagestionProductId": 0,
   "imagestionCategoryCod": 0,
   "imagestionCenterCost": 0,
@@ -321,7 +321,7 @@ Eliminar una variante virtualmente (desactivar).
   "allowNegativeStock": 0,
   "unlimitedStock": 0,
   "product": {
-    "href": "http://localhost:9292/v1/products/1.json",
+    "href": "http://api.bsale.cl/v1/products/1.json",
     "id": "1"
   },
   "prestashopCombinationId": 0,
@@ -330,7 +330,7 @@ Eliminar una variante virtualmente (desactivar).
   "serialNumber": 15269874,
   "prestashopValueId": 0,
   "description": "Calcetas con rombos rojos",
-  "href": "http://localhost:9292/v1/variants/208.json",
+  "href": "http://api.bsale.cl/v1/variants/208.json",
   "imagestionProductId": 0,
   "imagestionCategoryCod": 0,
   "imagestionCenterCost": 0,

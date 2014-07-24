@@ -1,5 +1,5 @@
-Obtener colección de clientes
------------------------------
+Obtener colección de productos
+------------------------------
 
 * `GET /v1/products.json` retornara todos los productos.
 
