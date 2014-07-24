@@ -31,13 +31,13 @@ Obtener colección de documentos
 ####Respuesta
 ```json
 {
-  "href": "http://localhost:9292/v1/documents.json",
+  "href": "http://api.bsale.cl/v1/documents.json",
   "count": 1449,
   "limit": 2,
   "offset": 0,
   "items": [
     {
-      "href": "http://localhost:9292/v1/documents/15.json",
+      "href": "http://api.bsale.cl/v1/documents/15.json",
       "id": 15,
       "emissionDate": "2011-07-01",
       "expirationDate": "2011-07-01",
@@ -56,20 +56,20 @@ Obtener colección de documentos
       "municipality": "Las Condes",
       "city": "Santiago",
       "document_type": {
-        "href": "http://localhost:9292/v1/document_types/1.json",
+        "href": "http://api.bsale.cl/v1/document_types/1.json",
         "id": "1"
       },
       "client": {
-        "href": "http://localhost:9292/v1/clients/1.json",
+        "href": "http://api.bsale.cl/v1/clients/1.json",
         "id": "1"
       },
       "office": {
-        "href": "http://localhost:9292/v1/offices/2.json",
+        "href": "http://api.bsale.cl/v1/offices/2.json",
         "id": "2"
       }
     },
     {
-      "href": "http://localhost:9292/v1/documents/190.json",
+      "href": "http://api.bsale.cl/v1/documents/190.json",
       "id": 190,
       "emissionDate": "2011-03-29",
       "expirationDate": "2011-03-29",
@@ -88,15 +88,15 @@ Obtener colección de documentos
       "municipality": "Quellon",
       "city": "Quellon",
       "document_type": {
-        "href": "http://localhost:9292/v1/document_types/1.json",
+        "href": "http://api.bsale.cl/v1/document_types/1.json",
         "id": "1"
       },
       "client": {
-        "href": "http://localhost:9292/v1/clients/29.json",
+        "href": "http://api.bsale.cl/v1/clients/29.json",
         "id": "29"
       },
       "office": {
-        "href": "http://localhost:9292/v1/offices/2.json",
+        "href": "http://api.bsale.cl/v1/offices/2.json",
         "id": "2"
       }
     }
@@ -117,7 +117,7 @@ Obtener un documento
 ####Respuesta
 ```json
 {
-  "href": "http://localhost:9292/v1/documents/190.json",
+  "href": "http://api.bsale.cl/v1/documents/190.json",
   "id": 190,
   "emissionDate": "2011-03-29",
   "expirationDate": "2011-03-29",
@@ -136,15 +136,15 @@ Obtener un documento
   "municipality": "Quellon",
   "city": "Quellon",
   "document_type": {
-    "href": "http://localhost:9292/v1/document_types/1.json",
+    "href": "http://api.bsale.cl/v1/document_types/1.json",
     "id": "1"
   },
   "client": {
-    "href": "http://localhost:9292/v1/clients/29.json",
+    "href": "http://api.bsale.cl/v1/clients/29.json",
     "id": "29"
   },
   "office": {
-    "href": "http://localhost:9292/v1/offices/2.json",
+    "href": "http://api.bsale.cl/v1/offices/2.json",
     "id": "2"
   }
 }
@@ -204,18 +204,18 @@ Se debe enviar un Json con la siguiente esctructura.
 {
   "urlPdf": "http://app.bsale.cl/view/613/e46554f50e44.pdf",
   "client": {
-    "href": "http://localhost:9292/v1/clients/7.json",
+    "href": "http://api.bsale.cl/v1/clients/7.json",
     "id": "7"
   },
   "urlXml": " ",
   "exemptAmount": "134702.4",
-  "href": "http://localhost:9292/v1/documents/10145.json",
+  "href": "http://api.bsale.cl/v1/documents/10145.json",
   "city": "Puerto Montt",
   "totalAmount": "134702.4",
   "urlTimbre": "http://s3.amazonaws.com/bsale/imaginexti/timbres/T34_F1760.png",
   "number": 1760,
   "document_type": {
-    "href": "http://localhost:9292/v1/document_types/2.json",
+    "href": "http://api.bsale.cl/v1/document_types/2.json",
     "id": "2"
   },
   "address": "Av. Juan Soler Manfredini 41 1801",
@@ -226,7 +226,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "expirationDate": "2014-07-23",
   "id": 10145,
   "office": {
-    "href": "http://localhost:9292/v1/offices/1.json",
+    "href": "http://api.bsale.cl/v1/offices/1.json",
     "id": "1"
   },
   "userId": 1,
