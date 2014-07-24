@@ -30,14 +30,18 @@ Documentacion
 * [Clientes.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/clients.md)
 * [Condiciones de venta.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/sale_conditions.md)
 * [Descuentos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/discounts.md)
+* [Documentos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/documents.md)
 * [Formas de pago.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/payment_types.md)
 * [Impuestos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/taxes.md)
+* [Listas de precio.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/price_lists.md)
 * [Monedas.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/coins.md)
-* [Pagos](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/payments.md)
-* [Productos](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/products.md)
+* [Pagos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/payments.md)
+* [Productos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/products.md)
+* [Sucursales.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/offices.md)
 * [Tipos de documento.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/document_types.md)
 * [Tipos de libro.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/book_types.md)
 * [Tipos de producto.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/product_types.md)
+* [Variantes.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/variants.md)
 
 [RESTful]:http://es.wikipedia.org/wiki/Representational_State_Transfer
 [JSON]:http://www.json.org/
