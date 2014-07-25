@@ -15,7 +15,7 @@ Obtener colección de impuestos
 ####Ejemplos
 
 * `GET /v1/payments.json?limit=10&offset=0`
-* `GET /v1/payments.json?recorddate=2014-03-21`
+* `GET /v1/payments.json?recorddate=1393642800,`
 * `GET /v1/payments.json?expand=[office,payment_type]`
 
 ####Respuesta
