@@ -26,26 +26,26 @@ Obtener colección de documentos
 * `GET /v1/documents.json?number=53`
 * `GET /v1/documents.json?documenttypeid=1`
 * `GET /v1/documents.json?expand=[document_types,client,office]`
-* `GET /v1/documents.json?emissiondate=2011-07-01&expirationdate=2011-08-01&state=0`
+* `GET /v1/documents.json?emissiondate=1309478400&expirationdate=1309478400&state=0`
 
 ####Respuesta
 ```json
 {
   "href": "http://api.bsale.cl/v1/documents.json",
-  "count": 1449,
-  "limit": 2,
+  "count": 1452,
+  "limit": 25,
   "offset": 0,
   "items": [
     {
       "href": "http://api.bsale.cl/v1/documents/15.json",
       "id": 15,
-      "emissionDate": "2011-07-01",
-      "expirationDate": "2011-07-01",
+      "emissionDate": 1309478400,
+      "expirationDate": 1309478400,
       "number": 1,
-      "totalAmount": "120410.0",
-      "netAmount": "120410.0",
-      "taxAmount": "0.0",
-      "exemptAmount": "120410.0",
+      "totalAmount": 120410.0,
+      "netAmount": 120410.0,
+      "taxAmount": 0.0,
+      "exemptAmount": 120410.0,
       "urlTimbre": "-",
       "urlPdf": "http://app.bsale.cl/view/613/88cab16269f8.pdf",
       "token": "88cab16269f8",
@@ -71,13 +71,13 @@ Obtener colección de documentos
     {
       "href": "http://api.bsale.cl/v1/documents/190.json",
       "id": 190,
-      "emissionDate": "2011-03-29",
-      "expirationDate": "2011-03-29",
+      "emissionDate": 1301356800,
+      "expirationDate": 1301356800,
       "number": 40,
-      "totalAmount": "22207210.0",
-      "netAmount": "22207210.0",
-      "taxAmount": "0.0",
-      "exemptAmount": "22207210.0",
+      "totalAmount": 22207210.0,
+      "netAmount": 22207210.0,
+      "taxAmount": 0.0,
+      "exemptAmount": 22207210.0,
       "urlTimbre": "-",
       "urlPdf": "http://app.bsale.cl/view/613/f7712ecede59.pdf",
       "token": "f7712ecede59",
@@ -85,8 +85,8 @@ Obtener colección de documentos
       "userId": 5,
       "urlXml": null,
       "address": "Este de Punta Chiguao S/N",
-      "municipality": "Quellon",
-      "city": "Quellon",
+      "municipality": "Quellón",
+      "city": "Quellón",
       "document_type": {
         "href": "http://api.bsale.cl/v1/document_types/1.json",
         "id": "1"
@@ -100,6 +100,8 @@ Obtener colección de documentos
         "id": "2"
       }
     }
+  ]
+}
 ```
 Obtener un documento
 --------------------
@@ -119,13 +121,13 @@ Obtener un documento
 {
   "href": "http://api.bsale.cl/v1/documents/190.json",
   "id": 190,
-  "emissionDate": "2011-03-29",
-  "expirationDate": "2011-03-29",
+  "emissionDate": 1301356800,
+  "expirationDate": 1301356800,
   "number": 40,
-  "totalAmount": "22207210.0",
-  "netAmount": "22207210.0",
-  "taxAmount": "0.0",
-  "exemptAmount": "22207210.0",
+  "totalAmount": 22207210.0,
+  "netAmount": 22207210.0,
+  "taxAmount": 0.0,
+  "exemptAmount": 22207210.0,
   "urlTimbre": "-",
   "urlPdf": "http://app.bsale.cl/view/613/f7712ecede59.pdf",
   "token": "f7712ecede59",
@@ -133,8 +135,8 @@ Obtener un documento
   "userId": 5,
   "urlXml": null,
   "address": "Este de Punta Chiguao S/N",
-  "municipality": "Quellon",
-  "city": "Quellon",
+  "municipality": "Quellón",
+  "city": "Quellón",
   "document_type": {
     "href": "http://api.bsale.cl/v1/document_types/1.json",
     "id": "1"
@@ -147,7 +149,7 @@ Obtener un documento
     "href": "http://api.bsale.cl/v1/offices/2.json",
     "id": "2"
   }
-}
+
 ```
 Cantidad de documentos
 ----------------------
@@ -168,8 +170,8 @@ Se debe enviar un Json con la siguiente esctructura.
 {
   "documentTypeId": 2,
   "priceListId": 2,
-  "emissionDate": "2014-07-23",
-  "expirationDate": "2014-07-23",
+  "emissionDate": "1309478400",
+  "expirationDate": "1309478400",
   "declareSii": 1,
   "officeId": 1,
   "exchangeRate": 24054,
@@ -220,10 +222,10 @@ Se debe enviar un Json con la siguiente esctructura.
   },
   "address": "Av. Juan Soler Manfredini 41 1801",
   "token": "e46554f50e44",
-  "emissionDate": "2014-07-23",
+  "emissionDate": "21309478400",
   "municipality": "Puerto Montt",
   "state": 0,
-  "expirationDate": "2014-07-23",
+  "expirationDate": "1309478400",
   "id": 10145,
   "office": {
     "href": "http://api.bsale.cl/v1/offices/1.json",
