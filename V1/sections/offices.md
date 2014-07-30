@@ -127,59 +127,6 @@ Obtener una sucursal
   "imagestionCellarId": 0
 }
 ```
-Obtener stock de una sucursal
------------------------------
-
-* `GET /v1/offices/2/stock.json`
-```json
-{
-  "href": "http://api.bsale.cl/v1/offices/2/stock.json",
-  "count": 37,
-  "limit": 3,
-  "offset": 0,
-  "items": [
-    {
-      "href": "http://api.bsale.cl/v1/offices/2/stock/1.json",
-      "id": 1,
-      "quantity": "5.0",
-      "variant": {
-        "href": "http://api.bsale.cl/v1/variants/156.json",
-        "id": "156"
-      },
-      "office": {
-        "href": "http://api.bsale.cl/v1/offices/2.json",
-        "id": "2"
-      }
-    },
-    {
-      "href": "http://api.bsale.cl/v1/offices/2/stock/2.json",
-      "id": 2,
-      "quantity": "10.0",
-      "variant": {
-        "href": "http://api.bsale.cl/v1/variants/103.json",
-        "id": "103"
-      },
-      "office": {
-        "href": "http://api.bsale.cl/v1/offices/2.json",
-        "id": "2"
-      }
-    },
-    {
-      "href": "http://api.bsale.cl/v1/offices/2/stock/4.json",
-      "id": 4,
-      "quantity": "17.0",
-      "variant": {
-        "href": "http://api.bsale.cl/v1/variants/162.json",
-        "id": "162"
-      },
-      "office": {
-        "href": "http://api.bsale.cl/v1/offices/2.json",
-        "id": "2"
-      }
-    }
-  ]
-}
-```
 Cantidad de sucursales
 ----------------------
 

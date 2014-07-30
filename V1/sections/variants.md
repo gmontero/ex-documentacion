@@ -166,59 +166,6 @@ Obtener una variante
   }
 }
 ```
-Obtener stock de una variante.
----------------------------------------------
-
-* `GET /v1/variants/101/stock.json`
-```json
-{
-  "href": "http://api.bsale.cl/v1/variants/101/stock.json",
-  "count": 0,
-  "limit": 25,
-  "offset": 0,
-  "items": [
-    {
-      "href": "http://api.bsale.cl/v1/offices/2/stock/11.json",
-      "id": 11,
-      "quantity": "5.0",
-      "variant": {
-        "href": "http://api.bsale.cl/v1/variants/101.json",
-        "id": "101"
-      },
-      "office": {
-        "href": "http://api.bsale.cl/v1/offices/2.json",
-        "id": "2"
-      }
-    },
-    {
-      "href": "http://api.bsale.cl/v1/offices/1/stock/12.json",
-      "id": 12,
-      "quantity": "10.0",
-      "variant": {
-        "href": "http://api.bsale.cl/v1/variants/101.json",
-        "id": "101"
-      },
-      "office": {
-        "href": "http://api.bsale.cl/v1/offices/1.json",
-        "id": "1"
-      }
-    },
-    {
-      "href": "http://api.bsale.cl/v1/offices/4/stock/104.json",
-      "id": 104,
-      "quantity": "40.0",
-      "variant": {
-        "href": "http://api.bsale.cl/v1/variants/101.json",
-        "id": "101"
-      },
-      "office": {
-        "href": "http://api.bsale.cl/v1/offices/4.json",
-        "id": "4"
-      }
-    }
-  ]
-}
-
 Cantidad de variantes
 ---------------------
 
