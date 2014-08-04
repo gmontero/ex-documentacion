@@ -4,6 +4,7 @@ Bsale API
 
 Convenciones de la API
 -----------------------------
+* Peticiones sobre https
 * Usar sustantivos, no verbos.
 * Dos urls base por recurso "/clients.json", "clients/1.json"
 * Siempre usar el nombre del recurso en plural.
