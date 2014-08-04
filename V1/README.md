@@ -16,7 +16,7 @@ Convenciones de la API
 * Paginacion de la respuesta JSON.
 * Permitir acceder a las asociones de un recurso a traves de la variable expand en una sola peticion.
 * Permitir devolver solo los atributos requeridos a traves de la variable fields.
-* Las fechas se trabaja como enteros para el envio y respuesta de peticiones.
+* Las fechas se trabaja como enteros por ejemplo 1388545200 corresponde a la fecha '2014-01-01'.
 
 Mandar un Request
 -----------------
