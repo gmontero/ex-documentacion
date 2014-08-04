@@ -1,7 +1,7 @@
 Obtener colección de documentos de tercero
 ------------------------------------------
 
-* `GET /v1/third_pary_documents.json` retornara todas las monedas.
+* `GET /v1/third_pary_documents.json` retornara todos los documentos de terceros.
 
 ####Parametros
 
@@ -138,10 +138,10 @@ Obtener colección de documentos de tercero
   ]
 }
 ```
-Obtener un documentos de tercero
---------------------------------
+Obtener un documento de tercero
+-------------------------------
 
-* `GET /v1/third_pary_documents/38.json` retornara una moneda específica.
+* `GET /v1/third_pary_documents/38.json` retornara un documento específico.
 
 ####Respuesta
 ```json
