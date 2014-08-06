@@ -272,8 +272,8 @@ Obtener un de detalle de una recepcion
   }
 }
 ```
-Crea un recepcion
------------------
+Crear una recepcion de stock
+---------------------------
 
 * `POST /v1/stocks/receptions.json`
 
@@ -388,5 +388,125 @@ Obtener consumos de stock
       }
     }
   ]
+}
+```
+Obtener un consumo
+------------------
+
+* `GET /v1/stocks/consumptions/1.json` retorna un consumo específico.
+
+####Parametros
+
+- *expand*, permite expandir instancias y colecciones.
+
+####Ejemplos
+
+* `GET /v1/stocks/consumptions/1.json?expand=[office,details]`
+
+####Respuesta
+```json
+{
+  "href": "https://api.bsale.cl/v1/stocks/consumptions/1.json",
+  "id": 1,
+  "consumptionDate": 1371441600,
+  "note": "traslado a los angeles",
+  "imagestionCcdescription": "",
+  "imagestionCenterCostId": 0,
+  "office": {
+    "href": "https://api.bsale.cl/v1/offices/1.json",
+    "id": "1"
+  },
+  "details": {
+    "href": "https://api.bsale.cl/v1/stocks/consumptions/1/details.json"
+  }
+}
+```
+Obtener detalles de un consumo
+------------------------------
+
+* `GET /v1/stocks/consumptions/1/details.json`
+```json
+{
+  "href": "https://api.bsale.cl/v1/stocks/consumptions/1/details.json",
+  "count": 2,
+  "limit": 25,
+  "offset": 0,
+  "items": [
+    {
+      "href": "https://api.bsale.cl/v1/stocks/consumptions/1/details/1.json",
+      "id": 1,
+      "quantity": 36.78,
+      "cost": 3200.0,
+      "variantStock": 42.2,
+      "variant": {
+        "href": "https://api.bsale.cl/v1/variant/355.json",
+        "id": "355"
+      }
+    },
+    {
+      "href": "https://api.bsale.cl/v1/stocks/consumptions/2/details/2.json",
+      "id": 2,
+      "quantity": 78.64,
+      "cost": 1311.08850457782,
+      "variantStock": 106.56,
+      "variant": {
+        "href": "https://api.bsale.cl/v1/variant/388.json",
+        "id": "388"
+      }
+    }
+  ]
+}
+```
+Obtener un de detalle de un consumo
+-----------------------------------
+
+* `GET /v1/stocks/consumptions/1/details/1.json`
+```json
+{
+  "href": "https://api.bsale.cl/v1/stocks/consumptions/1/details/1.json",
+  "id": 1,
+  "quantity": 36.78,
+  "cost": 3200.0,
+  "variantStock": 42.2,
+  "variant": {
+    "href": "https://api.bsale.cl/v1/variant/355.json",
+    "id": "355"
+  }
+}
+```
+Crear un consumo de stock
+-------------------------
+
+* `POST /v1/stocks/receptions.json`
+
+Se debe enviar un Json con la siguiente esctructura.
+```json
+{
+  "note": "prueba api",
+  "officeId": 1,
+  "details": [
+    {
+      "quantity": 13,
+      "variantId": 629
+    }
+  ]
+}
+```
+####Respuesta
+```json
+{
+  "office": {
+    "id": "1",
+    "href": "https://api.bsale.cl/v1/offices/1.json"
+  },
+  "imagestionCenterCostId": null,
+  "details": {
+    "href": "https://api.bsale.cl/v1/stocks/consumptions/593/details.json"
+  },
+  "note": "prueba api",
+  "consumptionDate": 1407297600,
+  "imagestionCcdescription": null,
+  "id": 593,
+  "href": "https://api.bsale.cl/v1/stocks/consumptions/593.json"
 }
 ```
