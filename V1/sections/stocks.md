@@ -95,7 +95,7 @@ Obtener recepciones de stock
 - *offset*, permite paginar los items de una respuesta JSON, si no se envia el offset es 0.
 - *fields*, solo devolver atributos especificos de un recurso
 - *expand*, permite expandir instancias y colecciones.
-- *admissiondate*, Permite fecha de la recepcion.
+- *admissiondate*, Permite filtrar por la fecha de la recepcion.
 - *documentnumber*, filtra por el numero del documento de la recepcion.
 - *officeid*, Permite filtrar por sucursal.
 
@@ -254,8 +254,8 @@ Obtener detalles de una recepcion
   ]
 }
 ```
-Obtener un de detalle de una lista de precio
---------------------------------------------
+Obtener un de detalle de una recepcion
+--------------------------------------
 
 * `GET /v1/stocks/receptions/12/details/65.json`
 ```json
@@ -270,5 +270,123 @@ Obtener un de detalle de una lista de precio
     "href": "https://api.bsale.cl/v1/variant/391.json",
     "id": "391"
   }
+}
+```
+Crea un recepcion
+-----------------
+
+* `POST /v1/stocks/receptions.json`
+
+Se debe enviar un Json con la siguiente esctructura.
+```json
+{
+  "document": "Guía",
+  "officeId": 1,
+  "documentNumber": "123",
+  "note": "prueba api",
+  "details": [
+    {
+      "quantity": 32.22,
+      "variantId": 629,
+      "cost": 3200
+    }
+  ],
+}
+```
+####Respuesta
+```json
+{
+  "admissionDate": 1407297600,
+  "imagestionCcDescription": null,
+  "href": "https://api.bsale.cl/v1/stocks/receptions/831.json",
+  "id": 831,
+  "details": {
+    "href": "https://api.bsale.cl/v1/stocks/receptions/831/details.json"
+  },
+  "document": "Guía",
+  "documentNumber": 123,
+  "office": {
+    "href": "https://api.bsale.cl/v1/offices/1.json",
+    "id": "1"
+  },
+  "imagestionCctId": 0,
+  "note": "prueba api",
+  "internalDispatchId": 0
+}
+```
+Obtener consumos de stock
+-------------------------
+
+* `GET /v1/stocks/consumptions.json` retornara todos las recepciones.
+
+####Parametros
+
+- *limit*, limita la cantidad de items de una respuesta JSON, si no se envia el limit es 25.
+- *offset*, permite paginar los items de una respuesta JSON, si no se envia el offset es 0.
+- *fields*, solo devolver atributos especificos de un recurso.
+- *expand*, permite expandir instancias y colecciones.
+- *consumptiondate*, Permite filtrar por la fecha del consumo.
+- *officeid*, Permite filtrar por sucursal.
+
+####Ejemplos
+
+* `GET /v1/stocks/consumptions.json?limit=10&offset=0`
+* `GET /v1/stocks/consumptions.json?fields=[consumptiondate,note]`
+* `GET /v1/stocks/consumptions.json?expand=[office,details]`
+
+####Respuesta
+```json
+{
+  "href": "https://api.bsale.cl/v1/stocks/consumptions.json",
+  "count": 591,
+  "limit": 3,
+  "offset": 0,
+  "items": [
+    {
+      "href": "https://api.bsale.cl/v1/stocks/consumptions/1.json",
+      "id": 1,
+      "consumptionDate": 1371441600,
+      "note": "traslado a los angeles",
+      "imagestionCcdescription": "",
+      "imagestionCenterCostId": 0,
+      "office": {
+        "href": "https://api.bsale.cl/v1/offices/1.json",
+        "id": "1"
+      },
+      "details": {
+        "href": "https://api.bsale.cl/v1/stocks/consumptions/1/details.json"
+      }
+    },
+    {
+      "href": "https://api.bsale.cl/v1/stocks/consumptions/2.json",
+      "id": 2,
+      "consumptionDate": 1375070400,
+      "note": "Ajuste de Stock: Jessica Vargas",
+      "imagestionCcdescription": "",
+      "imagestionCenterCostId": 0,
+      "office": {
+        "href": "https://api.bsale.cl/v1/offices/1.json",
+        "id": "1"
+      },
+      "details": {
+        "href": "https://api.bsale.cl/v1/stocks/consumptions/2/details.json"
+      }
+    },
+    {
+      "href": "https://api.bsale.cl/v1/stocks/consumptions/3.json",
+      "id": 3,
+      "consumptionDate": 1376452800,
+      "note": "Ajuste de Stock: Jessica Vargas",
+      "imagestionCcdescription": "",
+      "imagestionCenterCostId": 0,
+      "office": {
+        "href": "https://api.bsale.cl/v1/offices/1.json",
+        "id": "1"
+      },
+      "details": {
+        "href": "https://api.bsale.cl/v1/stocks/consumptions/3/details.json"
+      }
+    }
+  ]
 }
 ```
