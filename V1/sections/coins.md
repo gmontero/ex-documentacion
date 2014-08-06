@@ -21,13 +21,13 @@ Obtener colección de monedas
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/coins.json",
+  "href": "https://api.bsale.cl/v1/coins.json",
   "count": 3,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/coins/3.json",
+      "href": "https://api.bsale.cl/v1/coins/3.json",
       "id": 3,
       "name": "Dolar",
       "symbol": "USD",
@@ -35,7 +35,7 @@ Obtener colección de monedas
       "totalRound": 0
     },
     {
-      "href": "http://api.bsale.cl/v1/coins/1.json",
+      "href": "https://api.bsale.cl/v1/coins/1.json",
       "id": 1,
       "name": "Peso Chileno",
       "symbol": "$",
@@ -43,7 +43,7 @@ Obtener colección de monedas
       "totalRound": 0
     },
     {
-      "href": "http://api.bsale.cl/v1/coins/2.json",
+      "href": "https://api.bsale.cl/v1/coins/2.json",
       "id": 2,
       "name": "UF",
       "symbol": "(UF)",
@@ -61,7 +61,7 @@ Obtener una moneda
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/coins/1.json",
+  "href": "https://api.bsale.cl/v1/coins/1.json",
   "id": 1,
   "name": "Peso Chileno",
   "symbol": "$",

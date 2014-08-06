@@ -31,13 +31,13 @@ Obtener colección de documentos
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/documents.json",
+  "href": "https://api.bsale.cl/v1/documents.json",
   "count": 1452,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/documents/15.json",
+      "href": "https://api.bsale.cl/v1/documents/15.json",
       "id": 15,
       "emissionDate": 1309478400,
       "expirationDate": 1309478400,
@@ -47,7 +47,7 @@ Obtener colección de documentos
       "taxAmount": 0.0,
       "exemptAmount": 120410.0,
       "urlTimbre": "-",
-      "urlPdf": "http://app.bsale.cl/view/613/88cab16269f8.pdf",
+      "urlPdf": "https://app.bsale.cl/view/613/88cab16269f8.pdf",
       "token": "88cab16269f8",
       "state": 0,
       "userId": 1,
@@ -56,20 +56,20 @@ Obtener colección de documentos
       "municipality": "Las Condes",
       "city": "Santiago",
       "document_type": {
-        "href": "http://api.bsale.cl/v1/document_types/1.json",
+        "href": "https://api.bsale.cl/v1/document_types/1.json",
         "id": "1"
       },
       "client": {
-        "href": "http://api.bsale.cl/v1/clients/1.json",
+        "href": "https://api.bsale.cl/v1/clients/1.json",
         "id": "1"
       },
       "office": {
-        "href": "http://api.bsale.cl/v1/offices/2.json",
+        "href": "https://api.bsale.cl/v1/offices/2.json",
         "id": "2"
       }
     },
     {
-      "href": "http://api.bsale.cl/v1/documents/190.json",
+      "href": "https://api.bsale.cl/v1/documents/190.json",
       "id": 190,
       "emissionDate": 1301356800,
       "expirationDate": 1301356800,
@@ -79,7 +79,7 @@ Obtener colección de documentos
       "taxAmount": 0.0,
       "exemptAmount": 22207210.0,
       "urlTimbre": "-",
-      "urlPdf": "http://app.bsale.cl/view/613/f7712ecede59.pdf",
+      "urlPdf": "https://app.bsale.cl/view/613/f7712ecede59.pdf",
       "token": "f7712ecede59",
       "state": 0,
       "userId": 5,
@@ -88,15 +88,15 @@ Obtener colección de documentos
       "municipality": "Quellón",
       "city": "Quellón",
       "document_type": {
-        "href": "http://api.bsale.cl/v1/document_types/1.json",
+        "href": "https://api.bsale.cl/v1/document_types/1.json",
         "id": "1"
       },
       "client": {
-        "href": "http://api.bsale.cl/v1/clients/29.json",
+        "href": "https://api.bsale.cl/v1/clients/29.json",
         "id": "29"
       },
       "office": {
-        "href": "http://api.bsale.cl/v1/offices/2.json",
+        "href": "https://api.bsale.cl/v1/offices/2.json",
         "id": "2"
       }
     }
@@ -119,7 +119,7 @@ Obtener un documento
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/documents/190.json",
+  "href": "https://api.bsale.cl/v1/documents/190.json",
   "id": 190,
   "emissionDate": 1301356800,
   "expirationDate": 1301356800,
@@ -129,7 +129,7 @@ Obtener un documento
   "taxAmount": 0.0,
   "exemptAmount": 22207210.0,
   "urlTimbre": "-",
-  "urlPdf": "http://app.bsale.cl/view/613/f7712ecede59.pdf",
+  "urlPdf": "https://app.bsale.cl/view/613/f7712ecede59.pdf",
   "token": "f7712ecede59",
   "state": 0,
   "userId": 5,
@@ -138,15 +138,15 @@ Obtener un documento
   "municipality": "Quellón",
   "city": "Quellón",
   "document_type": {
-    "href": "http://api.bsale.cl/v1/document_types/1.json",
+    "href": "https://api.bsale.cl/v1/document_types/1.json",
     "id": "1"
   },
   "client": {
-    "href": "http://api.bsale.cl/v1/clients/29.json",
+    "href": "https://api.bsale.cl/v1/clients/29.json",
     "id": "29"
   },
   "office": {
-    "href": "http://api.bsale.cl/v1/offices/2.json",
+    "href": "https://api.bsale.cl/v1/offices/2.json",
     "id": "2"
   }
 
@@ -204,20 +204,20 @@ Se debe enviar un Json con la siguiente esctructura.
 ####Respuesta
 ```json
 {
-  "urlPdf": "http://app.bsale.cl/view/613/e46554f50e44.pdf",
+  "urlPdf": "https://app.bsale.cl/view/613/e46554f50e44.pdf",
   "client": {
-    "href": "http://api.bsale.cl/v1/clients/7.json",
+    "href": "https://api.bsale.cl/v1/clients/7.json",
     "id": "7"
   },
   "urlXml": " ",
   "exemptAmount": "134702.4",
-  "href": "http://api.bsale.cl/v1/documents/10145.json",
+  "href": "https://api.bsale.cl/v1/documents/10145.json",
   "city": "Puerto Montt",
   "totalAmount": "134702.4",
-  "urlTimbre": "http://s3.amazonaws.com/bsale/imaginexti/timbres/T34_F1760.png",
+  "urlTimbre": "https://s3.amazonaws.com/bsale/imaginexti/timbres/T34_F1760.png",
   "number": 1760,
   "document_type": {
-    "href": "http://api.bsale.cl/v1/document_types/2.json",
+    "href": "https://api.bsale.cl/v1/document_types/2.json",
     "id": "2"
   },
   "address": "Av. Juan Soler Manfredini 41 1801",
@@ -228,7 +228,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "expirationDate": "1309478400",
   "id": 10145,
   "office": {
-    "href": "http://api.bsale.cl/v1/offices/1.json",
+    "href": "https://api.bsale.cl/v1/offices/1.json",
     "id": "1"
   },
   "userId": 1,

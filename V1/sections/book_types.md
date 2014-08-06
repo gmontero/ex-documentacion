@@ -22,13 +22,13 @@ Obtener colección de tipos de libro
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/book_types.json",
+  "href": "https://api.bsale.cl/v1/book_types.json",
   "count": 3,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/book_types/3.json",
+      "href": "https://api.bsale.cl/v1/book_types/3.json",
       "id": 3,
       "name": "Libro Boleta",
       "dteProcess": "Boleta",
@@ -36,7 +36,7 @@ Obtener colección de tipos de libro
       "state": 0
     },
     {
-      "href": "http://api.bsale.cl/v1/book_types/2.json",
+      "href": "https://api.bsale.cl/v1/book_types/2.json",
       "id": 2,
       "name": "Libro Compra",
       "dteProcess": "Compra",
@@ -44,7 +44,7 @@ Obtener colección de tipos de libro
       "state": 1
     },
     {
-      "href": "http://api.bsale.cl/v1/book_types/1.json",
+      "href": "https://api.bsale.cl/v1/book_types/1.json",
       "id": 1,
       "name": "Libro Venta",
       "dteProcess": "Venta",
@@ -62,7 +62,7 @@ Obtener un tipo de libro
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/book_types/1.json",
+  "href": "https://api.bsale.cl/v1/book_types/1.json",
   "id": 1,
   "name": "Libro Venta",
   "dteProcess": "Venta",

@@ -25,13 +25,13 @@ Obtener colección de tipos de documento
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/document_types.json",
+  "href": "https://api.bsale.cl/v1/document_types.json",
   "count": 3,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/document_types/2.json",
+      "href": "https://api.bsale.cl/v1/document_types/2.json",
       "id": 2,
       "name": "FACTURA EXENTA O NO AFECTA ELECTRONICA",
       "initialNumber": 1,
@@ -53,12 +53,12 @@ Obtener colección de tipos de documento
       "ipadPrint": 0,
       "ipadPrintHigh": "0",
       "book_type": {
-        "href": "http://api.bsale.cl/v1/book_types/1.json",
+        "href": "https://api.bsale.cl/v1/book_types/1.json",
         "id": "1"
       }
     },
     {
-      "href": "http://api.bsale.cl/v1/document_types/3.json",
+      "href": "https://api.bsale.cl/v1/document_types/3.json",
       "id": 3,
       "name": "NOTA CREDITO ELECTRONICA",
       "initialNumber": 43,
@@ -80,12 +80,12 @@ Obtener colección de tipos de documento
       "ipadPrint": 0,
       "ipadPrintHigh": "0",
       "book_type": {
-        "href": "http://api.bsale.cl/v1/book_types/1.json",
+        "href": "https://api.bsale.cl/v1/book_types/1.json",
         "id": "1"
       }
     },
     {
-      "href": "http://api.bsale.cl/v1/document_types/1.json",
+      "href": "https://api.bsale.cl/v1/document_types/1.json",
       "id": 1,
       "name": "NOTA VENTA",
       "initialNumber": 1,
@@ -126,7 +126,7 @@ Obtener un tipo de documento
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/document_types/1.json",
+  "href": "https://api.bsale.cl/v1/document_types/1.json",
   "id": 1,
   "name": "NOTA VENTA",
   "initialNumber": 1,

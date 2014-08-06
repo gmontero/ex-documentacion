@@ -25,13 +25,13 @@ Obtener colección de productos
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/products.json",
+  "href": "https://api.bsale.cl/v1/products.json",
   "count": 53,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/products/62.json",
+      "href": "https://api.bsale.cl/v1/products/62.json",
       "id": 62,
       "name": "Activox Desarrollo Controles de Cambio",
       "description": "",
@@ -45,12 +45,12 @@ Obtener colección de productos
       "prestashopProductId": 0,
       "presashopAttributeId": 0,
       "product_type": {
-        "href": "http://api.bsale.cl/v1/product_types/4.json",
+        "href": "https://api.bsale.cl/v1/product_types/4.json",
         "id": "4"
       }
     },
     {
-      "href": "http://api.bsale.cl/v1/products/30.json",
+      "href": "https://api.bsale.cl/v1/products/30.json",
       "id": 30,
       "name": "Activox Hosting",
       "description": "",
@@ -64,12 +64,12 @@ Obtener colección de productos
       "prestashopProductId": 0,
       "presashopAttributeId": 0,
       "product_type": {
-        "href": "http://api.bsale.cl/v1/product_types/5.json",
+        "href": "https://api.bsale.cl/v1/product_types/5.json",
         "id": "5"
       }
     },
     {
-      "href": "http://api.bsale.cl/v1/products/29.json",
+      "href": "https://api.bsale.cl/v1/products/29.json",
       "id": 29,
       "name": "Activox Soporte",
       "description": "",
@@ -83,7 +83,7 @@ Obtener colección de productos
       "prestashopProductId": 0,
       "presashopAttributeId": 0,
       "product_type": {
-        "href": "http://api.bsale.cl/v1/product_types/7.json",
+        "href": "https://api.bsale.cl/v1/product_types/7.json",
         "id": "7"
       }
     }
@@ -106,7 +106,7 @@ Obtener un producto
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/products/62.json",
+  "href": "https://api.bsale.cl/v1/products/62.json",
   "id": 62,
   "name": "Activox Desarrollo Controles de Cambio",
   "description": "",
@@ -120,7 +120,7 @@ Obtener un producto
   "prestashopProductId": 0,
   "presashopAttributeId": 0,
   "product_type": {
-    "href": "http://api.bsale.cl/v1/product_types/4.json",
+    "href": "https://api.bsale.cl/v1/product_types/4.json",
     "id": "4"
   }
 }
@@ -131,13 +131,13 @@ Obtener variantes de un producto
 * `GET /v1/products/62/variants.json`
 ```json
 {
-  "href": "http://api.bsale.cl/v1/variants.json",
+  "href": "https://api.bsale.cl/v1/variants.json",
   "count": 1,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/variants/149.json",
+      "href": "https://api.bsale.cl/v1/variants/149.json",
       "id": 149,
       "description": "Base",
       "unlimitedStock": 1,
@@ -155,7 +155,7 @@ Obtener variantes de un producto
       "prestashopCombinationId": 0,
       "prestashopValueId": 0,
       "product": {
-        "href": "http://api.bsale.cl/v1/products/62.json",
+        "href": "https://api.bsale.cl/v1/products/62.json",
         "id": "62"
       }
     }
@@ -193,13 +193,13 @@ Se debe enviar un Json con la siguiente esctructura.
   "stockControl": 1,
   "name": "Calcetines",
   "ledgerAccount": "Calcetas",
-  "href": "http://api.bsale.cl/v1/products/97.json",
+  "href": "https://api.bsale.cl/v1/products/97.json",
   "prestashopProductId": 0,
   "presashopAttributeId": 0,
   "costCenter": "23",
   "printDetailPack": 0,
   "product_type": {
-    "href": "http://api.bsale.cl/v1/product_types/1.json",
+    "href": "https://api.bsale.cl/v1/product_types/1.json",
     "id": "1"
   },
   "classification": 1,
@@ -227,13 +227,13 @@ Se debe enviar un Json con la siguiente esctructura.
   "stockControl": 1,
   "name": "Calcetines de Mujer",
   "ledgerAccount": "Calcetas",
-  "href": "http://api.bsale.cl/v1/products/97.json",
+  "href": "https://api.bsale.cl/v1/products/97.json",
   "prestashopProductId": 0,
   "presashopAttributeId": 0,
   "costCenter": "23",
   "printDetailPack": 0,
   "product_type": {
-    "href": "http://api.bsale.cl/v1/product_types/1.json",
+    "href": "https://api.bsale.cl/v1/product_types/1.json",
     "id": "1"
   },
   "classification": 1,
@@ -249,7 +249,7 @@ Eliminar un producto virtualmente (desactivar).
 * `DELETE /v1/products/97.json` cambia el estado del producto.
 ```json
 {
-  "href": "http://api.bsale.cl/v1/products/97.json",
+  "href": "https://api.bsale.cl/v1/products/97.json",
   "id": 97,
   "name": "Calcetines",
   "description": "Multiples colores de calcetines",
@@ -263,7 +263,7 @@ Eliminar un producto virtualmente (desactivar).
   "prestashopProductId": 0,
   "presashopAttributeId": 0,
   "product_type": {
-    "href": "http://api.bsale.cl/v1/product_types/1.json",
+    "href": "https://api.bsale.cl/v1/product_types/1.json",
     "id": "1"
   }
 }

@@ -21,13 +21,13 @@ Obtener colección de impuestos
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/payments.json",
+  "href": "https://api.bsale.cl/v1/payments.json",
   "count": 1926,
   "limit": 4,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/payments/950.json",
+      "href": "https://api.bsale.cl/v1/payments/950.json",
       "id": 950,
       "recordDate": null,
       "amount": "68643.0",
@@ -36,16 +36,16 @@ Obtener colección de impuestos
       "checkAmount": "0",
       "state": 0,
       "payment_type": {
-        "href": "http://api.bsale.cl/v1/payment_types/1.json",
+        "href": "https://api.bsale.cl/v1/payment_types/1.json",
         "id": "1"
       },
       "office": {
-        "href": "http://api.bsale.cl/v1/offices/2.json",
+        "href": "https://api.bsale.cl/v1/offices/2.json",
         "id": "2"
       }
     },
     {
-      "href": "http://api.bsale.cl/v1/payments/951.json",
+      "href": "https://api.bsale.cl/v1/payments/951.json",
       "id": 951,
       "recordDate": null,
       "amount": "281494.0",
@@ -54,16 +54,16 @@ Obtener colección de impuestos
       "checkAmount": "0",
       "state": 0,
       "payment_type": {
-        "href": "http://api.bsale.cl/v1/payment_types/1.json",
+        "href": "https://api.bsale.cl/v1/payment_types/1.json",
         "id": "1"
       },
       "office": {
-        "href": "http://api.bsale.cl/v1/offices/2.json",
+        "href": "https://api.bsale.cl/v1/offices/2.json",
         "id": "2"
       }
     },
     {
-      "href": "http://api.bsale.cl/v1/payments/957.json",
+      "href": "https://api.bsale.cl/v1/payments/957.json",
       "id": 957,
       "recordDate": null,
       "amount": "52637.0",
@@ -72,16 +72,16 @@ Obtener colección de impuestos
       "checkAmount": "0",
       "state": 0,
       "payment_type": {
-        "href": "http://api.bsale.cl/v1/payment_types/1.json",
+        "href": "https://api.bsale.cl/v1/payment_types/1.json",
         "id": "1"
       },
       "office": {
-        "href": "http://api.bsale.cl/v1/offices/2.json",
+        "href": "https://api.bsale.cl/v1/offices/2.json",
         "id": "2"
       }
     },
     {
-      "href": "http://api.bsale.cl/v1/payments/958.json",
+      "href": "https://api.bsale.cl/v1/payments/958.json",
       "id": 958,
       "recordDate": null,
       "amount": "22837.0",
@@ -90,11 +90,11 @@ Obtener colección de impuestos
       "checkAmount": "0",
       "state": 0,
       "payment_type": {
-        "href": "http://api.bsale.cl/v1/payment_types/1.json",
+        "href": "https://api.bsale.cl/v1/payment_types/1.json",
         "id": "1"
       },
       "office": {
-        "href": "http://api.bsale.cl/v1/offices/2.json",
+        "href": "https://api.bsale.cl/v1/offices/2.json",
         "id": "2"
       }
     }
@@ -109,7 +109,7 @@ Obtener un pago
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/payments/950.json",
+  "href": "https://api.bsale.cl/v1/payments/950.json",
   "id": 950,
   "recordDate": null,
   "amount": "68643.0",
@@ -118,11 +118,11 @@ Obtener un pago
   "checkAmount": "0",
   "state": 0,
   "payment_type": {
-    "href": "http://api.bsale.cl/v1/payment_types/1.json",
+    "href": "https://api.bsale.cl/v1/payment_types/1.json",
     "id": "1"
   },
   "office": {
-    "href": "http://api.bsale.cl/v1/offices/2.json",
+    "href": "https://api.bsale.cl/v1/offices/2.json",
     "id": "2"
   }
 }

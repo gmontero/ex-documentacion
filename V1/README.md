@@ -24,7 +24,7 @@ Las peticones son RESTful por lo que se debe especificar el metodo a utilzan GET
 en la cabecera del request el token de acceso que permite la autentificacion en la API.
 
 ```sh
-curl -i -H "access_token: tutokendeacceso" -X GET http://api.bsale.cl/v1/clients.json
+curl -i -H "access_token: tutokendeacceso" -X GET https://api.bsale.cl/v1/clients.json
 ```
 
 Documentacion
@@ -32,6 +32,7 @@ Documentacion
 * [Clientes.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/clients.md)
 * [Condiciones de venta.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/sale_conditions.md)
 * [Descuentos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/discounts.md)
+* [Devoluciones.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/returns.md)
 * [Documentos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/documents.md)
 * [Documentos de terceros.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/third_party_documents.md)
 * [Formas de pago.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/payment_types.md)

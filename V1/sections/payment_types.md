@@ -22,13 +22,13 @@ Obtener colección de formas de pago
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/payment_types.json",
+  "href": "https://api.bsale.cl/v1/payment_types.json",
   "count": 3,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/payment_types/3.json",
+      "href": "https://api.bsale.cl/v1/payment_types/3.json",
       "id": 3,
       "name": "Abono de Cliente",
       "isVirtual": 0,
@@ -43,7 +43,7 @@ Obtener colección de formas de pago
       "ledgerAccount": null
     },
     {
-      "href": "http://api.bsale.cl/v1/payment_types/2.json",
+      "href": "https://api.bsale.cl/v1/payment_types/2.json",
       "id": 2,
       "name": "Credito Factura",
       "isVirtual": 0,
@@ -58,7 +58,7 @@ Obtener colección de formas de pago
       "ledgerAccount": null
     },
     {
-      "href": "http://api.bsale.cl/v1/payment_types/1.json",
+      "href": "https://api.bsale.cl/v1/payment_types/1.json",
       "id": 1,
       "name": "Deposito en Cuenta Corriente",
       "isVirtual": 1,
@@ -83,7 +83,7 @@ Obtener una forma de pago
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/payment_types/1.json",
+  "href": "https://api.bsale.cl/v1/payment_types/1.json",
   "id": 1,
   "name": "Deposito en Cuenta Corriente",
   "isVirtual": 1,

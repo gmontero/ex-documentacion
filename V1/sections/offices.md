@@ -26,13 +26,13 @@ Obtener colección de sucursales
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/offices.json",
+  "href": "https://api.bsale.cl/v1/offices.json",
   "count": 4,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/offices/2.json",
+      "href": "https://api.bsale.cl/v1/offices/2.json",
       "id": 2,
       "name": "Casa Matriz - Puerto Varas",
       "description": "",
@@ -49,7 +49,7 @@ Obtener colección de sucursales
       "imagestionCellarId": 0
     },
     {
-      "href": "http://api.bsale.cl/v1/offices/3.json",
+      "href": "https://api.bsale.cl/v1/offices/3.json",
       "id": 3,
       "name": "Casa Matriz Pto. Varas en ($)",
       "description": "",
@@ -66,7 +66,7 @@ Obtener colección de sucursales
       "imagestionCellarId": 0
     },
     {
-      "href": "http://api.bsale.cl/v1/offices/4.json",
+      "href": "https://api.bsale.cl/v1/offices/4.json",
       "id": 4,
       "name": "Internacional",
       "description": "",
@@ -83,7 +83,7 @@ Obtener colección de sucursales
       "imagestionCellarId": 0
     },
     {
-      "href": "http://api.bsale.cl/v1/offices/1.json",
+      "href": "https://api.bsale.cl/v1/offices/1.json",
       "id": 1,
       "name": "Tienda Online",
       "description": "",
@@ -110,7 +110,7 @@ Obtener una sucursal
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/offices/1.json",
+  "href": "https://api.bsale.cl/v1/offices/1.json",
   "id": 1,
   "name": "Tienda Online",
   "description": "",
@@ -166,7 +166,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "latitude": "",
   "name": "Imaginex",
   "isVirtual": 0,
-  "href": "http://api.bsale.cl/v1/offices/5.json",
+  "href": "https://api.bsale.cl/v1/offices/5.json",
   "address": "Santa Rosa 402",
   "id": 5,
   "city": "Puerto Varas",
@@ -199,7 +199,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "latitude": "",
   "name": "Imaginex TI",
   "isVirtual": 0,
-  "href": "http://api.bsale.cl/v1/offices/5.json",
+  "href": "https://api.bsale.cl/v1/offices/5.json",
   "address": "SSanta Rosa 402 oficina B",
   "id": 5,
   "city": "Puerto Varas",
@@ -222,7 +222,7 @@ Eliminar una sucursal virtualmente (desactivar)
   "latitude": "",
   "name": "Imaginex TI",
   "isVirtual": 0,
-  "href": "http://api.bsale.cl/v1/offices/5.json",
+  "href": "https://api.bsale.cl/v1/offices/5.json",
   "address": "SSanta Rosa 402 oficina B",
   "id": 5,
   "city": "Puerto Varas",

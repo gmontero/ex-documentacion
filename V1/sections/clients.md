@@ -28,13 +28,13 @@ Obtener colección de clientes
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/clients.json",
+  "href": "https://api.bsale.cl/v1/clients.json",
   "count": 112,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/clients/65.json",
+      "href": "https://api.bsale.cl/v1/clients/65.json",
       "id": 65,
       "firstName": "a",
       "lastName": "sa",
@@ -55,11 +55,11 @@ Obtener colección de clientes
       "sendDte": 0,
       "prestashopClienId": 0,
       "contacts": {
-        "href": "http://api.bsale.cl/v1/clients/65/contacts.json"
+        "href": "https://api.bsale.cl/v1/clients/65/contacts.json"
       }
     },
     {
-      "href": "http://api.bsale.cl/v1/clients/102.json",
+      "href": "https://api.bsale.cl/v1/clients/102.json",
       "id": 102,
       "firstName": "Adriana",
       "lastName": "Talhouk",
@@ -80,7 +80,7 @@ Obtener colección de clientes
       "sendDte": 0,
       "prestashopClienId": 0,
       "contacts": {
-        "href": "http://api.bsale.cl/v1/clients/102/contacts.json"
+        "href": "https://api.bsale.cl/v1/clients/102/contacts.json"
       }
     }
   ]
@@ -102,7 +102,7 @@ Obtener un cliente
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/clients/80.json",
+  "href": "https://api.bsale.cl/v1/clients/80.json",
   "id": 80,
   "firstName": "juanito",
   "lastName": "mena",
@@ -123,7 +123,7 @@ Obtener un cliente
   "sendDte": 0,
   "prestashopClienId": 0,
   "contacts": {
-    "href": "http://api.bsale.cl/v1/clients/80/contacts.json"
+    "href": "https://api.bsale.cl/v1/clients/80/contacts.json"
   }
 }
 ```
@@ -133,13 +133,13 @@ Obtener colección de contactos de un cliente.
 * `GET /v1/clientes/55/contacts.json`
 ```json
 {
-  "href": "http://api.bsale.cl/v1/clients/4/contacts.json",
+  "href": "https://api.bsale.cl/v1/clients/4/contacts.json",
   "count": 2,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/clients/4/contacts/31.json",
+      "href": "https://api.bsale.cl/v1/clients/4/contacts/31.json",
       "id": 31,
       "firstName": "Andres",
       "lastName": "Villanueva",
@@ -147,7 +147,7 @@ Obtener colección de contactos de un cliente.
       "email": "a.villanueva@gmail.cl"
     },
     {
-      "href": "http://api.bsale.cl/v1/clients/4/contacts/32.json",
+      "href": "https://api.bsale.cl/v1/clients/4/contacts/32.json",
       "id": 32,
       "firstName": "Juana ",
       "lastName": "Jeldres",
@@ -163,7 +163,7 @@ Obtener un de contacto de un cliente.
 * `GET /v1/clientes/4/contacts/31.json`
 ```json
 {
-  "href": "http://api.bsale.cl/v1/clients/4/contacts/31.json",
+  "href": "https://api.bsale.cl/v1/clients/4/contacts/31.json",
   "id": 31,
   "firstName": "Andres",
   "lastName": "Villanueva",
@@ -222,7 +222,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "note": "Cliente premiun",
   "phone": "66287196",
   "contacts": {
-    "href": "http://localhost:9292/v1/clients/67/contacts.json"
+    "href": "https://localhost:9292/v1/clients/67/contacts.json"
   },
   "prestashopClienId": 0,
   "activity": "Venta de ropa",
@@ -230,7 +230,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "facebook": "",
   "company": "Particular",
   "code": "2-7",
-  "href": "http://localhost:9292/v1/clients/67.json"
+  "href": "https://localhost:9292/v1/clients/67.json"
 }
 ```
 Modifica un cliente.
@@ -275,7 +275,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "note": "Cliente premiun",
   "phone": "66287196",
   "contacts": {
-    "href": "http://localhost:9292/v1/clients/67/contacts.json"
+    "href": "https://localhost:9292/v1/clients/67/contacts.json"
   },
   "prestashopClienId": 0,
   "activity": "Venta de ropa",
@@ -283,7 +283,7 @@ Se debe enviar un Json con la siguiente esctructura.
   "facebook": "",
   "company": "Particular",
   "code": "2-7",
-  "href": "http://localhost:9292/v1/clients/67.json"
+  "href": "https://localhost:9292/v1/clients/67.json"
 }
 ```
 Eliminar un cliente virtualmente (desactivar).
@@ -292,7 +292,7 @@ Eliminar un cliente virtualmente (desactivar).
 * `DELETE /v1/clients/30.json` cambia el estado del cliente.
 ```json
 {
-  "href": "http://api.bsale.cl/v1/clients/30.json",
+  "href": "https://api.bsale.cl/v1/clients/30.json",
   "id": 30,
   "firstName": "Andres",
   "lastName": "Vasquez",
@@ -313,15 +313,15 @@ Eliminar un cliente virtualmente (desactivar).
   "sendDte": 0,
   "prestashopClienId": 0,
   "payment_type": {
-    "href": "http://api.bsale.cl/v1/payment_types/2.json",
+    "href": "https://api.bsale.cl/v1/payment_types/2.json",
     "id": "2"
   },
   "sale_condition": {
-    "href": "http://api.bsale.cl/v1/sale_conditions/1.json",
+    "href": "https://api.bsale.cl/v1/sale_conditions/1.json",
     "id": "2"
   },
   "contacts": {
-    "href": "http://api.bsale.cl/v1/clients/30/contacts.json"
+    "href": "https://api.bsale.cl/v1/clients/30/contacts.json"
   }
 }
 ```

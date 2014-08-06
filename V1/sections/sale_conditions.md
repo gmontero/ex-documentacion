@@ -22,13 +22,13 @@ Obtener colección de condiciones de venta
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/sale_conditions.json",
+  "href": "https://api.bsale.cl/v1/sale_conditions.json",
   "count": 1,
   "limit": 25,
   "offset": 0,
   "items": [
     {
-      "href": "http://api.bsale.cl/v1/sale_conditions/1.json",
+      "href": "https://api.bsale.cl/v1/sale_conditions/1.json",
       "id": 1,
       "name": "Al dia",
       "timeCondition": 7,
@@ -46,7 +46,7 @@ Obtener una condicion de venta
 ####Respuesta
 ```json
 {
-  "href": "http://api.bsale.cl/v1/sale_conditions/1.json",
+  "href": "https://api.bsale.cl/v1/sale_conditions/1.json",
   "id": 1,
   "name": "Al dia",
   "timeCondition": 7,
