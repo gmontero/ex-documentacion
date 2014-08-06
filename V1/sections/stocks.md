@@ -21,34 +21,34 @@ Obtener colección de stocks
 ####Respuesta
 ```json
 {
-  "href": "http://localhost:9292/v1/stocks.json",
+  "href": "https://api.bsale.cl/v1/stocks.json",
   "count": 1049,
   "limit": 2,
   "offset": 0,
   "items": [
     {
-      "href": "http://localhost:9292/v1/stocks/629.json",
+      "href": "https://api.bsale.cl/v1/stocks/629.json",
       "id": 629,
       "quantity": 60.36,
       "variant": {
-        "href": "http://localhost:9292/v1/variants/351.json",
+        "href": "https://api.bsale.cl/v1/variants/351.json",
         "id": "351"
       },
       "office": {
-        "href": "http://localhost:9292/v1/offices/2.json",
+        "href": "https://api.bsale.cl/v1/offices/2.json",
         "id": "2"
       }
     },
     {
-      "href": "http://localhost:9292/v1/stocks/630.json",
+      "href": "https://api.bsale.cl/v1/stocks/630.json",
       "id": 630,
       "quantity": 0.0,
       "variant": {
-        "href": "http://localhost:9292/v1/variants/351.json",
+        "href": "https://api.bsale.cl/v1/variants/351.json",
         "id": "351"
       },
       "office": {
-        "href": "http://localhost:9292/v1/offices/1.json",
+        "href": "https://api.bsale.cl/v1/offices/1.json",
         "id": "1"
       }
     }
@@ -71,15 +71,15 @@ Obtener un stock
 ####Respuesta
 ```json
 {
-  "href": "http://localhost:9292/v1/stocks/629.json",
+  "href": "https://api.bsale.cl/v1/stocks/629.json",
   "id": 629,
   "quantity": 60.36,
   "variant": {
-    "href": "http://localhost:9292/v1/variants/351.json",
+    "href": "https://api.bsale.cl/v1/variants/351.json",
     "id": "351"
   },
   "office": {
-    "href": "http://localhost:9292/v1/offices/2.json",
+    "href": "https://api.bsale.cl/v1/offices/2.json",
     "id": "2"
   }
 }
@@ -108,13 +108,13 @@ Obtener recepciones de stock
 ####Respuesta
 ```json
 {
-  "href": "http://localhost:9292/v1/stocks/receptions.json",
+  "href": "https://api.bsale.cl/v1/stocks/receptions.json",
   "count": 819,
   "limit": 3,
   "offset": 0,
   "items": [
     {
-      "href": "http://localhost:9292/v1/stocks/receptions/12.json",
+      "href": "https://api.bsale.cl/v1/stocks/receptions/12.json",
       "id": 12,
       "admissionDate": 1371182400,
       "document": "Guía",
@@ -124,15 +124,15 @@ Obtener recepciones de stock
       "imagestionCcDescription": "",
       "internalDispatchId": 0,
       "office": {
-        "href": "http://localhost:9292/v1/offices/1.json",
+        "href": "https://api.bsale.cl/v1/offices/1.json",
         "id": "1"
       },
       "details": {
-        "href": "http://localhost:9292/v1/stocks/receptions/12/details.json"
+        "href": "https://api.bsale.cl/v1/stocks/receptions/12/details.json"
       }
     },
     {
-      "href": "http://localhost:9292/v1/stocks/receptions/13.json",
+      "href": "https://api.bsale.cl/v1/stocks/receptions/13.json",
       "id": 13,
       "admissionDate": 1371182400,
       "document": "Factura",
@@ -142,15 +142,15 @@ Obtener recepciones de stock
       "imagestionCcDescription": "",
       "internalDispatchId": 0,
       "office": {
-        "href": "http://localhost:9292/v1/offices/1.json",
+        "href": "https://api.bsale.cl/v1/offices/1.json",
         "id": "1"
       },
       "details": {
-        "href": "http://localhost:9292/v1/stocks/receptions/13/details.json"
+        "href": "https://api.bsale.cl/v1/stocks/receptions/13/details.json"
       }
     },
     {
-      "href": "http://localhost:9292/v1/stocks/receptions/14.json",
+      "href": "https://api.bsale.cl/v1/stocks/receptions/14.json",
       "id": 14,
       "admissionDate": 1371182400,
       "document": "Factura",
@@ -160,11 +160,11 @@ Obtener recepciones de stock
       "imagestionCcDescription": "",
       "internalDispatchId": 0,
       "office": {
-        "href": "http://localhost:9292/v1/offices/1.json",
+        "href": "https://api.bsale.cl/v1/offices/1.json",
         "id": "1"
       },
       "details": {
-        "href": "http://localhost:9292/v1/stocks/receptions/14/details.json"
+        "href": "https://api.bsale.cl/v1/stocks/receptions/14/details.json"
       }
     }
   ]
@@ -186,7 +186,7 @@ Obtener una recepcion
 ####Respuesta
 ```json
 {
-  "href": "http://localhost:9292/v1/stocks/receptions/12.json",
+  "href": "https://api.bsale.cl/v1/stocks/receptions/12.json",
   "id": 12,
   "admissionDate": 1371182400,
   "document": "Guía",
@@ -196,11 +196,79 @@ Obtener una recepcion
   "imagestionCcDescription": "",
   "internalDispatchId": 0,
   "office": {
-    "href": "http://localhost:9292/v1/offices/1.json",
+    "href": "https://api.bsale.cl/v1/offices/1.json",
     "id": "1"
   },
   "details": {
-    "href": "http://localhost:9292/v1/stocks/receptions/12/details.json"
+    "href": "https://api.bsale.cl/v1/stocks/receptions/12/details.json"
+  }
+}
+```
+Obtener detalles de una recepcion
+---------------------------------
+
+* `GET /v1/stocks/receptions/12/details.json`
+```json
+{
+  "href": "https://api.bsale.cl/v1/stocks/receptions/12/details.json",
+  "count": 13,
+  "limit": 25,
+  "offset": 0,
+  "items": [
+    {
+      "href": "https://api.bsale.cl/v1/stocks/receptions/12/details/65.json",
+      "id": 65,
+      "quantity": 32.02,
+      "cost": 3200.0,
+      "variantStock": 85.55,
+      "serialNumber": null,
+      "variant": {
+        "href": "https://api.bsale.cl/v1/variant/391.json",
+        "id": "391"
+      }
+    },
+    {
+      "href": "https://api.bsale.cl/v1/stocks/receptions/12/details/66.json",
+      "id": 66,
+      "quantity": 32.22,
+      "cost": 3200.0,
+      "variantStock": 185.2,
+      "serialNumber": null,
+      "variant": {
+        "href": "https://api.bsale.cl/v1/variant/388.json",
+        "id": "388"
+      }
+    },
+    {
+      "href": "https://api.bsale.cl/v1/stocks/receptions/12/details/67.json",
+      "id": 67,
+      "quantity": 14.46,
+      "cost": 3200.0,
+      "variantStock": 107.84,
+      "serialNumber": null,
+      "variant": {
+        "href": "https://api.bsale.cl/v1/variant/393.json",
+        "id": "393"
+      }
+    }
+  ]
+}
+```
+Obtener un de detalle de una lista de precio
+--------------------------------------------
+
+* `GET /v1/stocks/receptions/12/details/65.json`
+```json
+{
+  "href": "https://api.bsale.cl/v1/stocks/receptions/12/details/65.json",
+  "id": 65,
+  "quantity": 32.02,
+  "cost": 3200.0,
+  "variantStock": 85.55,
+  "serialNumber": null,
+  "variant": {
+    "href": "https://api.bsale.cl/v1/variant/391.json",
+    "id": "391"
   }
 }
 ```

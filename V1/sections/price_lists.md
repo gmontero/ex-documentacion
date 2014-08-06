@@ -146,7 +146,7 @@ Obtener detalles de una lista de precio
   "next": "https://localhost:9292/v1/price_lists/3/details.json?limit=25\u0026offset=25"
 }
 ```
-Obtener un de detelle de una lista de precio
+Obtener un de detalle de una lista de precio
 --------------------------------------------
 
 * `GET /v1/price_lists/3/details/349.json`
