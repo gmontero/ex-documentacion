@@ -1,5 +1,5 @@
-Obtener colección de impuestos
-------------------------------
+Obtener colección de pagos
+--------------------------
 
 * `GET /v1/payments.json` retornara todos los pagos realizados.
 
@@ -127,6 +127,184 @@ Obtener un pago
   }
 }
 ```
+Obtener pagos agrupados por forma de pago
+-----------------------------------------
+
+* `GET /v1/payments/group_payment_types.json` retornara todos los pagos realizados.
+
+####Parametros
+
+- *limit*, limita la cantidad de items de una respuesta JSON, si no se envia el limit es 25.
+- *offset*, permite paginar los items de una respuesta JSON, si no se envia el offset es 0.
+- *fields*, solo devolver atributos especificos de un recurso
+- *expand*, permite expandir instancias y colecciones.
+- *recorddate*, Permite filtrar por fecha del pago.
+- *codesii*, Código documento basado en los identificadores del SII, pueden ser varios separados por coma.
+- *documentid*, filtra por documento.
+- *officeid*, filtra por sucursal.
+- *paymenttypeid*, filtra por forma de pago.
+
+####Ejemplos
+
+* `GET /v1/payments/group_payment_types.json?limit=10&offset=0`
+* `GET /v1/payments/group_payment_types.json?recorddate=1393642800,`
+
+####Respuesta
+```json
+[
+  {
+    "recordDate": 1396494000,
+    "paymentTypeTotalAmount": 40906.0,
+    "paymentTypeId": 1,
+    "paymentTypeName": "Efectivo",
+    "paymentLedgerAccount": null,
+    "isCheck": 0,
+    "isCreditNote": 0,
+    "isClientCredit": 0,
+    "isCash": 1,
+    "isCreditMemo": 0,
+    "codesii": "35",
+    "officeId": 1,
+    "officeName": "Puerto Varas",
+    "officeCostCenter": "",
+    "details": [
+
+    ]
+  },
+  {
+    "recordDate": 1396494000,
+    "paymentTypeTotalAmount": 174592.0,
+    "paymentTypeId": 1,
+    "paymentTypeName": "Efectivo",
+    "paymentLedgerAccount": null,
+    "isCheck": 0,
+    "isCreditNote": 0,
+    "isClientCredit": 0,
+    "isCash": 1,
+    "isCreditMemo": 0,
+    "codesii": "39",
+    "officeId": 2,
+    "officeName": "Los Angeles",
+    "officeCostCenter": "",
+    "details": [
+
+    ]
+  },
+  {
+    "recordDate": 1396494000,
+    "paymentTypeTotalAmount": 75204.0,
+    "paymentTypeId": 2,
+    "paymentTypeName": "Tarjeta de Crédito",
+    "paymentLedgerAccount": null,
+    "isCheck": 0,
+    "isCreditNote": 0,
+    "isClientCredit": 0,
+    "isCash": 0,
+    "isCreditMemo": 0,
+    "codesii": "35",
+    "officeId": 1,
+    "officeName": "Puerto Varas",
+    "officeCostCenter": "",
+    "details": [
+      {
+        "name": "Nº Comprobante",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "recordDate": 1396494000,
+    "paymentTypeTotalAmount": 54328.0,
+    "paymentTypeId": 2,
+    "paymentTypeName": "Tarjeta de Crédito",
+    "paymentLedgerAccount": null,
+    "isCheck": 0,
+    "isCreditNote": 0,
+    "isClientCredit": 0,
+    "isCash": 0,
+    "isCreditMemo": 0,
+    "codesii": "39",
+    "officeId": 2,
+    "officeName": "Los Angeles",
+    "officeCostCenter": "",
+    "details": [
+      {
+        "name": "Nº Comprobante",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "recordDate": 1396494000,
+    "paymentTypeTotalAmount": 816873.0,
+    "paymentTypeId": 4,
+    "paymentTypeName": "Crédito",
+    "paymentLedgerAccount": "",
+    "isCheck": 0,
+    "isCreditNote": 0,
+    "isClientCredit": 1,
+    "isCash": 0,
+    "isCreditMemo": 0,
+    "codesii": "33",
+    "officeId": 1,
+    "officeName": "Puerto Varas",
+    "officeCostCenter": "",
+    "details": [
+
+    ]
+  },
+  {
+    "recordDate": 1396494000,
+    "paymentTypeTotalAmount": 16373.0,
+    "paymentTypeId": 5,
+    "paymentTypeName": "Cheque",
+    "paymentLedgerAccount": "",
+    "isCheck": 1,
+    "isCreditNote": 0,
+    "isClientCredit": 0,
+    "isCash": 0,
+    "isCreditMemo": 0,
+    "codesii": "39",
+    "officeId": 2,
+    "officeName": "Los Angeles",
+    "officeCostCenter": "",
+    "details": [
+      {
+        "name": "Banco",
+        "value": ""
+      },
+      {
+        "name": "Número",
+        "value": ""
+      }
+    ]
+  },
+  {
+    "recordDate": 1396494000,
+    "paymentTypeTotalAmount": 32658.0,
+    "paymentTypeId": 6,
+    "paymentTypeName": "Tarjeta de Débito",
+    "paymentLedgerAccount": "",
+    "isCheck": 0,
+    "isCreditNote": 0,
+    "isClientCredit": 0,
+    "isCash": 0,
+    "isCreditMemo": 0,
+    "codesii": "39",
+    "officeId": 2,
+    "officeName": "Los Angeles",
+    "officeCostCenter": "",
+    "details": [
+      {
+        "name": "N Operacion",
+        "value": ""
+      }
+    ]
+  }
+]
+```
+
+
 Obtener cantidad de pagos.
 --------------------------
 
