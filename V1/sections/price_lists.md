@@ -168,3 +168,27 @@ Cantidad de clientes.
   "count": 3
 }
 ```
+Modifica un de detalle de una lista de precio
+---------------------------------------------
+
+* `PUT /v1/price_lists/19/details/1412.json`
+
+Se debe enviar un Json con la siguiente esctructura.
+```json
+{
+  "variantValue": 2000,
+  "id": 1412
+}
+```
+####Respuesta
+```json
+{
+  "href": "http://localhost:9292/v1/price_lists/19/details/1412.json",
+  "variantValue": 2000.0,
+  "variant": {
+    "href": "http://localhost:9292/v1/variant/351.json",
+    "id": "351"
+  },
+  "id": 1412
+}
+```
