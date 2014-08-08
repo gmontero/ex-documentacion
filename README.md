@@ -8,6 +8,10 @@ Estos métodos permitirán obtener información desde Bsale o enviar informació
 Esta API permite llamadas del tipo REST y utiliza JSON para el envío y recepción de información.
 En la carpeta sections pueden encontrar los distintos métodos disponibles.
 
+## Nueva Versión
+Por que siempre estamos buscando [una mejor manera de trabajar], hemos liberado una nueva version de la API de Bsale, mucho mas facil y rapida de trabajar pueden encontrar la documentacion aqui:
+* [Documentación nueva API](https://github.com/gmontero/API-Bsale/blob/master/V1/README.mkd)
+
 ## Mandar un Request
 
 Para hacer una llamada a la API, la URL a utilizar debe ser http://app.bsale.cl/api/, seguido del nombre del método solicitado. En este sentido se debe notar que los métodos están agrupados en sub carpetas, por lo que al nombre del método se le debe anteponer el nombre de la carpeta. Por ejemplo, si se requiere obtener la lista de los documentos generados en Bsale (lista de facturas, boletas, etc.) la llamada será:
@@ -82,3 +86,6 @@ Por ejemplo si se requiere obtener la lista de documentos generados para el día
 * [Stock](https://github.com/gmontero/API-Bsale/blob/master/sections/stock.mkd)
 
 * [Sucursal](https://github.com/gmontero/API-Bsale/blob/master/sections/sucursal.mkd)
+
+
+[una mejor manera de trabajar]:http://www.imaginex.cl/
