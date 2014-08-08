@@ -151,6 +151,98 @@ Obtener un documento
   }
 
 ```
+Obtener colección de documentos
+-------------------------------
+
+* `GET /v1/documents/summary.json` retorna resumen.
+
+####Parametros
+
+- *limit*, limita la cantidad de items de una respuesta JSON, si no se envia el limit es 25.
+- *offset*, permite paginar los items de una respuesta JSON, si no se envia el offset es 0.
+- *fields*, solo devolver atributos especificos de un recurso
+- *expand*, permite expandir instancias y colecciones.
+- *emissiondaterange*, filtra por rango de fecha de emision.
+- *generationdaterange*, filtra por rango de fecha de generacion.
+- *codesii*, Código documento basado en los identificadores del SII, pueden ser varios separados por coma.
+- *perdocument*, Boolean (0 o 1) indica si el resultado lo agrupa por documento.
+
+####Ejemplos
+
+* `GET /v1/documents.json?limit=10&offset=0`
+* `GET /v1/documents/summary.json?emissiondaterange=[1404187200,1406779200]`
+* `GET /v1/documents/summary.json?generationdaterange=[1404187200,1406779200]`
+* `GET /v1/documents/summary.json?codesii=[33,31]`
+* `GET /v1/documents/summary.json?perdocument=1`
+
+####Respuesta
+```json
+[
+  {
+    "generationDate": "",
+    "emissionDate": "",
+    "documentTypeName": "Boleta Electrónica",
+    "codeSii": "39",
+    "month": 7,
+    "year": 2014,
+    "officeId": 2,
+    "officeName": "Los Angeles",
+    "officeCostCenter": "",
+    "count": 1,
+    "totalNetAmount": 2791.0,
+    "totalTaxAmount": 530.0,
+    "totalAmount": 3321.0,
+    "totalExemptAmount": 0.0,
+    "taxes": [
+      {
+        "taxId": 1,
+        "taxName": "IVA",
+        "taxAmount": 530.0
+      }
+    ],
+    "details": [
+      {
+        "itemLedgerAccount": "",
+        "totalNetAmount": 2791.0
+      }
+    ],
+    "documentId": 10383,
+    "documentNumber": 9093
+  },
+  {
+    "generationDate": "",
+    "emissionDate": "",
+    "documentTypeName": "Boleta Electrónica",
+    "codeSii": "39",
+    "month": 7,
+    "year": 2014,
+    "officeId": 2,
+    "officeName": "Los Angeles",
+    "officeCostCenter": "",
+    "count": 1,
+    "totalNetAmount": 15132.0,
+    "totalTaxAmount": 2875.0,
+    "totalAmount": 18007.0,
+    "totalExemptAmount": 0.0,
+    "taxes": [
+      {
+        "taxId": 1,
+        "taxName": "IVA",
+        "taxAmount": 2875.0
+      }
+    ],
+    "details": [
+      {
+        "itemLedgerAccount": "",
+        "totalNetAmount": 15132.0
+      }
+    ],
+    "documentId": 10384,
+    "documentNumber": 9094
+  }
+]
+```
+
 Cantidad de documentos
 ----------------------
 
