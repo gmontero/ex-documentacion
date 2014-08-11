@@ -288,7 +288,7 @@ Se debe enviar un Json con la siguiente esctructura.
     {
       "paymentTypeId": 1,
       "amount": 70000,
-      "recordDate": "2014-07-22"
+      "recordDate": "1309478400"
     }
   ]
 }
