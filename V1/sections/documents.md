@@ -257,74 +257,74 @@ Crea un documento
 
 * `POST /v1/documents.json`
 
-Se debe enviar un Json con la siguiente esctructura.
+Para crear una factura electrónica, se debe enviar un Json con la siguiente esctructura.
 ```json
 {
-  "documentTypeId": 2,
-  "priceListId": 2,
-  "emissionDate": "1309478400",
-  "expirationDate": "1309478400",
-  "declareSii": 1,
-  "officeId": 1,
-  "exchangeRate": 24054,
+  "documentTypeId": 8,          # Identificador del tipo del documento, se debe enviar el que pertenece a factura electrónica.
+  "officeId": 1,                # Sucursal donde se emite el documento.
+  "emissionDate": 1407715200,   # Fecha de emision del documento, se envia en integer GMT.
+  "expirationDate": 1407715200, # Fecha vencimiento del documento, se envia en integer GMT.
+  "declareSii": 1,              # Si se desea declarar el documento se envia 1 en caso contrario 0.
+  "priceListId": 18,            # Identificador de la lista de precio, si no se envia usara la por defecto de la sucursal.
+  "payments": [
+    {
+      "paymentTypeId": 1,       # Identificador de la forma de pago.
+      "amount": 70000,          # Monto de la forma de pago.
+      "recordDate": 1407715200  # Fecha del pago, se envia en integer GMT..
+    }
+  ],
   "details": [
     {
-      "discount": 0,
-      "comment": "Prueba API nueva",
-      "variantId": 1,
-      "quantity": 1,
-      "netUnitValue": 5.6
+      "variantId":1,            # Identificador de la variante, si se utiliza glosa dinamica no se debe enviar.
+      "netUnitValue": 53975,    # Valor neto.
+      "quantity": 1,            # cantidad.
+      "taxId": "[1,2]",         # Identificadores de los impuesto a utilizar.
+      "comment": "Producto 1"   # Glosa dinamica.
+      "discount": 0             # % de descuento.
     }
   ],
   "client": {
-    "code": "76018303-2",
-    "activity": "Servicios Relacionados con la Acuicultura",
-    "lastName": "Reinoso",
-    "company": "Ocea Chile S.A.",
-    "firstName": "Julio",
-    "email": "facturas@ocea.cl"
-  },
-  "payments": [
-    {
-      "paymentTypeId": 1,
-      "amount": 70000,
-      "recordDate": "2014-07-22"
-    }
-  ]
+    "code": "1-9",              # Rut cliente.
+    "city": "Puerto Varas",     # Ciudad.
+    "company": "Imaginex",      # Razon social.
+    "municipality": "comuna",   # Comuna.
+    "activity": "giro",         # Giro empresa.
+    "address": "direccion"      # Direccion.
+  }
 }
 ```
 ####Respuesta
 ```json
 {
-  "urlPdf": "https://app.bsale.cl/view/613/e46554f50e44.pdf",
-  "client": {
-    "href": "https://api.bsale.cl/v1/clients/7.json",
-    "id": "7"
-  },
   "urlXml": " ",
-  "exemptAmount": "134702.4",
-  "href": "https://api.bsale.cl/v1/documents/10145.json",
-  "city": "Puerto Montt",
-  "totalAmount": "134702.4",
-  "urlTimbre": "https://s3.amazonaws.com/bsale/imaginexti/timbres/T34_F1760.png",
-  "number": 1760,
   "document_type": {
-    "href": "https://api.bsale.cl/v1/document_types/2.json",
-    "id": "2"
+    "href": "https://api.bsale.cl/v1/document_types/8.json",
+    "id": "8"
   },
-  "address": "Av. Juan Soler Manfredini 41 1801",
-  "token": "e46554f50e44",
-  "emissionDate": "21309478400",
-  "municipality": "Puerto Montt",
-  "state": 0,
-  "expirationDate": "1309478400",
-  "id": 10145,
+  "urlTimbre": "http://s3.amazonaws.com/bsale/timbres/T33_F930.png",
+  "userId": 1,
+  "emissionDate": 1407643200,
   "office": {
     "href": "https://api.bsale.cl/v1/offices/1.json",
     "id": "1"
   },
-  "userId": 1,
-  "taxAmount": "0.0",
-  "netAmount": "134702.4"
+  "taxAmount": 20511.0,
+  "number": 930,
+  "href": "https://api.bsale.cl/v1/documents/11558.json",
+  "urlPdf": "http://app.bsale.cl/view/339/e850a3beb02b.pdf",
+  "expirationDate": 1407643200,
+  "city": "puerto varas",
+  "netAmount": 53975.0,
+  "exemptAmount": 0.0,
+  "id": 11558,
+  "municipality": "comuna",
+  "token": "e850a3beb02b",
+  "client": {
+    "href": "https://api.bsale.cl/v1/clients/211.json",
+    "id": "211"
+  },
+  "address": "direccion,
+  "state": 0,
+  "totalAmount": 74486.0
 }
 ```
