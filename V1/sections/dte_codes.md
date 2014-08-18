@@ -212,6 +212,7 @@ Obtener un codigo tributario
 
 ####Respuesta
 ```json
+{
   "href": "https://api.bsale.cl/v1/dte_codes/8.json",
   "id": 8,
   "name": "Factura Electrónica",
