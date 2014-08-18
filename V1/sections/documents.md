@@ -283,6 +283,14 @@ Para crear una factura electrónica, se debe enviar un Json con la siguiente esc
       "discount": 0             # % de descuento.
     }
   ],
+  "references": [                        # Documentos de referencia de un documento, es opcional
+      {
+        "number": 123,                   # Folio de la referencia.
+        "referenceDate": 1407715200,     # Fecha del documento de referencia.
+        "reason": "Orden de Compra 123", # Razon del documento
+        "codeSii": 801                   # Codigo tributario del documento de referencia.
+      }
+  ],
   "client": {
     "code": "1-9",              # Rut cliente.
     "city": "Puerto Varas",     # Ciudad.
