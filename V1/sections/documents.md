@@ -304,35 +304,38 @@ Para crear una factura electrónica, se debe enviar un Json con la siguiente esc
 ####Respuesta
 ```json
 {
-  "urlXml": " ",
-  "document_type": {
-    "href": "https://api.bsale.cl/v1/document_types/8.json",
-    "id": "8"
-  },
-  "urlTimbre": "http://s3.amazonaws.com/bsale/timbres/T33_F930.png",
-  "userId": 1,
-  "emissionDate": 1407643200,
-  "office": {
-    "href": "https://api.bsale.cl/v1/offices/1.json",
-    "id": "1"
-  },
-  "taxAmount": 20511.0,
-  "number": 930,
-  "href": "https://api.bsale.cl/v1/documents/11558.json",
-  "urlPdf": "http://app.bsale.cl/view/339/e850a3beb02b.pdf",
-  "expirationDate": 1407643200,
-  "city": "puerto varas",
-  "netAmount": 53975.0,
-  "exemptAmount": 0.0,
-  "id": 11558,
-  "municipality": "comuna",
-  "token": "e850a3beb02b",
+  "urlTimbre": "http://s3.amazonaws.com/bsale/timbres/T33_F933.png",
   "client": {
     "href": "https://api.bsale.cl/v1/clients/211.json",
     "id": "211"
   },
-  "address": "direccion,
-  "state": 0,
-  "totalAmount": 74486.0
+  "address": "direccion valida",
+  "token": "a1a3291afd78",
+  "userId": 1,
+  "exemptAmount": 0.0,
+  "office": {
+    "href": "https://api.bsale.cl/v1/offices/1.json",
+    "id": "1"
+  },
+  "urlXml": " ",
+  "expirationDate": 1407643200,
+  "municipality": "puerto montt",
+  "netAmount": 53975.0,
+  "totalAmount": 74486.0,
+  "document_type": {
+    "href": "https://api.bsale.cl/v1/document_types/8.json",
+    "id": "8"
+  },
+  "taxAmount": 20511.0,
+  "number": 933,
+  "href": "https://api.bsale.cl/v1/documents/11561.json",
+  "emissionDate": 1407643200,
+  "urlPdf": "http://app.bsale.cl/view/339/a1a3291afd78.pdf",
+  "id": 11561,
+  "references": {
+    "href": "https://api.bsale.cl/v1/documents/11561/references.json"
+  },
+  "city": "puerto montt",
+  "state": 0
 }
 ```
