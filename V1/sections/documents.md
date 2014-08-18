@@ -346,7 +346,7 @@ Para crear una factura electrónica, se debe enviar un Json con la siguiente esc
   "dynamicAttributes": [                 # atributos dinamicos, es opcional
     {
       "description": "098",              # Valor del atributo
-      "dynamicAttributeId": 17           # Identificador del atributo
+      "dynamicAttributeId": 17           # Identificador del atributo dinamico
     },
     {
       "description": "nombre",
