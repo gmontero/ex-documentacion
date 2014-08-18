@@ -1,11 +1,6 @@
+GET con PHP
+----------
 ```php
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
-    </head>
-    <body>
         <?php
             $url='https://api.bsale.cl/v1/clients.json';
             $access_token='tutokendeacceso';
@@ -33,6 +28,4 @@
             //Esto es sólo para poder visualizar lo que se está retornando
             print_r($response);
         ?>
-    </body>
-</html>
 ```
