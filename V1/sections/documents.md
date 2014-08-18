@@ -343,6 +343,16 @@ Para crear una factura electrónica, se debe enviar un Json con la siguiente esc
         "codeSii": 801                   # Codigo tributario del documento de referencia.
       }
   ],
+  "dynamicAttributes": [                 # atributos dinamicos, es opcional
+    {
+      "description": "098",              # Valor del atributo
+      "dynamicAttributeId": 17           # Identificador del atributo
+    },
+    {
+      "description": "nombre",
+      "dynamicAttributeId": 18
+    }
+  ],
   "client": {
     "code": "1-9",              # Rut cliente.
     "city": "Puerto Varas",     # Ciudad.
