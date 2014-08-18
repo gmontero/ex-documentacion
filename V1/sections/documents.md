@@ -242,7 +242,59 @@ Obtener colección de documentos
   }
 ]
 ```
+Obtener referencias de un documento
+-----------------------------------
 
+* `GET /v1/documents/11561/references.json`
+```json
+{
+  "href": "https://api.bsale.cl/v1/documents//references.json",
+  "count": 2,
+  "limit": 25,
+  "offset": 0,
+  "items": [
+    {
+      "href": "https://api.bsale.cl/v1/documents/11561/references/5.json",
+      "id": 5,
+      "referenceDate": 1407643200,
+      "number": "123",
+      "reason": "Orden de Compra 123",
+      "dte_code": {
+        "href": "https://api.bsale.cl/v1/dte_codes/20.json",
+        "id": "20"
+      }
+    },
+    {
+      "href": "https://api.bsale.cl/v1/documents/11561/references/6.json",
+      "id": 6,
+      "referenceDate": 1407643200,
+      "number": "456",
+      "reason": "Guia despacho 456",
+      "dte_code": {
+        "href": "https://api.bsale.cl/v1/dte_codes/15.json",
+        "id": "15"
+      }
+    }
+  ]
+}
+```
+Obtener una referencia de un documento
+--------------------------------------
+
+* `GET /v1/documents/11561/references/5.json`
+```json
+{
+  "href": "https://api.bsale.cl/v1/documents/11561/references/5.json",
+  "id": 5,
+  "referenceDate": 1407643200,
+  "number": "123",
+  "reason": "Orden de Compra 123",
+  "dte_code": {
+    "href": "https://api.bsale.cl/v1/dte_codes/20.json",
+    "id": "20"
+  }
+}
+```
 Cantidad de documentos
 ----------------------
 
