@@ -208,7 +208,7 @@ Obtener colección de codigos tributarios
 Obtener un codigo tributario
 ----------------------------
 
-* `GET /v1/dte_codes/8.json` retornara una moneda específica.
+* `GET /v1/dte_codes/8.json`
 
 ####Respuesta
 ```json
