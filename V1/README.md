@@ -30,6 +30,7 @@ curl -i -H "access_token: tutokendeacceso" -X GET https://api.bsale.cl/v1/client
 Documentacion
 -------------
 * [Clientes.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/clients.md)
+* [Códigos tributarios.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/dte_codes.md)
 * [Condiciones de venta.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/sale_conditions.md)
 * [Descuentos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/discounts.md)
 * [Devoluciones.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/returns.md)
