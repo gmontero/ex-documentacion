@@ -27,8 +27,8 @@ en la cabecera del request el token de acceso que permite la autentificacion en 
 curl -i -H "access_token: tutokendeacceso" -X GET https://api.bsale.cl/v1/clients.json
 ```
 
-Documentacion
--------------
+Recursos disponibles
+--------------------
 * [Atributos dinámicos.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/dynamic_attributes.md)
 * [Clientes.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/clients.md)
 * [Códigos tributarios.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/dte_codes.md)
