@@ -178,7 +178,10 @@ Crear una devolución
 Se debe enviar un Json con la siguiente esctructura.
 ```json
 {
+  "documentTypeId": 9,
   "officeId": 1,
+  "expirationDate": 1407384000,
+  "emissionDate": 1407384000,
   "referenceDocumentId": 11528,
   "motive": "prueba api",
   "declareSii": 1,
@@ -186,11 +189,6 @@ Se debe enviar un Json con la siguiente esctructura.
   "editTexts": 0,
   "amount": 6490,
   "type": 1,
-  "document": {
-    "expirationDate": 1407384000,
-    "emissionDate": 1407384000,
-    "documentTypeId": 9
-  },
   "client": {
     "id": 107
   },
