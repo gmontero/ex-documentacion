@@ -32,72 +32,129 @@ Obtener colección de documentos
 ```json
 {
   "href": "https://api.bsale.cl/v1/documents.json",
-  "count": 1452,
-  "limit": 25,
+  "count": 2939,
+  "limit": 3,
   "offset": 0,
   "items": [
     {
-      "href": "https://api.bsale.cl/v1/documents/15.json",
-      "id": 15,
-      "emissionDate": 1309478400,
-      "expirationDate": 1309478400,
+      "href": "https://api.bsale.cl/v1/documents/382.json",
+      "id": 382,
+      "emissionDate": 1350604800,
+      "expirationDate": 1350604800,
       "number": 1,
-      "totalAmount": 120410.0,
-      "netAmount": 120410.0,
-      "taxAmount": 0.0,
-      "exemptAmount": 120410.0,
-      "urlTimbre": "-",
-      "urlPdf": "https://app.bsale.cl/view/613/88cab16269f8.pdf",
-      "token": "88cab16269f8",
+      "totalAmount": 14280.0,
+      "netAmount": 12000.0,
+      "taxAmount": 2280.0,
+      "exemptAmount": 0.0,
+      "urlTimbre": null,
+      "urlPublicView": "http://app.bsale.cl/view/2/439d299fb053",
+      "urlPdf": "http://app.bsale.cl/view/2/439d299fb053.pdf",
+      "token": "439d299fb053",
       "state": 0,
-      "userId": 1,
+      "userId": 2,
       "urlXml": null,
-      "address": "San Crescente 240",
-      "municipality": "Las Condes",
-      "city": "Santiago",
+      "address": null,
+      "municipality": null,
+      "city": null,
+      "informedSii": 1,
       "document_type": {
         "href": "https://api.bsale.cl/v1/document_types/1.json",
-        "id": "1"
-      },
-      "client": {
-        "href": "https://api.bsale.cl/v1/clients/1.json",
         "id": "1"
       },
       "office": {
         "href": "https://api.bsale.cl/v1/offices/2.json",
         "id": "2"
+      },
+      "references": {
+        "href": "https://api.bsale.cl/v1/documents/382/references.json"
+      },
+      "document_taxes": {
+        "href": "https://api.bsale.cl/v1/documents/382/document_taxes.json"
+      },
+      "details": {
+        "href": "https://api.bsale.cl/v1/documents/382/details.json"
       }
     },
     {
-      "href": "https://api.bsale.cl/v1/documents/190.json",
-      "id": 190,
-      "emissionDate": 1301356800,
-      "expirationDate": 1301356800,
-      "number": 40,
-      "totalAmount": 22207210.0,
-      "netAmount": 22207210.0,
+      "href": "https://api.bsale.cl/v1/documents/404.json",
+      "id": 404,
+      "emissionDate": 1351036800,
+      "expirationDate": 1351036800,
+      "number": 1,
+      "totalAmount": 14280.0,
+      "netAmount": 0.0,
       "taxAmount": 0.0,
-      "exemptAmount": 22207210.0,
-      "urlTimbre": "-",
-      "urlPdf": "https://app.bsale.cl/view/613/f7712ecede59.pdf",
-      "token": "f7712ecede59",
+      "exemptAmount": 0.0,
+      "urlTimbre": null,
+      "urlPublicView": "http://app.bsale.cl/view/2/ad0496679450",
+      "urlPdf": "http://app.bsale.cl/view/2/ad0496679450.pdf",
+      "token": "ad0496679450",
       "state": 0,
-      "userId": 5,
+      "userId": 20,
       "urlXml": null,
-      "address": "Este de Punta Chiguao S/N",
-      "municipality": "Quellón",
-      "city": "Quellón",
+      "address": null,
+      "municipality": null,
+      "city": null,
+      "informedSii": 1,
       "document_type": {
-        "href": "https://api.bsale.cl/v1/document_types/1.json",
-        "id": "1"
-      },
-      "client": {
-        "href": "https://api.bsale.cl/v1/clients/29.json",
-        "id": "29"
+        "href": "https://api.bsale.cl/v1/document_types/3.json",
+        "id": "3"
       },
       "office": {
         "href": "https://api.bsale.cl/v1/offices/2.json",
         "id": "2"
+      },
+      "references": {
+        "href": "https://api.bsale.cl/v1/documents/404/references.json"
+      },
+      "document_taxes": {
+        "href": "https://api.bsale.cl/v1/documents/404/document_taxes.json"
+      },
+      "details": {
+        "href": "https://api.bsale.cl/v1/documents/404/details.json"
+      }
+    },
+    {
+      "href": "https://api.bsale.cl/v1/documents/421.json",
+      "id": 421,
+      "emissionDate": 1351641600,
+      "expirationDate": 1351641600,
+      "number": 1,
+      "totalAmount": 5117000.0,
+      "netAmount": 4300000.0,
+      "taxAmount": 817000.0,
+      "exemptAmount": 0.0,
+      "urlTimbre": null,
+      "urlPublicView": "http://app.bsale.cl/view/2/f806d6a6ae73",
+      "urlPdf": "http://app.bsale.cl/view/2/f806d6a6ae73.pdf",
+      "token": "f806d6a6ae73",
+      "state": 0,
+      "userId": 2,
+      "urlXml": null,
+      "address": "San Francisco 402, jj perez 7248",
+      "municipality": "Santiago",
+      "city": "Santiago",
+      "informedSii": 2,
+      "document_type": {
+        "href": "https://api.bsale.cl/v1/document_types/4.json",
+        "id": "4"
+      },
+      "client": {
+        "href": "https://api.bsale.cl/v1/clients/7.json",
+        "id": "7"
+      },
+      "office": {
+        "href": "https://api.bsale.cl/v1/offices/2.json",
+        "id": "2"
+      },
+      "references": {
+        "href": "https://api.bsale.cl/v1/documents/421/references.json"
+      },
+      "document_taxes": {
+        "href": "https://api.bsale.cl/v1/documents/421/document_taxes.json"
+      },
+      "details": {
+        "href": "https://api.bsale.cl/v1/documents/421/details.json"
       }
     }
   ]
@@ -119,37 +176,44 @@ Obtener un documento
 ####Respuesta
 ```json
 {
-  "href": "https://api.bsale.cl/v1/documents/190.json",
-  "id": 190,
-  "emissionDate": 1301356800,
-  "expirationDate": 1301356800,
-  "number": 40,
-  "totalAmount": 22207210.0,
-  "netAmount": 22207210.0,
-  "taxAmount": 0.0,
-  "exemptAmount": 22207210.0,
-  "urlTimbre": "-",
-  "urlPdf": "https://app.bsale.cl/view/613/f7712ecede59.pdf",
-  "token": "f7712ecede59",
+  "href": "https://api.bsale.cl/v1/documents/382.json",
+  "id": 382,
+  "emissionDate": 1350604800,
+  "expirationDate": 1350604800,
+  "number": 1,
+  "totalAmount": 14280.0,
+  "netAmount": 12000.0,
+  "taxAmount": 2280.0,
+  "exemptAmount": 0.0,
+  "urlTimbre": null,
+  "urlPublicView": "http://app.bsale.cl/view/2/439d299fb053",
+  "urlPdf": "http://app.bsale.cl/view/2/439d299fb053.pdf",
+  "token": "439d299fb053",
   "state": 0,
-  "userId": 5,
+  "userId": 2,
   "urlXml": null,
-  "address": "Este de Punta Chiguao S/N",
-  "municipality": "Quellón",
-  "city": "Quellón",
+  "address": null,
+  "municipality": null,
+  "city": null,
+  "informedSii": 1,
   "document_type": {
     "href": "https://api.bsale.cl/v1/document_types/1.json",
     "id": "1"
   },
-  "client": {
-    "href": "https://api.bsale.cl/v1/clients/29.json",
-    "id": "29"
-  },
   "office": {
     "href": "https://api.bsale.cl/v1/offices/2.json",
     "id": "2"
+  },
+  "references": {
+    "href": "https://api.bsale.cl/v1/documents/382/references.json"
+  },
+  "document_taxes": {
+    "href": "https://api.bsale.cl/v1/documents/382/document_taxes.json"
+  },
+  "details": {
+    "href": "https://api.bsale.cl/v1/documents/382/details.json"
   }
-
+}
 ```
 Obtener colección de documentos
 -------------------------------
