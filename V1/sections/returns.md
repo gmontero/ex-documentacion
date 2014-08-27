@@ -18,7 +18,7 @@ Obtener colección de devoluciones
 ####Ejemplos
 
 * `GET /v1/returns.json?limit=10&offset=0`
-* `GET /v1/returns.json?fields=[returnDate,motive]`
+* `GET /v1/returns.json?fields=[returndate,motive]`
 * `GET /v1/returns.json?expand=[reference_document,credit_note,details]`
 
 ####Respuesta
