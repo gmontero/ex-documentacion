@@ -29,7 +29,7 @@ Obtener colección de tipos de despacho
     {
       "href": "https://api.bsale.cl/v1/shipping_types/3.json",
       "id": 3,
-      "name": "tipo_despacho.consignaciones",
+      "name": "Consignaciones",
       "codeSii": 3,
       "useDestinationOffice": 0,
       "state": 0
@@ -37,7 +37,7 @@ Obtener colección de tipos de despacho
     {
       "href": "https://api.bsale.cl/v1/shipping_types/4.json",
       "id": 4,
-      "name": "tipo_despacho.entrega_gratuita",
+      "name": "Entrega gratuita",
       "codeSii": 4,
       "useDestinationOffice": 0,
       "state": 0
@@ -45,7 +45,7 @@ Obtener colección de tipos de despacho
     {
       "href": "https://api.bsale.cl/v1/shipping_types/7.json",
       "id": 7,
-      "name": "tipo_despacho.guia_de_devolucion",
+      "name": "Guía de devolución",
       "codeSii": 7,
       "useDestinationOffice": 0,
       "state": 0
@@ -53,7 +53,7 @@ Obtener colección de tipos de despacho
     {
       "href": "https://api.bsale.cl/v1/shipping_types/1.json",
       "id": 1,
-      "name": "tipo_despacho.operacion_constituye_venta",
+      "name": "Operación constituye venta",
       "codeSii": 1,
       "useDestinationOffice": 0,
       "state": 0
@@ -61,7 +61,7 @@ Obtener colección de tipos de despacho
     {
       "href": "https://api.bsale.cl/v1/shipping_types/6.json",
       "id": 6,
-      "name": "tipo_despacho.otros_traslados_no_venta",
+      "name": "Otros traslados no venta",
       "codeSii": 6,
       "useDestinationOffice": 0,
       "state": 0
@@ -69,7 +69,7 @@ Obtener colección de tipos de despacho
     {
       "href": "https://api.bsale.cl/v1/shipping_types/5.json",
       "id": 5,
-      "name": "tipo_despacho.traslados_internos",
+      "name": "Traslados internos",
       "codeSii": 5,
       "useDestinationOffice": 1,
       "state": 0
@@ -77,7 +77,7 @@ Obtener colección de tipos de despacho
     {
       "href": "https://api.bsale.cl/v1/shipping_types/8.json",
       "id": 8,
-      "name": "tipo_despacho.traslado_para_exportacion",
+      "name": "Traslado para exportación. (no venta)",
       "codeSii": 8,
       "useDestinationOffice": 0,
       "state": 0
@@ -85,7 +85,7 @@ Obtener colección de tipos de despacho
     {
       "href": "https://api.bsale.cl/v1/shipping_types/2.json",
       "id": 2,
-      "name": "tipo_despacho.ventas_por_efectuar",
+      "name": "Ventas por efectuar",
       "codeSii": 2,
       "useDestinationOffice": 0,
       "state": 0
@@ -93,7 +93,7 @@ Obtener colección de tipos de despacho
     {
       "href": "https://api.bsale.cl/v1/shipping_types/9.json",
       "id": 9,
-      "name": "tipo_despacho.venta_para_exportacion",
+      "name": "Venta para exportación",
       "codeSii": 9,
       "useDestinationOffice": 0,
       "state": 0
@@ -111,7 +111,7 @@ Obtener un tipo de despacho
 {
   "href": "https://api.bsale.cl/v1/shipping_types/6.json",
   "id": 6,
-  "name": "tipo_despacho.otros_traslados_no_venta",
+  "name": "Otros traslados no venta",
   "codeSii": 6,
   "useDestinationOffice": 0,
   "state": 0
