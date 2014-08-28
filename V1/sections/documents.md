@@ -4,7 +4,10 @@ A
 
 ```json
 {
-  "href": "https://api.bsale.cl/v1/documents/382.json",                 # Url del documento (String).
+  # Url del documento (String).
+  "href": "https://api.bsale.cl/v1/documents/382.json",
+
+
   "id": 382,                                                            # Identificador unico del documento (Integer).
   "emissionDate": 1350604800,                                           # Fecha de emision del documento (Integer).
   "expirationDate": 1350604800,                                         # Fecha de vencimiento del documento (Integer).
@@ -20,7 +23,7 @@ A
   "state": 0,                                                           # Estado del documento indica si el documento esta activos(0) o inactivos (1) (Boolean).
   "userId": 2,                                                          # Identificador unico del usuario que emite el documento (Integer).
   "urlXml": null,                                                       # Respaldo del documento electronico (String).
-  "address": null,
+  "address": null,                                                      # Direccion del Documento
   "municipality": null,
   "city": null,
   "informedSii": 1,
