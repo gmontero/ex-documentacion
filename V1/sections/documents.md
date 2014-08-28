@@ -6,24 +6,38 @@ A
 {
   # Url del documento (String).
   "href": "https://api.bsale.cl/v1/documents/382.json",
-
-
-  "id": 382,                                                            # Identificador unico del documento (Integer).
-  "emissionDate": 1350604800,                                           # Fecha de emision del documento (Integer).
-  "expirationDate": 1350604800,                                         # Fecha de vencimiento del documento (Integer).
-  "number": 1,                                                          # Folio del documento (Integer).
-  "totalAmount": 14280.0,                                               # Monto total del documento (Float).
-  "netAmount": 12000.0,                                                 # Monto neto del documento (Float).
-  "taxAmount": 2280.0,                                                  # Monto de impuestos del documento (Float).
-  "exemptAmount": 0.0,                                                  # Monto exento del documento (Float).
-  "urlTimbre": null,                                                    # Url de la firma de un documento (String).
-  "urlPublicView": "http://app.bsale.cl/view/2/439d299fb053",           # Url publica para visualizar el documento (String).
-  "urlPdf": "http://app.bsale.cl/view/2/439d299fb053.pdf",              # Url del pdf del documento (String).
-  "token": "439d299fb053",                                              # Token unico del documento (String).
-  "state": 0,                                                           # Estado del documento indica si el documento esta activos(0) o inactivos (1) (Boolean).
-  "userId": 2,                                                          # Identificador unico del usuario que emite el documento (Integer).
-  "urlXml": null,                                                       # Respaldo del documento electronico (String).
-  "address": null,                                                      # Direccion del Documento
+  # Identificador unico del documento (Integer).
+  "id": 382,
+  # Fecha de emision del documento (Integer).
+  "emissionDate": 1350604800,
+  # Fecha de vencimiento del documento (Integer).
+  "expirationDate": 1350604800,
+  # Folio del documento (Integer).
+  "number": 1,
+  # Monto total del documento (Float).
+  "totalAmount": 14280.0,
+  # Monto neto del documento (Float).
+  "netAmount": 12000.0,
+  # Monto de impuestos del documento (Float).
+  "taxAmount": 2280.0,
+  # Monto exento del documento (Float).
+  "exemptAmount": 0.0,
+  # Url de la firma de un documento (String).
+  "urlTimbre": null,
+  # Url publica para visualizar el documento (String).
+  "urlPublicView": "http://app.bsale.cl/view/2/439d299fb053",
+  # Url del pdf del documento (String).
+  "urlPdf": "http://app.bsale.cl/view/2/439d299fb053.pdf",
+  # Token unico del documento (String).
+  "token": "439d299fb053",
+  # Estado del documento indica si el documento esta activo(0) o inactivo (1) (Boolean).
+  "state": 0,
+  # Identificador unico del usuario que emite el documento (Integer).
+  "userId": 2,
+  # Respaldo del documento electronico (String).
+  "urlXml": null,
+  # Direccion del Documento
+  "address": null,
   "municipality": null,
   "city": null,
   "informedSii": 1,
