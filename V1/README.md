@@ -52,5 +52,10 @@ Recursos disponibles
 * [Tipos de producto.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/product_types.md)
 * [Variantes.](https://github.com/gmontero/API-Bsale/blob/master/V1/sections/variants.md)
 
+Herramientas útiles
+-------------------
+* [Cliente REST Google Chrome.](https://chrome.google.com/webstore/detail/advanced-rest-client/hgmloofddffdnphfgcellkdfbfbjeloo)
+* [Visualizador de JSON.](http://jsonviewer.stack.hu/)
+
 [RESTful]:http://es.wikipedia.org/wiki/Representational_State_Transfer
 [JSON]:http://www.json.org/
