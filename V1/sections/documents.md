@@ -64,21 +64,37 @@ Al realizar una petición HTTP, el servicio retornara un JSON con la siguiente e
   # Indica si el documento fue infomado al SII, 0 es correcto, 1 es enviado, 2 es rechazado (Integer).
   "informedSii": 1,
 
-  #
+  # Nodo que indica el tipo del documento al cual pertene el documento
   "document_type": {
+
+  # Url del tipo del documento (String).
     "href": "https://api.bsale.cl/v1/document_types/1.json",
+
+  # Identificador unico del tipo del documento (Integer).
     "id": "1"
   },
+
+  # Nodo que indica la sucursal a la cual pertene el documento
   "office": {
+
+  # Url de la sucursal (String).
     "href": "https://api.bsale.cl/v1/offices/2.json",
+
+  # Identificador unico de la sucursal (Integer).
     "id": "2"
   },
+
+  # Nodo que indica las referencias de un documento.
   "references": {
     "href": "https://api.bsale.cl/v1/documents/382/references.json"
   },
+
+  # Nodo que indica el detalle de impuesto de un documento.
   "document_taxes": {
     "href": "https://api.bsale.cl/v1/documents/382/document_taxes.json"
   },
+/V1/sections/documents.md
+  # Nodo que indica los detalles de un documento.
   "details": {
     "href": "https://api.bsale.cl/v1/documents/382/details.json"
   }
