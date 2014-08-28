@@ -93,7 +93,7 @@ Al realizar una petición HTTP, el servicio retornara un JSON con la siguiente e
   "document_taxes": {
     "href": "https://api.bsale.cl/v1/documents/382/document_taxes.json"
   },
-/V1/sections/documents.md
+
   # Nodo que indica los detalles de un documento.
   "details": {
     "href": "https://api.bsale.cl/v1/documents/382/details.json"
