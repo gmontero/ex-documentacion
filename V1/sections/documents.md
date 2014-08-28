@@ -2,7 +2,7 @@ Estructura de un documento
 --------------------------
 Al realizar una peticion HTTP, el servicio retornara la siguiente estructura:
 
-```code
+```json
 {
   # Url del documento (String).
   "href": "https://api.bsale.cl/v1/documents/382.json",
@@ -52,12 +52,19 @@ Al realizar una peticion HTTP, el servicio retornara la siguiente estructura:
   # Respaldo del documento electronico (String).
   "urlXml": null,
 
-  # Direccion del Documento
+  # Direccion del documento (String).
   "address": null,
 
+  # Comuna del documento (String).
   "municipality": null,
+
+  # Ciudad del documento (String).
   "city": null,
+
+  # Indica si el documento fue infomado al SII, 0 es correcto, 1 es enviado, 2 es rechazado (Integer).
   "informedSii": 1,
+
+
   "document_type": {
     "href": "https://api.bsale.cl/v1/document_types/1.json",
     "id": "1"
