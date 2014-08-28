@@ -67,20 +67,20 @@ Al realizar una petición HTTP, el servicio retornara un JSON con la siguiente e
   # Nodo que indica el tipo del documento al cual pertene el documento
   "document_type": {
 
-  # Url del tipo del documento (String).
+    # Url del tipo del documento (String).
     "href": "https://api.bsale.cl/v1/document_types/1.json",
 
-  # Identificador unico del tipo del documento (Integer).
+    # Identificador unico del tipo del documento (Integer).
     "id": "1"
   },
 
   # Nodo que indica la sucursal a la cual pertene el documento
   "office": {
 
-  # Url de la sucursal (String).
+    # Url de la sucursal (String).
     "href": "https://api.bsale.cl/v1/offices/2.json",
 
-  # Identificador unico de la sucursal (Integer).
+    # Identificador unico de la sucursal (Integer).
     "id": "2"
   },
 
