@@ -4,7 +4,7 @@ Al realizar una peticion HTTP, el servicio retornara la siguiente estructura:
 
 ```code
 {
-  // Url del documento (String).
+  # Url del documento (String).
   "href": "https://api.bsale.cl/v1/documents/382.json",
 
   # Identificador unico del documento (Integer).
