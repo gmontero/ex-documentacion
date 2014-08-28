@@ -2,7 +2,7 @@ Estructura de un documento
 --------------------------
 Al realizar una peticion HTTP, el servicio retornara la siguiente estructura:
 
-```json
+```code
 {
   // Url del documento (String).
   "href": "https://api.bsale.cl/v1/documents/382.json",
