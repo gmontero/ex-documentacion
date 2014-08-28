@@ -1,6 +1,6 @@
 Estructura de un documento
 --------------------------
-Al realizar una peticion HTTP, el servicio retornara la siguiente estructura:
+Al realizar una petición HTTP, el servicio retornara un JSON con la siguiente estructura:
 
 ```json
 {
@@ -64,7 +64,7 @@ Al realizar una peticion HTTP, el servicio retornara la siguiente estructura:
   # Indica si el documento fue infomado al SII, 0 es correcto, 1 es enviado, 2 es rechazado (Integer).
   "informedSii": 1,
 
-
+  #
   "document_type": {
     "href": "https://api.bsale.cl/v1/document_types/1.json",
     "id": "1"
@@ -95,7 +95,7 @@ Obtener colección de documentos
 - *limit*, limita la cantidad de items de una respuesta JSON, si no se envia el limit es 25.
 - *offset*, permite paginar los items de una respuesta JSON, si no se envia el offset es 0.
 - *fields*, solo devolver atributos especificos de un recurso
-- *expand*, permite expandir instancias y colecciones.
+- *expand*, permite expandir instancias y colecciones para traer relaciones en una sola petición.
 - *emissiondate*, filtra documentos por la fecha de emision.
 - *expirationdate*, filtra documentos por la fecha de vencimiento.
 - *number*, filtra documentos por el folio.
@@ -302,8 +302,8 @@ Obtener un documento
   }
 }
 ```
-Obtener colección de documentos
--------------------------------
+Obtener resumen de documentos emitidos
+--------------------------------------
 
 * `GET /v1/documents/summary.json` retorna resumen.
 
