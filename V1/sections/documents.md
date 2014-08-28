@@ -176,15 +176,15 @@ Obtener un documento
 ####Respuesta
 ```json
 {
-  "href": "https://api.bsale.cl/v1/documents/382.json",
-  "id": 382,
-  "emissionDate": 1350604800,
-  "expirationDate": 1350604800,
-  "number": 1,
-  "totalAmount": 14280.0,
-  "netAmount": 12000.0,
-  "taxAmount": 2280.0,
-  "exemptAmount": 0.0,
+  "href": "https://api.bsale.cl/v1/documents/382.json",                 # Url del recurso (String).
+  "id": 382,                                                            # Identificador unico del recurso (Integer).
+  "emissionDate": 1350604800,                                           # Fecha de emision del documento (Integer).
+  "expirationDate": 1350604800,                                         # Fecha de vencimiento del documento (Integer).
+  "number": 1,                                                          # Folio del documento (Integer).
+  "totalAmount": 14280.0,                                               # Monto total del documento (Float).
+  "netAmount": 12000.0,                                                 # Monto neto del documento (Float).
+  "taxAmount": 2280.0,                                                  # Monto de impuestos del documento (Float).
+  "exemptAmount": 0.0,                                                  # Monto exento del documento (Float).
   "urlTimbre": null,
   "urlPublicView": "http://app.bsale.cl/view/2/439d299fb053",
   "urlPdf": "http://app.bsale.cl/view/2/439d299fb053.pdf",
