@@ -192,7 +192,6 @@ Se debe enviar un Json con la siguiente esctructura.
   "client": {
     "code": "1-9",
     "city": "Puerto Varas",
-    "company": "Imaginex",
     "municipality": "comuna",
     "activity": "giro",
     "address": "direccion"
