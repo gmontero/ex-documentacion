@@ -10,7 +10,7 @@ En la carpeta sections pueden encontrar los distintos métodos disponibles.
 
 ## Nueva Versión
 Por que siempre estamos buscando [una mejor manera de trabajar], hemos liberado una nueva version de la API de Bsale, mucho mas fácil y rapida de trabajar.
-pueden encontrar la documentacion [aquí](https://github.com/gmontero/API-Bsale/blob/master/V1/README.md)
+pueden encontrar la documentacion [aquí](https://github.com/gmontero/API-Bsale/wiki)
 
 ## Mandar un Request
 
