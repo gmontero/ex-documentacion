@@ -187,10 +187,13 @@ Se debe enviar un Json con la siguiente esctructura.
   "declareSii": 1,
   "priceAdjustment": 0,
   "editTexts": 0,
-  "amount": 6490,
   "type": 1,
   "client": {
-    "id": 107
+    "code": "1-9",
+    "city": "Puerto Varas",
+    "municipality": "comuna",
+    "activity": "giro",
+    "address": "direccion"
   },
   "details": [
     {
