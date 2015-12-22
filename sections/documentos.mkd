@@ -263,6 +263,10 @@ generation_date_start => Fecha de generacion que indica el rango incial de busqu
 
 generation_date_end => Fecha de generacion que indica el rango final de busqueda de documentos (el formato debe ser YYYY-MM-DD)
 
+annulment_date_start => Fecha de anulación que indica el rango incial de busqueda de documentos (el formato debe ser YYYY-MM-DD)
+
+annulment_date_end => Fecha de anulación que indica el rango final de busqueda de documentos (el formato debe ser YYYY-MM-DD)
+
 per_document => Boolean (0 o 1) indica si el resultado lo agrupa por documento
 
 La respuesta (response) de la llamada  entregará la siguiente información en formato JSON para el resumen general (per_document = 0)
