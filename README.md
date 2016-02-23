@@ -8,7 +8,7 @@ Estos métodos permitirán obtener información desde Bsale o enviar informació
 Esta API permite llamadas del tipo REST y utiliza JSON para el envío y recepción de información.
 En la carpeta sections pueden encontrar los distintos métodos disponibles.
 
-## Nueva Versión
+## Documentación
 Por que siempre estamos buscando [una mejor manera de trabajar], hemos liberado una nueva version de la API de Bsale, mucho mas fácil y rapida de trabajar.
-pueden encontrar la documentacion [aquí](https://github.com/gmontero/API-Bsale/wiki)
+pueden encontrar toda la documentación [aquí](https://github.com/gmontero/API-Bsale/wiki)
 
