@@ -10,7 +10,9 @@ Esta API permite llamadas del tipo [REST] y utiliza [JSON] para el envío y rece
 
 ## Documentación
 Por que siempre estamos buscando una mejor manera de trabajar, hemos liberado una nueva version de la API de Bsale, mucho mas fácil y rapida de trabajar.
-Pueden encontrar toda la documentación [aquí](https://github.com/gmontero/API-Bsale/wiki)
+
+Documentación para Chile [aquí](https://github.com/gmontero/API-Bsale/wiki)
+Documentación para Peru [aquí](https://github.com/gmontero/API-Bsale-PE/wiki)
 
 [REST]:http://es.wikipedia.org/wiki/Representational_State_Transfer
 [JSON]:http://www.json.org/
